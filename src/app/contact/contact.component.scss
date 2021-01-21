@@ -1,0 +1,59 @@
+@import "../../assets/responsive.scss";
+.contact-wrapper {
+    padding: 100px 0px;
+    @include tab {
+        padding: 30px 0;
+    }
+
+    .contact-heading {
+        
+        h3 {
+            font-size: 50px;
+            color: #000;
+            font-weight: bold;
+            @include tab {
+                font-size: 25px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 35px;
+        }
+        
+    }
+
+    .contact-content {
+        margin: 30px 0px;
+         @include tab {
+            margin: 15px 0;
+        }
+        h4 {
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+
+        p {
+            padding-bottom: 15px;
+            @include tab {
+                margin-bottom: 0;
+            }
+            a {
+                color: #0ea133;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper {
+        .contact-heading {
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+    }
+}

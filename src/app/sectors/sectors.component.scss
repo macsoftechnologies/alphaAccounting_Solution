@@ -1,0 +1,168 @@
+@import "../../assets/responsive.scss";
+.service-wrapper {
+    margin: 50px 0px;
+    .services-tabs-section {
+        .services-heading {
+            h5 {
+                color: #0fa534;
+                margin: 0px 0px 20px 0px;
+            }
+        }
+        nav {
+            .nav-tabs {
+                border-bottom: none;
+                a {
+                    color: #000;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .tab-content {
+            .tab-1 {
+                .tab-banner {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: 450px;
+                    }
+                    .banner-content {
+                        position: absolute;
+                        top: 50%;
+                        display: flex;
+                        width: 100%;
+                        h3 {
+                            font-size: 45px;
+                            color: #fff;
+                            width: 100%;
+                            text-align: center;
+                            @include tab {
+                                font-size: 33px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .tab-2 {
+                margin: 100px 0px;
+                @include tab {
+                    margin: 40px 0;
+                    padding: 0 15px ;
+                }
+                .container-1 {
+                    max-width: 1000px;
+                    margin: auto;
+                }
+
+                .tab2-heading {
+                    font-size: 50px;
+                    margin-bottom: 25px;
+                    @include tab {
+                        font-size: 33px;
+                    }
+                }
+                .tab-banner {
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: 450px;
+                    }
+                    .banner-content {
+                        position: absolute;
+                        top: 50%;
+                        display: flex;
+                        width: 100%;
+                        h3 {
+                            font-size: 45px;
+                            color: #fff;
+                            width: 100%;
+                            text-align: center;
+                            @include tab {
+                                font-size: 33px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+     
+}
+
+.nav-tabs .nav-link.active {
+    color: #0ca332;
+    background-color: #fff;
+    border-top: 4px solid #0ca332 !important;
+    padding: 5px 20px;
+    border: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
+}
+.nav-tabs {
+    @include tab {
+        flex-wrap: nowrap !important;
+        max-width: 100%;
+        overflow-x: scroll;
+        margin-bottom: 10px;
+        a {
+            white-space: nowrap;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+          }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .service-wrapper {
+        .services-tabs-section {
+            .tab-content {
+                .tab-1 {
+                    .tab1-heading {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+
+                    .tab-banner {
+                        img {
+                            width: 100%;
+                            height: 350px;
+                        }
+
+                        .banner-content {
+                            h3 {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+
+
+
+                .tab-2 {
+                    .tab2-heading {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+
+                    .tab-banner {
+                        img {
+                            width: 100%;
+                            height: 350px;
+                        }
+
+                        .banner-content {
+                            h3 {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,45 @@
+<div class="header-banner">
+    <nav>
+        <div class="container">
+            <div class="nav-section">
+                <div>
+                    <div class="logo">
+                        <a [routerLink]="['']">
+                            <img src="./assets/images/airtus-logo.jpg">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navlinks-section">
+                    <!-- <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" /> -->
+                    <div class="menu-icon" (click)="showMenu()">
+                        <i class="fa fa-bars open-icon"></i>
+                    </div>
+                    <ul class="menu">
+                        <li><a [routerLink]="['/aboutus']" (click)="showMenu()">About Us</a></li>
+                        <li><a [routerLink]="['/sectors']" (click)="showMenu()">Sectors</a></li>
+                        <!-- <li>
+                            <label for="drop-1" class="toggle">WordPress +</label>
+                            <a href="#">WordPress</a>
+                            <input type="checkbox" id="drop-1"/>
+                            <ul>
+                                <li><a href="#">Themes and stuff</a></li>
+                                <li><a href="#">Plugins</a></li>
+                                <li><a href="#">Tutorials</a></li>
+                            </ul>                 
+                        </li> -->
+
+                        <li><a [routerLink]="['/services']" (click)="showMenu()">Services</a></li>
+                        <li><a (click)="showMenu()">AIRUTS Intelligence Unit </a></li>
+                        <li><a [routerLink]="['jobboard']" (click)="showMenu()">Job Board </a></li>
+                        <li><a (click)="showMenu()">Fundraising</a></li>
+                        <li><a (click)="showMenu()">Partners</a></li>
+                        <li><a (click)="showMenu()">Media </a></li>
+                        <li><a [routerLink]="['/contact']" (click)="showMenu()">Contact Us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

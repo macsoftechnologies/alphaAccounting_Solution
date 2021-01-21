@@ -1,0 +1,33 @@
+/**************************************************** Media Queries ******************************/ 
+
+
+
+//  ********* Media Queries For Desktop  ************
+
+$for-desktop: 1200px;
+
+@mixin desktop {
+  @media screen and (max-width: #{ $for-desktop }) {
+    @content;
+  }
+}
+
+//  ********* Media Queries For Tab  ************
+
+$tab: 992px;
+
+@mixin tab {
+  @media screen and (max-width: #{ $tab }) {
+    @content;
+  }
+}
+
+//  ********* Media Queries For Mobile  ************
+
+$mobile: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: #{ $mobile }) {
+    @content;
+  }
+}
