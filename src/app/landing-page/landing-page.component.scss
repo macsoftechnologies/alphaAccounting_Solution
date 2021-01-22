@@ -1,0 +1,34 @@
+@import "../../assets/responsive.scss";
+
+.landing-page {
+    padding: 70px 0;
+    @include mobile {
+        padding: 20px 0;
+    }
+}
+.tab-data {
+    ul {
+        li {
+            list-style-type: decimal;
+        }
+    }
+}
+.nav-link {
+    color: #103d5f;
+    box-shadow: 0 0 8px -3px #b3aeae;
+    padding: 15px 20px;
+    margin-bottom: 15px
+}
+.nav-link.active {
+    background-color: #0ca332;
+}
+.content-tabs {
+    padding-right: 30px;
+    @include mobile {
+        padding-right: 15px;
+    }
+}
+.content-body {
+    padding: 25px;
+    box-shadow: 0 0 8px -3px #b3aeae;
+}

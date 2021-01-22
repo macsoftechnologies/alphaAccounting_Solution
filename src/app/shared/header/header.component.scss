@@ -2,6 +2,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import "../../../assets/responsive.scss";
 
 .header-banner {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
@@ -22,10 +23,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding: 15px 0;
                 .logo {
+                    height: 50px;
+                    @include mobile {
+                        height: 40px;
+                    }
                     img {
-                        height: 100px;
-                        width: 150px;
+                        height: 100%;
                     }
                 }
                 .navlinks-section {
@@ -47,8 +52,10 @@
                                 color:#0ca332;
                                 font-size:17px;
                                 text-decoration:none;
+                                cursor: pointer;
                                 &:hover {
                                     background: #fff;
+                                    color: #103d5f;
                                 }
                             }
                         }
@@ -130,7 +137,7 @@ li > a:only-child:after { content: ''; }
         position: fixed !important;
         z-index: 1;
         width: 0;
-        top: 120px;
+        top: 70px;
         display: flex;
         flex-direction: column;
         right: 0;
@@ -154,14 +161,6 @@ li > a:only-child:after { content: ''; }
     .open-menu {
         // transform: translateX(0);
         width: 300px;
-    }
-
-    .logo {
-        padding: 10px 0px;
-        img {
-            height: 100px;
-            width: 130px !important;
-        }
     }
     .close-icon {
         &::before{

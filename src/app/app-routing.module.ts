@@ -1,37 +1,42 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { JobboardComponent } from './jobboard/jobboard.component';
-import { SectorsComponent } from './sectors/sectors.component';
-import { ServicesComponent } from './services/services.component';
+import { AccountingComponent } from './accounting/accounting.component';
+import { GstComponent } from './gst/gst.component';
+import { IncomeTaxComponent } from './income-tax/income-tax.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NgoComponent } from './ngo/ngo.component';
+import { PayrollComponent } from './payroll/payroll.component';
 
 const routes: Routes = [
 
   {
     path: '',
-    component: HomeComponent,
+    component: LandingPageComponent,
   },
+
   {
-    path: 'aboutus',
-    component: AboutUsComponent,
+    path: 'incometax',
+    component: IncomeTaxComponent,
   },
+
   {
-    path:'services',
-    component: ServicesComponent,
+    path: 'gst',
+    component: GstComponent,
   },
+
   {
-    path:'sectors',
-    component: SectorsComponent,
-  }, 
-  {
-    path: 'contact',
-    component: ContactComponent
+    path: 'ngo',
+    component: NgoComponent,
   },
+
   {
-    path: 'jobboard',
-    component: JobboardComponent,
+    path: 'payroll',
+    component: PayrollComponent,
+  },
+
+  {
+    path: 'accounting',
+    component: AccountingComponent
   }
 
 ];

@@ -10,6 +10,12 @@ import { ServicesComponent } from './services/services.component';
 import { SectorsComponent } from './sectors/sectors.component';
 import { ContactComponent } from './contact/contact.component';
 import { JobboardComponent } from './jobboard/jobboard.component';
+import { AccountingComponent } from './accounting/accounting.component';
+import { GstComponent } from './gst/gst.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { IncomeTaxComponent } from './income-tax/income-tax.component';
+import { NgoComponent } from './ngo/ngo.component';
+import { PayrollComponent } from './payroll/payroll.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,12 @@ import { JobboardComponent } from './jobboard/jobboard.component';
     SectorsComponent,
     ContactComponent,
     JobboardComponent,
+    AccountingComponent,
+    GstComponent,
+    LandingPageComponent,
+    IncomeTaxComponent,
+    NgoComponent,
+    PayrollComponent,
   ],
   imports: [
     BrowserModule,

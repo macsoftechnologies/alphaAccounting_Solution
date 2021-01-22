@@ -2,41 +2,38 @@
     <nav>
         <div class="container">
             <div class="nav-section">
-                <div>
-                    <div class="logo">
-                        <a [routerLink]="['']">
-                            <img src="./assets/images/airtus-logo.jpg">
-                        </a>
-                    </div>
+                <div class="logo" [routerLink]="['']">
+                    <img src="assets/images/logo.png">
                 </div>
 
                 <div class="navlinks-section">
-                    <!-- <label for="drop" class="toggle">Menu</label>
-                    <input type="checkbox" id="drop" /> -->
                     <div class="menu-icon" (click)="showMenu()">
                         <i class="fa fa-bars open-icon"></i>
                     </div>
                     <ul class="menu">
-                        <li><a [routerLink]="['/aboutus']" (click)="showMenu()">About Us</a></li>
-                        <li><a [routerLink]="['/sectors']" (click)="showMenu()">Sectors</a></li>
-                        <!-- <li>
-                            <label for="drop-1" class="toggle">WordPress +</label>
-                            <a href="#">WordPress</a>
-                            <input type="checkbox" id="drop-1"/>
-                            <ul>
-                                <li><a href="#">Themes and stuff</a></li>
-                                <li><a href="#">Plugins</a></li>
-                                <li><a href="#">Tutorials</a></li>
-                            </ul>                 
-                        </li> -->
+                        <li>
+                            <a>Start Busines</a>
+                        </li>
 
-                        <li><a [routerLink]="['/services']" (click)="showMenu()">Services</a></li>
-                        <li><a (click)="showMenu()">AIRUTS Intelligence Unit </a></li>
-                        <li><a [routerLink]="['jobboard']" (click)="showMenu()">Job Board </a></li>
-                        <li><a (click)="showMenu()">Fundraising</a></li>
-                        <li><a (click)="showMenu()">Partners</a></li>
-                        <li><a (click)="showMenu()">Media </a></li>
-                        <li><a [routerLink]="['/contact']" (click)="showMenu()">Contact Us </a></li>
+                        <li>
+                            <a>Income Tax and compliance</a>
+                        </li>
+
+                        <li>
+                            <a>GST</a>
+                        </li>
+
+                        <li>
+                            <a>NGO</a>
+                        </li>
+
+                        <li>
+                            <a>Payroll</a>
+                        </li>
+
+                        <li>
+                            <a>Accounting and Bookkeeping</a>
+                        </li>
                     </ul>
                 </div>
             </div>
