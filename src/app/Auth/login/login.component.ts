@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   LoginForm = new FormGroup({
-    email: new FormControl('', Validators.required),
+    email: new FormControl("", Validators.required),
     password: new FormControl('', Validators.required)
   })
 
