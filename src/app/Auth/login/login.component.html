@@ -1,0 +1,47 @@
+<section class="login-wrapper">
+    <div class="login-section">
+
+        <div class="login-image">
+
+        </div>
+
+        <div class="login-form">
+            <div class="login-header">
+                <div class="logo">
+                    <img src="assets/images/logo.png">
+                </div>
+            </div>
+            <form [formGroup]="LoginForm">
+                <div class="col-md-12">
+                    <div class="login-input">
+                        <input type="text" [class.is-invalid] = "
+                        LoginForm.get('email').invalid && 
+                        LoginForm.get('email').touched || (LoginForm.get('email').pristine && hasError)"                        
+                        class="form-control" formControlName="email"  placeholder="Enter Email/Phone Number">
+                        <span class="error" *ngIf="
+                        LoginForm.get('email').invalid && 
+                        LoginForm.get('email').touched || (LoginForm.get('email').pristine && hasError)">Email is required</span>
+                    </div>
+
+                    <div class="login-input">
+                        <input type="password" [class.is-invalid]="
+                        LoginForm.get('password').invalid && 
+                        LoginForm.get('password').touched || (LoginForm.get('password').pristine && hasError) "
+                         class="form-control" formControlName="password" placeholder="Enter Password">
+                        <span class="error" *ngIf="LoginForm.get('password').invalid && 
+                        LoginForm.get('password').touched || (LoginForm.get('password').pristine && hasError)">Password is required</span>
+                    </div>
+                    
+                    <div class="login-button">
+                        <button type="button" class="form-control" (click)="submitbtn()">Login Now!</button>
+                    </div>
+
+                    <div class="sign-up">
+                        <p>Don't have an account? <a [routerLink]="['register']">Sign Up</a></p>
+                    </div>
+                    <!-- <button class="ods-button">Primary</button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

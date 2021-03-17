@@ -16,6 +16,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { IncomeTaxComponent } from './income-tax/income-tax.component';
 import { NgoComponent } from './ngo/ngo.component';
 import { PayrollComponent } from './payroll/payroll.component';
+import { IndianOwnershipModule } from './indian-ownership/indian-ownership.module';
+import { LoginComponent } from './Auth/login/login.component';
+import { RegisterComponent } from './Auth/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -32,11 +36,15 @@ import { PayrollComponent } from './payroll/payroll.component';
     IncomeTaxComponent,
     NgoComponent,
     PayrollComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    IndianOwnershipModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

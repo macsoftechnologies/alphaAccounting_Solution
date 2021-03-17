@@ -2,39 +2,213 @@
     <nav>
         <div class="container">
             <div class="nav-section">
-                <div class="logo" [routerLink]="['']">
+                <div class="logo">
                     <img src="assets/images/logo.png">
                 </div>
 
-                <div class="navlinks-section">
+                <div class="navlinks-section main-menu">
                     <div class="menu-icon" (click)="showMenu()">
                         <i class="fa fa-bars open-icon"></i>
                     </div>
-                    <ul class="menu">
-                        <li>
-                            <a>Start Busines</a>
-                        </li>
+                    <div class="nav">
+                        <ul class="menu">
+                            <li>
+                                <a>Start Busines</a>
+                                <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <h3>For Indian Ownership</h3>
 
-                        <li>
-                            <a>Income Tax and compliance</a>
-                        </li>
+                                            <li [routerLink] = "['/IndianOwnership/privatelimitedcompany']">
+                                                 Private limited Company
+                                            </li>
+                                            <li [routerLink] = "['/IndianOwnership/publicLimitedCompany']">
+                                                Public limited Company
+                                            </li>
+                                            <li [routerLink] = "['/IndianOwnership/LLP']">
+                                                LLP(Limited Liability Partnership)
+                                            </li>
+                                            <li [routerLink] = "['/IndianOwnership/OnePersonCompany']">
+                                                One person Company
+                                            </li>
+                                            <li [routerLink] = "['/IndianOwnership/PartnershipFirm']">
+                                                Partnership Firm
+                                            </li>
+                                            <li [routerLink] = "['/IndianOwnership/SoleProprietorship']">
+                                                Sole proprietorship
+                                            </li>
+                                        </div>
 
-                        <li>
-                            <a>GST</a>
-                        </li>
+                                        <div class="sub-menu-list">
+                                            <h3>Special Entities</h3>
 
-                        <li>
-                            <a>NGO</a>
-                        </li>
+                                            <li>Nidhi Company</li>
+                                            <li>Producer Company</li>
+                                        </div>
 
-                        <li>
-                            <a>Payroll</a>
-                        </li>
+                                        <div class="sub-menu-list">
+                                            <h3>Registrations</h3>
 
-                        <li>
-                            <a>Accounting and Bookkeeping</a>
-                        </li>
-                    </ul>
+                                            <li>FSSAI (Food License)</li>
+                                            <li>IEC (Import/Export Code)</li>
+                                            <li>MSME /SSI Registration</li>
+                                            <li>ISO Certification</li>
+                                            <li>Digital Signature Certificate</li>
+                                            <li>Trade license</li>
+                                            <li>Trade Mark</li>
+                                            <li>PAN Application</li>
+                                            <li>TAN Application</li>
+                                        </div>
+                                    </div>
+                                </ul>                                
+                            </li>
+
+                            <li>
+                                <a>Income Tax and compliance</a>
+                                <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <h3>Income Tax</h3>
+
+                                            <li> ITR - 1 Form filing to ITR - 7</li>
+                                            <li> Income tax notice</li>
+                                            <li> Assessment</li>
+                                            <li> Income Tax Return Filing</li>
+                                            <li> Bulk Return Filing</li>
+                                            <li> Respond to Tax Notice</li>
+                                            <li> TDS Return Filing</li>
+                                        </div>
+
+                                        <div class="sub-menu-list">
+                                            <h3>Annual compliance</h3>
+
+                                            <li> Proprietor</li>
+                                            <li> Partner</li>
+                                            <li> Private Limited Company</li>
+                                            <li> LLP</li>
+                                        </div>
+
+                                        <div class="sub-menu-list">
+                                            <h3>Compliances</h3>
+
+                                            <li> Annual Filings</li>
+                                            <li> ROC Compliance</li>
+                                            <li> Maintenance of Minutes</li>
+                                            <li> Allotment of Shares/Transfer of Shares</li>
+                                            <li> Change of Reg. Office</li>
+                                            <li> Change in directors</li>
+                                            <li> Change Authorized capital of company</li>
+                                            <li> DIR-3</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a>GST</a>
+                                <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <!-- <h3>Income Tax</h3> -->
+
+                                            <li>  GST Registration</li>
+                                            <li>  Invoicing</li>
+                                            <li>   Annual Return</li>
+                                            <li>   GST LUT Filing</li>
+                                            <li> GST Return Filing</li>
+                                            <li> E- Way Filing</li>
+                                            <li> GST Registration Cancellation</li>
+                                            <li> Refund Application</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a>NGO</a>
+                                <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <!-- <h3>Income Tax</h3> -->
+
+                                            <li> NGO</li>
+                                            <li> Section 8</li>
+                                            <li>  Trust Registration</li>
+                                            <li>  Society Registration</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a>Payroll</a>
+
+                                <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <!-- <h3>Income Tax</h3> -->
+
+                                            <li>  Payroll</li>
+                                            <li>  PF Registration & ESI</li>
+                                            <li>   PF Return Filing</li>
+                                            <li>   Profession Tax</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+    
+                            <li>
+                                <a>Accounting and Bookkeeping</a>
+                                <!-- <ul class="total-sub-menu">
+                                    <div class="sub-menu">
+                                        <div class="sub-menu-list">
+                                            <h3>For Indian Ownership</h3>
+
+                                            <li>Private limited Company</li>
+                                            <li>Public limited Company</li>
+                                            <li>LLP(Limited Liability Partnership)</li>
+                                            <li>One person Company</li>
+                                            <li>Partnership Firm</li>
+                                            <li>Sole proprietorship</li>
+                                        </div>
+
+                                        <div class="sub-menu-list">
+                                            <h3>Special Entities</h3>
+
+                                            <li>Nidhi Company</li>
+                                            <li>Producer Company</li>
+                                        </div>
+
+                                        <div class="sub-menu-list">
+                                            <h3>Registrations</h3>
+
+                                            <li>FSSAI (Food License)</li>
+                                            <li>IEC (Import/Export Code)</li>
+                                            <li>MSME /SSI Registration</li>
+                                            <li>ISO Certification</li>
+                                            <li>Digital Signature Certificate</li>
+                                            <li>Trade license</li>
+                                            <li>Trade Mark</li>
+                                            <li>PAN Application</li>
+                                            <li>TAN Application</li>
+                                        </div>
+                                    </div>
+                                </ul> -->
+                            </li>
+
+                            <li [routerLink]="['login']">
+                                <a>
+                                    Login
+                                </a>
+                            </li>
+
+                            <li [routerLink]="['register']">
+                                <a>
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
