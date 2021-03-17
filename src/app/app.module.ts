@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +18,9 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { IndianOwnershipModule } from './indian-ownership/indian-ownership.module';
 import { LoginComponent } from './Auth/login/login.component';
 import { RegisterComponent } from './Auth/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import { ReactiveFormsModule } from '@angular/forms'
     AppRoutingModule,
     SharedModule,
     IndianOwnershipModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
