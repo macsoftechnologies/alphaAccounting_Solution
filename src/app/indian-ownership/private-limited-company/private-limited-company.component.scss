@@ -23,7 +23,7 @@
             justify-content: center;
             //   height: 100%;
             //   padding: 31px 0px 0px 0px;
-            padding: 80px 0px 41px 0px;
+            padding: 84px 0px 41px 0px;
             margin: 0px !important;
           }
           h4 {
@@ -148,10 +148,6 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 992px) {
   .privatelimited-wrapper {
     .private-banner {
-      .banner-image {
-      }
-    }
-
     .overlay-left {
       h3 {
         font-size: 35px;
@@ -168,15 +164,16 @@ input::-webkit-inner-spin-button {
     }
   }
 }
+}
 
 @media only screen and (max-width: 768px) {
   .privatelimited-wrapper {
     .private-banner {
-      .banner-image {
-      }
-      .overlay{
-        .overlay-left {
-          width: 100%;
+      
+      
+      .card-body {
+        .rectangle {
+          p{font-size: 18px;}
         }
       }
       
