@@ -3,9 +3,9 @@
     <div class="banner-image">
       <div class="overlay">
         <div class="container">
-          <div class="col-md-12">
+          <div class="col-md-12 overlay-body">
             <div class="row">
-              <div class="col-md-7">
+              <div class="col-lg-8 col-md-12 overlay-left">
                 <h3>Private Limited Company Registration</h3>
                 <div class="hr" style="border-bottom: 1px solid white"></div>
                 <h4>
@@ -17,16 +17,95 @@
                 <h6>SAVE 60% COST..!!!</h6>
                 <h2>(Takes 10-20 days)</h2>
               </div>
-              <div class="col-md-4 card-reg">
+
+              <div class="col-lg-4 col-md-12 card-reg">
                 <div class="card">
                   <div class="card-body">
-                    <input type="text" placeholder="full name" id="name" />
-                    <input type="email" placeholder="email" id="email" />
-                    <input type="tel" placeholder="mobile number" id="number" />
-                    <p><button type="button" id="proceed">proceed</button></p>
+                    <div class="rectangle">
+                      <p>company registration</p>
+                    </div>
+                    <div class="triangle-l"></div>
+                    <!-- <div class="card bg-success text-white"> -->
+                      <!-- <div class="card-body company bg-success text-white">company registration</div> -->
+                    <!-- </div> -->
+                    <form [formGroup]="myform">
+                      <div
+                        class="form-group"
+                        [ngClass]="{
+                          'has-error':
+                            myform.controls.fullname.invalid &&
+                            (myform.controls.fullname.dirty ||
+                              myform.controls.fullname.touched),
+                          'has-success':
+                            myform.controls.fullname.valid &&
+                            (myform.controls.fullname.dirty ||
+                              myform.controls.fullname.touched)
+                        }"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="full name"
+                          id="fullname"
+                          formControlName="fullname"
+                        />
+                      </div>
+                      <div
+                        class="form-group"
+                        [ngClass]="{
+                          'has-error':
+                            myform.controls.email.invalid &&
+                            (myform.controls.email.dirty ||
+                              myform.controls.email.touched),
+                          'has-success':
+                            myform.controls.email.valid &&
+                            (myform.controls.email.dirty ||
+                              myform.controls.email.touched)
+                        }"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="email"
+                          id="email"
+                          formControlName="email"
+                        />
+                      </div>
+                      <div
+                        class="form-group"
+                        [ngClass]="{
+                          'has-error':
+                            myform.controls.number.invalid &&
+                            (myform.controls.number.dirty ||
+                              myform.controls.number.touched),
+                          'has-success':
+                            myform.controls.number.valid &&
+                            (myform.controls.number.dirty ||
+                              myform.controls.number.touched)
+                        }"
+                      >
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="mobile number"
+                          id="number"
+                          formControlName="number"
+                        />
+                      </div>
+                      <button type="button"  id="proceed" (click)="proceed()">proceed</button>
+                    </form>
                   </div>
                 </div>
               </div>
+
+              <!-- <input type="text"  class="form-control" placeholder="full name" id="name" formControlName="fullname" />
+                      <input type="email" placeholder="email" id="email" />
+                      <input
+                        type="tel"
+                        placeholder="mobile number"
+                        id="number"
+                      />
+                      <p><button type="button" id="proceed">proceed</button></p> -->
             </div>
           </div>
         </div>

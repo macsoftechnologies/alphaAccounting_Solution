@@ -18,8 +18,9 @@ import { PayrollComponent } from './payroll/payroll.component';
 import { IndianOwnershipModule } from './indian-ownership/indian-ownership.module';
 import { LoginComponent } from './Auth/login/login.component';
 import { RegisterComponent } from './Auth/register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PayrollComponent,
     LoginComponent,
     RegisterComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IndianOwnershipModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FormsModule
    
   ],
   providers: [],

@@ -10,6 +10,8 @@ import { Routes , RouterModule } from '@angular/router';
 import { StartBusinessComponent } from './start-business/start-business.component';
 import { NidhiCompanyComponent } from './nidhi-company/nidhi-company.component';
 import { ProducerCompanyComponent } from './producer-company/producer-company.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrivateLimitedRegistrationComponent } from './private-limited-registration/private-limited-registration.component';
 
 const routes: Routes = [
   
@@ -46,15 +48,19 @@ const routes: Routes = [
   {
     path: 'SoleProprietorship',
     component: SoleProprietorshipComponent
+  },
+  {
+    path: 'PrivateLimitedRegistration',
+    component: PrivateLimitedRegistrationComponent
   }
 
 ]
 
 
 @NgModule({
-  declarations: [PrivateLimitedCompanyComponent, PublicLimitedCompanyComponent, LimitedLiabilityPartnershipComponent, OnePersonCompanyComponent, PartnershipFirmComponent, SoleProprietorshipComponent, NidhiCompanyComponent, ProducerCompanyComponent],
+  declarations: [PrivateLimitedCompanyComponent, PublicLimitedCompanyComponent, LimitedLiabilityPartnershipComponent, OnePersonCompanyComponent, PartnershipFirmComponent, SoleProprietorshipComponent, NidhiCompanyComponent, ProducerCompanyComponent, PrivateLimitedRegistrationComponent],
   imports: [
-    CommonModule,RouterModule.forChild(routes)
+    CommonModule,FormsModule,ReactiveFormsModule,RouterModule.forChild(routes)
   ]
 })
 export class IndianOwnershipModule { }
