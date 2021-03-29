@@ -1,4 +1,4 @@
-section.privatelimited-registration-wrapper {
+section.limitedliabilty-registration-wrapper {
   background-color: #ececec;
 
   .container.card {
@@ -9,7 +9,7 @@ section.privatelimited-registration-wrapper {
     margin-top: 10px;
   }
 
-  .card-body-titleleft {
+  .limitedliabilty-card-body-titleleft {
     padding-left: 0px;
     padding-right: 0px;
     h2 {
@@ -19,7 +19,7 @@ section.privatelimited-registration-wrapper {
       color: #005191 !important;
     }
     .hr-line {
-      width: 29%;
+      width: 27%;
       border-bottom: 2px solid #005191;
 
       margin-bottom: 39px;
@@ -29,7 +29,7 @@ section.privatelimited-registration-wrapper {
     }
   }
 
-  .card-body-titleright {
+  .limitedliabilty-card-body-titleright {
     margin-top: 7px;
     //   .align {
     //     // align-items: center;
@@ -52,11 +52,11 @@ section.privatelimited-registration-wrapper {
       }
     }
   }
-  .col-md-12.tabs {
+  .col-md-12.limitedliabilty-tabs {
     margin-top: 30px;
     padding: 0px 0px !important;
 
-    #pills-Company{
+    #pills-Company {
       p.filltext {
         margin: 0px 0 16px;
         color: #34495e;
@@ -85,11 +85,13 @@ section.privatelimited-registration-wrapper {
     .labelname {
       font-weight: 600;
       color: #333333;
+      // margin-bottom: 0px;
       //  padding: 0px 0px 5px 0px;
       i {
         color: #790000;
         font-size: 8px;
       }
+      // h4{margin: 0 0 8px 0px !important;}
     }
     .form-group.company {
       margin: 0px 0px 17px 0px;
@@ -100,31 +102,32 @@ section.privatelimited-registration-wrapper {
       border-radius: 0px;
       height: 29px;
       box-shadow: none;
+      font-size: 14px;
     }
-    .addon {
-      button#plus {
-        position: absolute;
-        right: 0px;
-        margin: 37px 48px 0px 0px;
-        border: none;
-        background-color: transparent;
-        box-shadow: none;
-        display: flex;
-      }
-      i {
-        font-size: 18px;
-      }
-      :focus {
-        outline: none;
-      }
-    }
+    // .addon {
+    //   button#plus {
+    //     position: absolute;
+    //     right: 0px;
+    //     margin: 37px 48px 0px 0px;
+    //     border: none;
+    //     background-color: transparent;
+    //     box-shadow: none;
+    //     display: flex;
+    //   }
+    //   i {
+    //     font-size: 18px;
+    //   }
+    //   :focus {
+    //     outline: none;
+    //   }
+    // }
 
-    input.form-control.add {
-      width: 94%;
-      border-radius: 0px;
-      height: 29px;
-      box-shadow: none;
-    }
+    // input.form-control.add {
+    //   width: 50%;
+    //   border-radius: 0px;
+    //   height: 29px;
+    //   box-shadow: none;
+    // }
     input.form-control.address {
       width: 50%;
       height: 29px;
@@ -190,8 +193,7 @@ i.fa.fa-asterisk {
   font-size: 7px;
 }
 
-
-.Director-pro {
+.Partner-pro {
   padding-left: 0px;
   label.Documents {
     font-size: 18px;
@@ -199,149 +201,157 @@ i.fa.fa-asterisk {
     text-transform: capitalize;
   }
 
-.Director-name {
-  margin-bottom: 15px;
-  label.dirname {
-    margin: 7px 0px 10px 0px;
-  }
-  input.form-control.directorname {
-    height: 30px;
-    border-radius: 0px;
-  }
-}
-.pan{
-input.form-control-file.border {
-  margin-bottom: 15px;
-}
-textarea.form-control-txt {
-  width: 100%;
-  resize: none;
-  font-size: 12px;
-  border-color: #ced4da;
-  margin-bottom: 12px;
-}
-}
-.idproof{
-select.id-proof {
-  margin-bottom: 15px;
-  border-color: #ced4da;
-  height: 30px;
-  width: 100%;
-}
-input.form-control-file {
-  margin-bottom: 15px;
-}
-textarea.form-control-txt {
-  width: 100%;
-  resize: none;
-  font-size: 12px;
-  border-color: #ced4da;
-  margin-bottom: 12px;
-}
-}
-button.btn-submit {
-  width: 100px;
-  height: 46px;
-  text-transform: uppercase;
-  background-color: #037fc5;
-  box-shadow: none;
-  border: none;
-  box-sizing: border-box;
-  font-size: 14px;
-  border-radius: 2px;
-  color: white;
-  margin-top: 5px;
-  margin-bottom: 84px;
-}
-:focus {
-  outline: none;
-}
-}
-#pills-Business{
-  .Business-pro{
-label.labelbusiness {
-  margin-top: 5px;
-  margin-bottom: 18px;
-  color: #333;
-    font-weight: 600;
-    font-size: 13px;
-}
-.radiosection-left {
-  padding-left: 0px;
-}
-.form-check {
-  padding-left: 0px;
-  ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding-left: 0px;
-    color: #005191;
-    font-size: 12px;
-    li{
-      margin-bottom: 5px;
-      min-height: 23px;
-    width: 50%;
-   
+  .Partner-name {
+    margin-bottom: 15px;
+    label.parname {
+      margin: 7px 0px 10px 0px;
     }
-
+    input.form-control.partnername {
+      height: 30px;
+      border-radius: 0px;
+    }
   }
-  
-}
-.radio-content {
-  padding-left: 0px;
-  label.labelradio {
-    color: #333;
-    font-weight: 600;
-    font-size: 13px;
-}
-  input.form-control{border-radius: 0px;
-    height: 29px;
-    margin-bottom: 10px;
+  .pan {
+    input.form-control-file.border {
+      margin-bottom: 15px;
+    }
+    textarea.form-control-txt {
+      width: 100%;
+      resize: none;
+      font-size: 12px;
+      border-color: #ced4da;
+      margin-bottom: 12px;
+    }
+  }
+  .idproof {
+    select.id-proof {
+      margin-bottom: 15px;
+      border-color: #ced4da;
+      height: 30px;
+      width: 100%;
+    }
+    input.form-control-file {
+      margin-bottom: 15px;
+    }
+    textarea.form-control-txt {
+      width: 100%;
+      resize: none;
+      font-size: 12px;
+      border-color: #ced4da;
+      margin-bottom: 12px;
+    }
+  }
+  .bank {
+    input.form-control-file.border {
+      margin-bottom: 15px;
+    }
+    textarea.form-control-txt {
+      width: 100%;
+      resize: none;
+      font-size: 12px;
+      border-color: #ced4da;
+      margin-bottom: 12px;
+    }
+  }
+  button.btn-submit {
+    width: 100px;
+    height: 46px;
+    text-transform: uppercase;
+    background-color: #037fc5;
     box-shadow: none;
-    font-size: 13px;
-    color: #333;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 2px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 84px;
+  }
+  :focus {
+    outline: none;
+  }
 }
-}
-button.btn-previous {
-  width: 100px;
-  height: 46px;
-  text-transform: uppercase;
-  background-color: #037fc5;
-  box-shadow: none;
-  border: none;
-  box-sizing: border-box;
-  font-size: 14px;
-  border-radius: 2px;
-  color: white;
-  margin-top: 5px;
-  margin-bottom: 84px;
-  margin-right: 30px;
-}
-:focus {
-  outline: none;
-}
-
-
-}
+#pills-Business {
+  .Business-pro {
+    label.labelbusiness {
+      margin-top: 5px;
+      margin-bottom: 18px;
+      color: #333;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .radiosection-left {
+      padding-left: 0px;
+    }
+    .form-check {
+      padding-left: 0px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding-left: 0px;
+        color: #005191;
+        font-size: 12px;
+        li {
+          margin-bottom: 5px;
+          min-height: 23px;
+          width: 50%;
+        }
+      }
+    }
+    .radio-content {
+      padding-left: 0px;
+      label.labelradio {
+        color: #333;
+        font-weight: 600;
+        font-size: 13px;
+      }
+      input.form-control {
+        border-radius: 0px;
+        height: 29px;
+        margin-bottom: 10px;
+        box-shadow: none;
+        font-size: 13px;
+        color: #333;
+      }
+    }
+    button.btn-previous {
+      width: 100px;
+      height: 46px;
+      text-transform: uppercase;
+      background-color: #037fc5;
+      box-shadow: none;
+      border: none;
+      box-sizing: border-box;
+      font-size: 14px;
+      border-radius: 2px;
+      color: white;
+      margin-top: 5px;
+      margin-bottom: 84px;
+      margin-right: 30px;
+    }
+    :focus {
+      outline: none;
+    }
+  }
 }
 
 // media-queries
 
 @media only screen and (max-width: 1199px) {
-  section.privatelimited-registration-wrapper {
+  section.limitedliabilty-registration-wrapper {
     .row.fullcard-wrapper.card-body {
-      .card-body-titleleft {
+      .limitedliabilty-card-body-titleleft {
         padding-left: 0px;
         padding-right: 0px;
         h2 {
           font-size: 28px;
         }
         .hr-line {
-          width: 25%;
+          width: 28%;
         }
       }
-      .card-body-titleright {
+      .limitedliabilty-card-body-titleright {
         .contact-right {
           padding: 0px 0px 0px 20px;
           h6 {
@@ -353,27 +363,24 @@ button.btn-previous {
           }
         }
       }
-      input.form-control.add {
-        width: 93%;
-      }
     }
   }
 }
 
 @media only screen and (max-width: 992px) {
-  section.privatelimited-registration-wrapper {
+  section.limitedliabilty-registration-wrapper {
     .row.fullcard-wrapper.card-body {
-      .card-body-titleleft {
+      .limitedliabilty-card-body-titleleft {
         padding-left: 0px;
         padding-right: 0px;
         h2 {
-          font-size: 24px;
+          font-size: 28px;
         }
         .hr-line {
           width: 25%;
         }
       }
-      .card-body-titleright {
+      .limitedliabilty-card-body-titleright {
         .contact-right {
           padding: 0px 0px 0px 25px;
           h6 {
@@ -384,26 +391,26 @@ button.btn-previous {
           }
         }
       }
-      input.form-control.add {
-        width: 92%;
-      }
+      // input.form-control.add {
+      //   width: 50%;
+      // }
     }
   }
 }
 @media only screen and (max-width: 768px) {
-  section.privatelimited-registration-wrapper {
+  section.limitedliabilty-registration-wrapper {
     .row.fullcard-wrapper.card-body {
-      .card-body-titleleft {
+      .limitedliabilty-card-body-titleleft {
         padding-left: 0px;
         padding-right: 0px;
         h2 {
-          font-size: 20px;
+          font-size: 28px;
         }
         .hr-line {
-          width: 30%;
+          width: 42%;
         }
       }
-      .card-body-titleright {
+      .limitedliabilty-card-body-titleright {
         .image-left {
           img {
             height: 53px;
@@ -422,33 +429,46 @@ button.btn-previous {
         }
       }
 
-      input.form-control.add {
-        width: 89%;
-      }
+      // input.form-control.add {
+      //   width: 50%;
+      // }
     }
   }
 }
 
 @media only screen and (max-width: 480px) {
-  section.privatelimited-registration-wrapper {
+  section.limitedliabilty-registration-wrapper {
     .row.fullcard-wrapper.card-body {
-      .card-body-titleleft {
+      .limitedliabilty-card-body-titleleft {
+        h2 {
+          font-size: 28px;
+        }
         padding-left: 0px;
         padding-right: 0px;
         .hr-line {
-          width: 25%;
+          width: 23%;
         }
       }
 
-      .card-body-titleright {
+      .limitedliabilty-card-body-titleright {
         margin-top: 3px;
       }
-      .tabs {
+      .limitedliabilty-tabs {
         margin-top: 10px;
-        .addon {
-          button#plus {
-            margin: 37px 38px 0px 0px;
-          }
+        input.form-control.company {
+          width: 100%;
+        }
+        input.form-control.address {
+          width: 100%;
+        }
+        .custom-select {
+          width: 100%;
+        }
+        input.form-control.Pincode {
+          width: 100% !important;
+        }
+        .selectarrow {
+          width: 100%;
         }
       }
       .image-left {
@@ -470,28 +490,26 @@ button.btn-previous {
           margin-top: 5px;
         }
       }
-      input.form-control.add {
-        width: 85% !important;
-      }
+      // input.form-control.add {
+      //   width: 100%;
+      // }
       button.btn-next {
         width: 100%;
       }
-      .tab-navpills-section{
-
-        a#pills-Director-tab {
+      .tab-navpills-section {
+        a#pills-Partner-tab {
           padding-left: 0px;
-      }
-      a#pills-Business-tab {
-        padding-left: 0px;
-      }
-      a#pills-Pricing-tab {
-        padding-left: 0px;
-      }
-      a#pills-abc-tab {
-        padding-left: 0px;
-      }
+        }
+        a#pills-Business-tab {
+          padding-left: 0px;
+        }
+        a#pills-Pricing-tab {
+          padding-left: 0px;
+        }
+        a#pills-abc-tab {
+          padding-left: 0px;
+        }
       }
     }
-    
   }
 }

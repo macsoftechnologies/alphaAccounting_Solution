@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class PrivateLimitedCompanyComponent implements OnInit {
 
-  public myform;
+  // public myform;
 
   constructor(private router:Router) { 
 
@@ -18,20 +18,20 @@ export class PrivateLimitedCompanyComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.myform = new FormGroup({
+    // this.myform = new FormGroup({
       
-      fullname: new FormControl("", [
-        Validators.required,
+    //   fullname: new FormControl("", [
+    //     Validators.required,
         
-      ]),
+    //   ]),
       
-      email: new FormControl("", [
-        Validators.required,
-        Validators.pattern("[^ @]*@[^ @]*")
-      ]),
+    //   email: new FormControl("", [
+    //     Validators.required,
+    //     Validators.pattern("[^ @]*@[^ @]*")
+    //   ]),
       
      
-    });
+    // });
   }
   // onsubmit()
   // {

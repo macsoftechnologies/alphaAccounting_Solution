@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{ Router} from '@angular/router';
 @Component({
   selector: 'app-sole-proprietorship',
   templateUrl: './sole-proprietorship.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoleProprietorshipComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  proceed(){
+    this.router.navigateByUrl('/SoleProprietorshipRegistration')
+  }
 }

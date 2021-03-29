@@ -25,23 +25,9 @@
                       <p>company registration</p>
                     </div>
                     <div class="triangle-l"></div>
-                    <!-- <div class="card bg-success text-white"> -->
-                      <!-- <div class="card-body company bg-success text-white">company registration</div> -->
-                    <!-- </div> -->
-                    <form [formGroup]="myform">
-                      <div
-                        class="form-group"
-                        [ngClass]="{
-                          'has-error':
-                            myform.controls.fullname.invalid &&
-                            (myform.controls.fullname.dirty ||
-                              myform.controls.fullname.touched),
-                          'has-success':
-                            myform.controls.fullname.valid &&
-                            (myform.controls.fullname.dirty ||
-                              myform.controls.fullname.touched)
-                        }"
-                      >
+
+                    <form>
+                      <div class="form-group">
                         <input
                           type="text"
                           class="form-control"
@@ -50,19 +36,7 @@
                           formControlName="fullname"
                         />
                       </div>
-                      <div
-                        class="form-group"
-                        [ngClass]="{
-                          'has-error':
-                            myform.controls.email.invalid &&
-                            (myform.controls.email.dirty ||
-                              myform.controls.email.touched),
-                          'has-success':
-                            myform.controls.email.valid &&
-                            (myform.controls.email.dirty ||
-                              myform.controls.email.touched)
-                        }"
-                      >
+                      <div class="form-group">
                         <input
                           type="text"
                           class="form-control"
@@ -71,19 +45,7 @@
                           formControlName="email"
                         />
                       </div>
-                      <div
-                        class="form-group"
-                        [ngClass]="{
-                          'has-error':
-                            myform.controls.number.invalid &&
-                            (myform.controls.number.dirty ||
-                              myform.controls.number.touched),
-                          'has-success':
-                            myform.controls.number.valid &&
-                            (myform.controls.number.dirty ||
-                              myform.controls.number.touched)
-                        }"
-                      >
+                      <div class="form-group">
                         <input
                           type="number"
                           class="form-control"
@@ -92,34 +54,16 @@
                           formControlName="number"
                         />
                       </div>
-                      <button type="button"  id="proceed" (click)="proceed()">proceed</button>
+                      <button type="button" id="proceed" (click)="proceed()">
+                        proceed
+                      </button>
                     </form>
                   </div>
                 </div>
               </div>
-
-              <!-- <input type="text"  class="form-control" placeholder="full name" id="name" formControlName="fullname" />
-                      <input type="email" placeholder="email" id="email" />
-                      <input
-                        type="tel"
-                        placeholder="mobile number"
-                        id="number"
-                      />
-                      <p><button type="button" id="proceed">proceed</button></p> -->
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-6">
-          <div class=""></div>
-        </div>
-
-        <div class="col-md-6"></div>
       </div>
     </div>
   </div>

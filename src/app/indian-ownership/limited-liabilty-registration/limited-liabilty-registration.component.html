@@ -1,12 +1,12 @@
-<section class="privatelimited-registration-wrapper">
+<section class="limitedliabilty-registration-wrapper">
   <div class="container card">
     <div class="row fullcard-wrapper card-body">
-      <div class="col-md-7 card-body-titleleft">
-        <h2>private limited application form</h2>
+      <div class="col-md-7 limitedliabilty-card-body-titleleft">
+        <h2>LLP application form</h2>
         <div class="hr-line"></div>
       </div>
 
-      <div class="col-md-5 card-body-titleright">
+      <div class="col-md-5 limitedliabilty-card-body-titleright">
         <div class="row align">
           <div class="col-md-2 image-left">
             <img
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 tabs">
+      <div class="col-md-12 limitedliabilty-tabs">
         <div class="tab-navpills-section">
           <ul class="nav nav-pills" id="pills-tab" role="tablist">
             <li class="nav-item">
@@ -38,14 +38,14 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                id="pills-Director-tab"
+                id="pills-Partner-tab"
                 data-toggle="pill"
-                href="#pills-Director"
-                id="pills-Director-tab"
+                href="#pills-Partner"
+                id="pills-Partner-tab"
                 role="tab"
-                aria-controls="pills-Director"
+                aria-controls="pills-Partner"
                 aria-selected="false"
-                >2&nbsp;Director details</a
+                >2&nbsp;Partner details</a
               >
             </li>
             <li class="nav-item">
@@ -99,27 +99,35 @@
             aria-labelledby="pills-Company-tab"
           >
             <p class="filltext">
-              Fill in the below form to apply for Pvt. Ltd. online. It will take
-              less than 5 mins. Your details are secured by SSL.
+              Fill in the below form to apply for LLP online. It will take less
+              than 5 mins. Your details are secured by SSL.
             </p>
             <p class="suggest">
-              Suggest names for your Private Limited (list two alternates, in
-              order of preference).
+              Suggest names for your LLP firm (in order of preference)
             </p>
 
             <form>
-              <div
-                class="form-group company"
-                [ngClass]="{
-                  'has-error':
-                    companyform.controls.namecompany.invalid &&
-                    (companyform.controls.namecompany.dirty ||
-                      companyform.controls.namecompany.touched)
-                }"
-              >
+              <div class="form-group company">
                 <label class="labelname"
-                  >What Is the Name of the Private Limited company you want to
-                  register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  >LLP Name Preference 1&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <h4>
+                  E.g XYZ solutions LLP. Government will approve the name which
+                  is not already registered.
+                </h4>
+
+                <input
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany"
+                />
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >LLP Name Preference 2&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
                   type="text"
@@ -127,28 +135,34 @@
                   placeholder=""
                   formControlName="namecompany"
                 />
-                <h1>Type in the name EXACTLY as you want it to appear.</h1>
-              </div>
-              <div class="form-group company">
-                <div class="addon">
-                  <button type="button" id="plus">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <label class="labelname"
-                  >List two alternates, in order of preference&nbsp;<sup
-                    ><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <input
+                <!-- <input
                   type="text"
                   class="form-control add"
                   placeholder=""
                   formControlName="listadd"
-                />
+                /> -->
               </div>
               <div class="form-group company">
                 <label class="labelname"
-                  >Address of proposed Pvt. Co.&nbsp;<sup
+                  >LLP Name Preference 3&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany"
+                />
+                <!-- <input
+                  type="text"
+                  class="form-control add"
+                  placeholder=""
+                  formControlName="listadd"
+                /> -->
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Address of proposed LLP&nbsp;<sup
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
@@ -160,13 +174,16 @@
               </div>
               <div class="form-group company">
                 <label class="labelname"
-                  >State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  >Select a State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
 
-                <select name="states" class="custom-select mb-3">
+                <select name="states" class="custom-select mb-3" value="select">
+                  <option value selected="selected" class="gf_placeholder">
+                    select
+                  </option>
                   <option value="AndhraPradesh">AndhraPradesh</option>
                   <option value="ArunachalPradesh">ArunachalPradesh</option>
-                  <option selected>Delhi</option>
+                  <option value="Delhi">Delhi</option>
                   <option value="Mumbai">Mumbai</option>
                   <option value="Jaipur">Jaipur</option>
                   <option value="Karnataka">Karnataka</option>
@@ -200,30 +217,32 @@
           </div>
 
           <div
-            id="pills-Director"
+            id="pills-Partner"
             class="tab-pane fade"
             role="tabpanel"
-            aria-labelledby="pills-Director-tab"
+            aria-labelledby="pills-Partner-tab"
           >
-            <div class="col-md-6 Director-pro">
+            <div class="col-md-6 Partner-pro">
               <div class="Documents-pro">
                 <label class="Documents">Documents required : </label>
               </div>
-              <div class="Director-name">
-                <label class="dirname"
-                  >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+              <div class="Partner-name">
+                <label class="parname"
+                  >Partners Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
                   type="text"
-                  class="form-control directorname"
+                  class="form-control partnername"
                   placeholder=""
-                  formControlName="directorname"
+                  formControlName="partnername"
                 />
               </div>
 
               <div class="pan">
                 <label class="labelpan"
-                  >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  >PAN Card or Passport for Foreigners:&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i
+                  ></sup>
                   &nbsp;</label
                 >
                 <input
@@ -239,22 +258,42 @@
 
               <div class="idproof">
                 <label class="labelidproof"
-                  >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  >Drivers License/Aadhar card/Residence card/Election identity
+                  card/Any identity proof issued by the Government:&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <div class="id-proof-file">
                   <select class="id-proof">
                     <option value=""></option>
-                    <option value="Passport">Passport</option>
-                    <option value="Aadhaar Card">Aadhaar Card</option>
+                    <option value="Driving">Driving License</option>
+                    <option value="Aadhaar">Aadhaar Card</option>
+                    <option value="Residence">Residence Card</option>
                     <option value="Election Card or Voter Identity Card">
                       Election Card or Voter Identity Card
                     </option>
-                    <option value="Ration Card">Ration Card</option>
-                    <option value="Driving License">Driving License</option>
+                    <option value="anyother">
+                      Any other identity proof issued by the Government
+                    </option>
                   </select>
                   <input type="file" class="form-control-file" name="file" />
                 </div>
 
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+              <div class="bank">
+                <label class="labelbank"
+                  >Less than 3 months Old Bank Statement or Telephone
+                  Bill:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  &nbsp;</label
+                >
+                <input
+                  type="file"
+                  class="form-control-file border"
+                  name="file"
+                />
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
@@ -285,7 +324,6 @@
                         id="accomodation"
                         name="tab"
                         value="accomodation"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault1"
@@ -299,7 +337,6 @@
                         id="construction"
                         name="tab"
                         value="construction"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault2"
@@ -313,7 +350,6 @@
                         id="consulting"
                         name="tab"
                         value="consulting"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault3"
@@ -327,7 +363,6 @@
                         id="entertainment"
                         name="tab"
                         value="entertainment"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault4"
@@ -341,7 +376,6 @@
                         id="finance"
                         name="tab"
                         value="finance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault5"
@@ -355,7 +389,6 @@
                         id="foodservice"
                         name="tab"
                         value="foodservice"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault6"
@@ -369,7 +402,6 @@
                         id="healthcare"
                         name="tab"
                         value="health"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault7"
@@ -383,7 +415,6 @@
                         id="insurance"
                         name="tab"
                         value="insurance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault8"
@@ -397,12 +428,9 @@
                         id="manufacturing"
                         name="tab"
                         value="manufacturing"
-                        
                         class="form-check-label"
                         for="flexRadioDefault9"
-                      >&nbsp;&nbsp;<label>
-                        Manufacturing</label
-                      >
+                      />&nbsp;&nbsp;<label> Manufacturing</label>
                     </li>
                     <li class="radio-professional">
                       <input
@@ -410,7 +438,6 @@
                         id="professional"
                         name="tab"
                         value="professional"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -424,7 +451,6 @@
                         id="realestate"
                         name="tab"
                         value="realestate"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault11"
@@ -438,7 +464,6 @@
                         id="rental"
                         name="tab"
                         value="rental"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault12"
@@ -452,7 +477,6 @@
                         id="retail"
                         name="tab"
                         value="retail"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault13"
@@ -466,7 +490,6 @@
                         id="social"
                         name="tab"
                         value="social"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault14"
@@ -480,7 +503,6 @@
                         id="technology"
                         name="tab"
                         value="technology"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault15"
@@ -494,7 +516,6 @@
                         id="transportation"
                         name="tab"
                         value="transportation"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault16"
@@ -508,7 +529,6 @@
                         id="warehousing"
                         name="tab"
                         value="warehousing"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -522,7 +542,6 @@
                         id="wholesale"
                         name="tab"
                         value="wholesale"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -536,7 +555,6 @@
                         id="other"
                         name="tab"
                         value="other"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -777,26 +795,31 @@
                       >In case your option is other&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
                     ></label>
-                    <h3>Please describe what your business will be doing.
-                    </h3>
+                    <h3>Please describe what your business will be doing.</h3>
                     <input
                       type="text"
                       class="form-control other"
                       placeholder=""
                       formControlName="other"
                     />
-                  </div><br>
-
+                  </div>
+                  <br />
                 </div>
-              
+
                 <div
-          class="hr-dotted"
-          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-        ></div>
-        <div class="previous-next">
-          <a href="#previous"><button type="button" class="btn-previous" >PREVIOUS</button></a>
-          <a href="#next"><button type="button" class="btn-next">NEXT</button></a>
-        </div>
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -805,17 +828,3 @@
     </div>
   </div>
 </section>
-<!-- <p>How many check boxes do you want when clicked on a radio button?</p>
-<input type="radio" name="tab" value="igotnone" (click)="show1();" />
-None
-<input type="radio" name="tab" value="igottwo" (click)="show2();" />
-Two
-
-<div id="div1" class="hide">
-  <hr><p>Okay Cool! Here are those two...</p>
-
-</div>
-<div id="div2" class="hide">
-  <hr><p>hello world...</p>
-
-</div> -->
