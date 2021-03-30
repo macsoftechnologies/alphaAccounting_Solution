@@ -12,7 +12,5 @@ export class OnePersonCompanyRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  proceed(){
-    this.router.navigateByUrl('/OPCRegistration')
-  }
+  
 }

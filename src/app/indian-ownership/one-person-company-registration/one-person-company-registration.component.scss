@@ -79,7 +79,6 @@ section.partnership-registration-wrapper {
         padding-top: 10px;
         font-size: 13px;
         padding-bottom: 10px;
-
       }
     }
 
@@ -149,42 +148,41 @@ section.partnership-registration-wrapper {
       box-shadow: none;
       font-size: 13px;
     }
-    .director-info{
-
-        .director-details-left {
-            // padding-left: 0px;
-            padding-right: 0px;
-            .form-group.director {
-                margin-bottom: 30px;
-            }
-            input.form-control.directorinfo {
-                border-radius: 0px;
-                height: 29px;
-                box-shadow: none;
-                font-size: 13px;
-            }
-            input.form-control.Mobile {
-                border-radius: 0px;
-                height: 29px;
-                box-shadow: none;
-                font-size: 13px;
-            }
-        }
-        .director-details-right {
-            .form-group.addressdirector {
-                margin-bottom: 30px;
-            }
-            input.form-control.addressdirector {
-                border-radius: 0px;
-                height: 29px;
-                box-shadow: none;
-                font-size: 13px;
-            }
-        }
+    .director-info {
+      .director-details-left {
         
+          padding-right: 0px;
+      
+        // padding-left: 0px;
+        // padding-right: 0px;
+        .form-group.director {
+          margin-bottom: 30px;
+        }
+        input.form-control.directorinfo {
+          border-radius: 0px;
+          height: 29px;
+          box-shadow: none;
+          font-size: 13px;
+        }
+        input.form-control.Mobile {
+          border-radius: 0px;
+          height: 29px;
+          box-shadow: none;
+          font-size: 13px;
+        }
+      }
+      .director-details-right {
+        .form-group.addressdirector {
+          margin-bottom: 30px;
+        }
+        input.form-control.addressdirector {
+          border-radius: 0px;
+          height: 29px;
+          box-shadow: none;
+          font-size: 13px;
+        }
+      }
     }
-    
-
 
     button.btn-next {
       width: 100px;
@@ -370,7 +368,7 @@ i.fa.fa-asterisk {
           font-size: 28px;
         }
         .hr-line {
-          width: 28%;
+          width: 30%;
         }
       }
       .partnership-card-body-titleright {
@@ -399,7 +397,7 @@ i.fa.fa-asterisk {
           font-size: 28px;
         }
         .hr-line {
-          width: 25%;
+          width: 30%;
         }
       }
       .partnership-card-body-titleright {
@@ -450,6 +448,14 @@ i.fa.fa-asterisk {
           }
         }
       }
+      .partnership-tabs {
+        a#pills-Pricing-tab {
+          padding-left: 0px;
+        }
+        a#pills-abc-tab {
+          padding-left: 0px;
+        }
+      }
 
       // input.form-control.add {
       //   width: 50%;
@@ -492,6 +498,13 @@ i.fa.fa-asterisk {
         .selectarrow {
           width: 100%;
         }
+        .director-info{
+          .director-details-left{
+            input.form-control.directorinfo{ width: 97%;}
+            input.form-control.Mobile{width: 97%;}
+          }
+        }
+       
       }
       .image-left {
         padding-left: 0px;

@@ -1,0 +1,507 @@
+section.privatelimited-registration-wrapper {
+    background-color: #ececec;
+  
+    .container.card {
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      top: 20px;
+    }
+    .row.fullcard-wrapper.card-body {
+      margin-top: 10px;
+    }
+  
+    .card-body-titleleft {
+      padding-left: 0px;
+      padding-right: 0px;
+      h2 {
+        font-size: 28px;
+        text-transform: capitalize;
+        padding: 16px 0px 0px 0px;
+        color: #005191 !important;
+      }
+      .hr-line {
+        width: 29%;
+        border-bottom: 2px solid #005191;
+  
+        margin-bottom: 39px;
+      }
+      .buttons-labels {
+        padding: 55px 0px 0px 0px;
+      }
+    }
+  
+    .card-body-titleright {
+      margin-top: 7px;
+      //   .align {
+      //     // align-items: center;
+      //   }
+      .image-left {
+        img {
+          height: 60px;
+        }
+      }
+      .contact-right {
+        margin-top: 10px;
+        padding: 0px 0px 0px 8px;
+  
+        h6 {
+          font-size: 18px;
+        }
+        p {
+          color: #747474;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .col-md-12.tabs {
+      margin-top: 30px;
+      padding: 0px 0px !important;
+  
+      #pills-Company{
+        p.filltext {
+          margin: 0px 0 16px;
+          color: #34495e;
+          font-size: 14px;
+        }
+  
+        p.suggest {
+          color: #34495e;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+      .form-group.company {
+        h1 {
+          color: #34495e;
+          font-size: 17px;
+          padding: 10px 0px 0px 0px;
+        }
+      }
+  
+      a#pills-Company-tab {
+        // background-color: transparent;
+        // color: black;
+        padding-left: 0px;
+      }
+      .labelname {
+        font-weight: 600;
+        color: #333333;
+        //  padding: 0px 0px 5px 0px;
+        i {
+          color: #790000;
+          font-size: 8px;
+        }
+      }
+      .form-group.company {
+        margin: 0px 0px 17px 0px;
+      }
+  
+      input.form-control.company {
+        width: 50%;
+        border-radius: 0px;
+        height: 29px;
+        box-shadow: none;
+      }
+      .addon {
+        button#plus {
+          position: absolute;
+          right: 0px;
+          margin: 37px 48px 0px 0px;
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+          display: flex;
+        }
+        i {
+          font-size: 18px;
+        }
+        :focus {
+          outline: none;
+        }
+      }
+  
+      input.form-control.add {
+        width: 94%;
+        border-radius: 0px;
+        height: 29px;
+        box-shadow: none;
+      }
+      input.form-control.address {
+        width: 50%;
+        height: 29px;
+        border-radius: 0px;
+        box-shadow: none;
+      }
+  
+      .custom-select {
+        background: none !important;
+        width: 50%;
+        display: flex;
+        border-radius: 0px;
+        font-size: 14px;
+        position: absolute;
+        box-shadow: none;
+      }
+      .selectarrow {
+        position: relative;
+        padding: 8px 0px 0px 0px;
+        font-size: 16px;
+        color: #98b7d6;
+        width: 50%;
+        i {
+          position: absolute;
+          right: 0;
+          padding-right: 9px;
+          pointer-events: none;
+          padding-top: 2px;
+        }
+      }
+      input.form-control.Pincode {
+        width: 50%;
+        border-radius: 0px;
+        height: 29px;
+        box-shadow: none;
+      }
+      button.btn-next {
+        width: 100px;
+        height: 46px;
+        text-transform: uppercase;
+        background-color: #037fc5;
+        box-shadow: none;
+        border: none;
+        box-sizing: border-box;
+        font-size: 14px;
+        border-radius: 2px;
+        color: white;
+        margin-top: 5px;
+        margin-bottom: 84px;
+      }
+      :focus {
+        outline: none;
+      }
+    }
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  i.fa.fa-asterisk {
+    color: #e00404;
+    font-size: 7px;
+  }
+  
+  
+  .Director-pro {
+    padding-left: 0px;
+    label.Documents {
+      font-size: 18px;
+      margin-top: 10px;
+      text-transform: capitalize;
+    }
+  
+  .Director-name {
+    margin-bottom: 15px;
+    label.dirname {
+      margin: 7px 0px 10px 0px;
+    }
+    input.form-control.directorname {
+      height: 30px;
+      border-radius: 0px;
+    }
+  }
+  .pan{
+  input.form-control-file.border {
+    margin-bottom: 15px;
+  }
+  textarea.form-control-txt {
+    width: 100%;
+    resize: none;
+    font-size: 12px;
+    border-color: #ced4da;
+    margin-bottom: 12px;
+  }
+  }
+  .idproof{
+  select.id-proof {
+    margin-bottom: 15px;
+    border-color: #ced4da;
+    height: 30px;
+    width: 100%;
+  }
+  input.form-control-file {
+    margin-bottom: 15px;
+  }
+  textarea.form-control-txt {
+    width: 100%;
+    resize: none;
+    font-size: 12px;
+    border-color: #ced4da;
+    margin-bottom: 12px;
+  }
+  }
+  button.btn-submit {
+    width: 100px;
+    height: 46px;
+    text-transform: uppercase;
+    background-color: #037fc5;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 2px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 84px;
+  }
+  :focus {
+    outline: none;
+  }
+  }
+  #pills-Business{
+    .Business-pro{
+  label.labelbusiness {
+    margin-top: 5px;
+    margin-bottom: 18px;
+    color: #333;
+      font-weight: 600;
+      font-size: 13px;
+  }
+  .radiosection-left {
+    padding-left: 0px;
+  }
+  .form-check {
+    padding-left: 0px;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding-left: 0px;
+      color: #005191;
+      font-size: 12px;
+      li{
+        margin-bottom: 5px;
+        min-height: 23px;
+      width: 50%;
+     
+      }
+  
+    }
+    
+  }
+  .radio-content {
+    padding-left: 0px;
+    label.labelradio {
+      color: #333;
+      font-weight: 600;
+      font-size: 13px;
+  }
+    input.form-control{border-radius: 0px;
+      height: 29px;
+      margin-bottom: 10px;
+      box-shadow: none;
+      font-size: 13px;
+      color: #333;
+  }
+  }
+  button.btn-previous {
+    width: 100px;
+    height: 46px;
+    text-transform: uppercase;
+    background-color: #037fc5;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 2px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 84px;
+    margin-right: 30px;
+  }
+  :focus {
+    outline: none;
+  }
+  
+  
+  }
+  }
+  
+  // media-queries
+  
+  @media only screen and (max-width: 1199px) {
+    section.privatelimited-registration-wrapper {
+      .row.fullcard-wrapper.card-body {
+        .card-body-titleleft {
+          padding-left: 0px;
+          padding-right: 0px;
+          h2 {
+            font-size: 28px;
+          }
+          .hr-line {
+            width: 30%;
+          }
+        }
+        .card-body-titleright {
+          .contact-right {
+            padding: 0px 0px 0px 20px;
+            h6 {
+              font-size: 18px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+        input.form-control.add {
+          width: 93%;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+    section.privatelimited-registration-wrapper {
+      .row.fullcard-wrapper.card-body {
+        .card-body-titleleft {
+          padding-left: 0px;
+          padding-right: 0px;
+          h2 {
+            font-size: 26px;
+          }
+          .hr-line {
+            width: 26%;
+          }
+        }
+        .card-body-titleright {
+          .contact-right {
+            padding: 0px 0px 0px 25px;
+            h6 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+        input.form-control.add {
+          width: 92%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    section.privatelimited-registration-wrapper {
+      .row.fullcard-wrapper.card-body {
+        .card-body-titleleft {
+          padding-left: 0px;
+          padding-right: 0px;
+          h2 {
+            font-size: 22px;
+          }
+          .hr-line {
+            width: 35%;
+          }
+        }
+        .card-body-titleright {
+          .image-left {
+            img {
+              height: 53px;
+            }
+          }
+  
+          .contact-right {
+            padding: 0px 0px 0px 30px;
+            margin-top: 10px;
+            h6 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+  
+        input.form-control.add {
+          width: 89%;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    section.privatelimited-registration-wrapper {
+      .row.fullcard-wrapper.card-body {
+        .card-body-titleleft {
+          padding-left: 0px;
+          padding-right: 0px;
+          h2{font-size:26px;}
+          .hr-line {
+            width: 25%;
+          }
+        }
+  
+        .card-body-titleright {
+          margin-top: 3px;
+        }
+        .tabs {
+          margin-top: 10px;
+          input.form-control.company {
+            width: 100%;
+          }
+          input.form-control.address {
+            width: 100%;
+          }
+          input.form-control.Pincode {
+            width: 100%;
+          }
+          .custom-select{
+            width: 100%;
+            
+          }
+          .selectarrow{width: 100%;}
+          
+        }
+        .image-left {
+          padding-left: 0px;
+        }
+        li.nav-item {
+          width: 100%;
+          margin-bottom: 5px;
+  
+          a.tab-link {
+            padding-left: 0px;
+          }
+        }
+  
+        .contact-right {
+          padding-left: 0px !important;
+          h6 {
+            font-size: 18px;
+            margin-top: 5px;
+          }
+        }
+        
+        button.btn-next {
+          width: 100%;
+        }
+        .tab-navpills-section{
+  
+          a#pills-Director-tab {
+            padding-left: 0px;
+        }
+        a#pills-Business-tab {
+          padding-left: 0px;
+        }
+        a#pills-Pricing-tab {
+          padding-left: 0px;
+        }
+        a#pills-abc-tab {
+          padding-left: 0px;
+        }
+        }
+      }
+      
+    }
+  }
+  

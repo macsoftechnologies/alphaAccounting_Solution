@@ -1,1 +1,949 @@
-<p>sole-proprietorship-registration works!</p>
+<section class="partnership-registration-wrapper">
+  <div class="container card">
+    <div class="row fullcard-wrapper card-body">
+      <div class="col-md-7 partnership-card-body-titleleft">
+        <h2>Proprietorship application form</h2>
+        <div class="hr-line"></div>
+      </div>
+
+      <div class="col-md-5 partnership-card-body-titleright">
+        <div class="row align">
+          <div class="col-md-2 image-left">
+            <img
+              src="../../../assets/images/contact-us-legalraasta-form-1.png"
+            />
+          </div>
+          <div class="col-md-10 contact-right">
+            <h6>Have any Problems?</h6>
+            <p>Call us now at +91-875 000 8585</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 partnership-tabs">
+        <div class="tab-navpills-section">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-toggle="pill"
+                href="#pills-Company"
+                id="pills-Company-tab"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+                >1&nbsp;Firm & Owner details</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Partner-tab"
+                data-toggle="pill"
+                href="#pills-Partner"
+                id="pills-Partner-tab"
+                role="tab"
+                aria-controls="pills-Partner"
+                aria-selected="false"
+                >2&nbsp;Director Details</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Business-tab"
+                data-toggle="pill"
+                href="#pills-Business"
+                role="tab"
+                aria-controls="pills-Business"
+                aria-selected="false"
+                >3&nbsp;Business Activity</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Pricing-tab"
+                data-toggle="pill"
+                href="#pills-Pricing"
+                role="tab"
+                aria-controls="pills-Pricing"
+                aria-selected="false"
+                >3&nbsp;Pricing and Packages</a
+              >
+            </li>
+            <!-- <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-abc-tab"
+                  data-toggle="pill"
+                  href="#pills-abc"
+                  role="tab"
+                  aria-controls="pills-abc"
+                  aria-selected="false"
+                  >4</a
+                >
+              </li> -->
+          </ul>
+        </div>
+        <div
+          class="hr-dotted"
+          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+        ></div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            id="pills-Company"
+            class="tab-pane fade show active"
+            role="tabpanel"
+            aria-labelledby="pills-Company-tab"
+          >
+            <p class="filltext">
+              Fill in the below form to apply for Proprietorship online. It will
+              take less than 5 mins. Your details are secured by SSL.
+            </p>
+            <form>
+              <div class="form-group company">
+                <label class="labelnamecompany"
+                  >What Is the name of the One Proprietorship Firm you want to
+                  register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <h3>Type in the name exactly as you want it to appear.</h3>
+
+                <input
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany"
+                />
+              </div>
+
+              <div class="form-group company">
+                <label class="labelname"
+                  >Nature of Business&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="text"
+                  class="form-control address"
+                  placeholder=""
+                  formControlName="address"
+                />
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Address of Business Place&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="text"
+                  class="form-control address"
+                  placeholder=""
+                  formControlName="address"
+                />
+              </div>
+
+              <div class="form-group company">
+                <label class="labelname"
+                  >State of Business Place&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+
+                <select name="states" class="custom-select mb-3" value="select">
+                  <option value="AndhraPradesh">AndhraPradesh</option>
+                  <option value="ArunachalPradesh">ArunachalPradesh</option>
+                  <option value="Delhi" selected>Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Karnataka">Karnataka</option>
+                </select>
+                <div class="selectarrow">
+                  <i
+                    class="fa fa-angle-down"
+                    aria-hidden="true"
+                    aria-disabled="true"
+                  ></i>
+                </div>
+              </div>
+              <br />
+              <div class="form-group company-pin">
+                <label class="labelname"
+                  >Pin Code of Business Place&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="number"
+                  class="form-control Pincode"
+                  placeholder=""
+                  formControlName="Pincode"
+                />
+              </div>
+
+              <div class="director-info">
+                <div class=" director-details">
+                  <div class="director-details-left">
+                    <div class="form-group director">
+                      <label class="labelname"
+                        >Name of the Proprietor&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="text"
+                        class="form-control directorinfo"
+                        placeholder=""
+                        formControlName="directorinfo"
+                      />
+                    </div>
+                    <div class="category-checkbox">
+                      <label class="labelcheckbox"
+                        >Category of Proprietor&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <div class="checkbox-caste">
+                        <ul class="check">
+                          <li class="check-obc">
+                            <input
+                              type="checkbox"
+                              id="checkgeneral"
+                              class="check-general"
+                              value=""
+                            /><label class="general">&nbsp;&nbsp;General</label>
+                          </li>
+                          <li class="check-obc">
+                            <input
+                              type="checkbox"
+                              id="checkobc"
+                              class="check-obc"
+                              value=""
+                            /><label class="OBC">&nbsp;&nbsp;OBC</label>
+                          </li>
+                          <li class="check-obc">
+                            <input
+                              type="checkbox"
+                              id="checksc"
+                              class="check-sc"
+                              value=""
+                            /><label class="SC">&nbsp;&nbsp;SC</label>
+                          </li>
+                          <li class="check-obc">
+                            <input
+                              type="checkbox"
+                              id="checkst"
+                              class="check-st"
+                              value=""
+                            /><label class="ST">&nbsp;&nbsp;ST</label>
+                          </li>
+                          <li class="check-obc">
+                            <input
+                              type="checkbox"
+                              id="checkother"
+                              class="check-other"
+                              value=""
+                            /><label class="Other">&nbsp;&nbsp;Other</label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="form-group director">
+                      <label class="labelname"
+                        >Address of Proprietor&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="text"
+                        class="form-control directorinfo"
+                        placeholder=""
+                        formControlName="directorinfo"
+                      />
+                    </div>
+                    <div class="form-group director-prop">
+                      <label class="labelname"
+                        >State of Proprietor&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+
+                      <select
+                        name="states"
+                        class="custom-select mb-3"
+                        value="select"
+                      >
+                        <option value="AndhraPradesh">AndhraPradesh</option>
+                        <option value="ArunachalPradesh">
+                          ArunachalPradesh
+                        </option>
+                        <option value="Delhi" selected>Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Karnataka">Karnataka</option>
+                      </select>
+                      <div class="selectarrow">
+                        <i
+                          class="fa fa-angle-down"
+                          aria-hidden="true"
+                          aria-disabled="true"
+                        ></i>
+                      </div>
+                    </div>
+                    <div class="form-group director">
+                      <label class="labelname"
+                        >Pin Code of Proprietor &nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="number"
+                        class="form-control Pincode"
+                        placeholder=""
+                        formControlName="Pincode"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-md-6 director-details-right">
+                    <div class="form-group addressdirector">
+                      <label class="labelname"
+                        >Full Address of Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="text"
+                        class="form-control addressdirector"
+                        placeholder=""
+                        formControlName="addressdirector"
+                      />
+                    </div>
+                    <div class="form-group addressdirector">
+                      <label class="labelname"
+                        >Email of the Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        type="text"
+                        class="form-control addressdirector"
+                        placeholder=""
+                        formControlName="addressdirector"
+                      />
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div
+                class="hr-dotted"
+                style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+              ></div>
+              <button type="submit" class="btn-next">Next</button>
+            </form>
+          </div>
+
+          <div
+            id="pills-Partner"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Partner-tab"
+          >
+            <div class="col-md-6 Partner-pro">
+              <div class="Documents-pro">
+                <label class="Documents">Documents required : </label>
+              </div>
+              <div class="Partner-name">
+                <label class="parname"
+                  >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="text"
+                  class="form-control partnername"
+                  placeholder=""
+                  formControlName="partnername"
+                />
+              </div>
+              <div class="pan">
+                <label class="labelpan"
+                  >Aadhar Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  &nbsp;</label
+                >
+                <input
+                  type="file"
+                  class="form-control-file border"
+                  name="file"
+                />
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+
+              <div class="pan">
+                <label class="labelpan"
+                  >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  &nbsp;</label
+                >
+                <input
+                  type="file"
+                  class="form-control-file border"
+                  name="file"
+                />
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+              <div class="pan">
+                <label class="labelpan"
+                  >Bank Account:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  &nbsp;</label
+                >
+                <input
+                  type="file"
+                  class="form-control-file border"
+                  name="file"
+                />
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+              <div class="pan">
+                <label class="labelpan"
+                  >Registered office proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                  &nbsp;</label
+                >
+                <input
+                  type="file"
+                  class="form-control-file border"
+                  name="file"
+                />
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">Submit</button>
+            </div>
+          </div>
+          <div
+            id="pills-Business"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Business-tab"
+          >
+            <div class="Business-pro">
+              <div class="Business-name">
+                <label class="labelbusiness"
+                  >What will your Business be doing?&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+              </div>
+              <div class="radiosection-left">
+                <div class="form-check">
+                  <ul class="radio-button" id="radio-check">
+                    <li class="radio-accomodation">
+                      <input
+                        type="radio"
+                        id="accomodation"
+                        name="tab"
+                        value="accomodation"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        Accomodations</label
+                      >
+                    </li>
+                    <li class="radio-construction">
+                      <input
+                        type="radio"
+                        id="construction"
+                        name="tab"
+                        value="construction"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault2"
+                      >
+                        Construction</label
+                      >
+                    </li>
+                    <li class="radio-consulting">
+                      <input
+                        type="radio"
+                        id="consulting"
+                        name="tab"
+                        value="consulting"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault3"
+                      >
+                        Consulting</label
+                      >
+                    </li>
+                    <li class="radio-entertainment">
+                      <input
+                        type="radio"
+                        id="entertainment"
+                        name="tab"
+                        value="entertainment"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault4"
+                      >
+                        Entertainment</label
+                      >
+                    </li>
+                    <li class="radio-finance">
+                      <input
+                        type="radio"
+                        id="finance"
+                        name="tab"
+                        value="finance"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault5"
+                      >
+                        Finance</label
+                      >
+                    </li>
+                    <li class="radio-foodservice">
+                      <input
+                        type="radio"
+                        id="foodservice"
+                        name="tab"
+                        value="foodservice"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault6"
+                      >
+                        Food Service</label
+                      >
+                    </li>
+                    <li class="radio-health">
+                      <input
+                        type="radio"
+                        id="healthcare"
+                        name="tab"
+                        value="health"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault7"
+                      >
+                        Health Care</label
+                      >
+                    </li>
+                    <li class="radio-insurance">
+                      <input
+                        type="radio"
+                        id="insurance"
+                        name="tab"
+                        value="insurance"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault8"
+                      >
+                        Insurance</label
+                      >
+                    </li>
+                    <li class="radio-manufacturing">
+                      <input
+                        type="radio"
+                        id="manufacturing"
+                        name="tab"
+                        value="manufacturing"
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      />&nbsp;&nbsp;<label> Manufacturing</label>
+                    </li>
+                    <li class="radio-professional">
+                      <input
+                        type="radio"
+                        id="professional"
+                        name="tab"
+                        value="professional"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        Professional</label
+                      >
+                    </li>
+                    <li class="radio-realestate">
+                      <input
+                        type="radio"
+                        id="realestate"
+                        name="tab"
+                        value="realestate"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault11"
+                      >
+                        Real Estate</label
+                      >
+                    </li>
+                    <li class="radio-rental">
+                      <input
+                        type="radio"
+                        id="rental"
+                        name="tab"
+                        value="rental"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault12"
+                      >
+                        Rental & Leasing</label
+                      >
+                    </li>
+                    <li class="radio-retail">
+                      <input
+                        type="radio"
+                        id="retail"
+                        name="tab"
+                        value="retail"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault13"
+                      >
+                        Retail</label
+                      >
+                    </li>
+                    <li class="radio-social">
+                      <input
+                        type="radio"
+                        id="social"
+                        name="tab"
+                        value="social"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault14"
+                      >
+                        Social Assistance</label
+                      >
+                    </li>
+                    <li class="radio-technology">
+                      <input
+                        type="radio"
+                        id="technology"
+                        name="tab"
+                        value="technology"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault15"
+                      >
+                        Technology</label
+                      >
+                    </li>
+                    <li class="radio-transportation">
+                      <input
+                        type="radio"
+                        id="transportation"
+                        name="tab"
+                        value="transportation"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault16"
+                      >
+                        Transportation</label
+                      >
+                    </li>
+                    <li class="radio-warehousing">
+                      <input
+                        type="radio"
+                        id="warehousing"
+                        name="tab"
+                        value="warehousing"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        Ware Housing</label
+                      >
+                    </li>
+                    <li class="radio-wholesale">
+                      <input
+                        type="radio"
+                        id="wholesale"
+                        name="tab"
+                        value="wholesale"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        Wholesale</label
+                      >
+                    </li>
+                    <li class="radio-other">
+                      <input
+                        type="radio"
+                        id="other"
+                        name="tab"
+                        value="other"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        Other</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6 radio-content">
+                  <div id="accomodation" class="accomodation-pro">
+                    <label class="labelradio"
+                      >what will you do in accomodation?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control accomodation"
+                      placeholder=""
+                      formControlName="accomodation"
+                    />
+                  </div>
+                  <div id="construction" class="construction-pro">
+                    <label class="labelradio"
+                      >what will you do in construction?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control construction"
+                      placeholder=""
+                      formControlName="construction"
+                    />
+                  </div>
+                  <div id="consulting" class="consulting-pro">
+                    <label class="labelradio"
+                      >what will you do in consulting?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control consulting"
+                      placeholder=""
+                      formControlName="consulting"
+                    />
+                    <h3>
+                      Describe the Type of Consulting service you provide.
+                      (Management, Marketing etc.)
+                    </h3>
+                  </div>
+                  <div id="entertainment" class="entertainment-pro">
+                    <label class="labelradio"
+                      >what will you do in entertainment?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control entertainment"
+                      placeholder=""
+                      formControlName="entertainment"
+                    />
+                  </div>
+                  <div id="finance" class="finance-pro">
+                    <label class="labelradio"
+                      >what will you do in finance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control finance"
+                      placeholder=""
+                      formControlName="finance"
+                    />
+                  </div>
+                  <div id="foodservice" class="foodservice-pro">
+                    <label class="labelradio"
+                      >what will you do in foodservice?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control foodservice"
+                      placeholder=""
+                      formControlName="foodservice"
+                    />
+                  </div>
+                  <div id="health" class="health-pro">
+                    <label class="labelradio"
+                      >what will you do in health care?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control health"
+                      placeholder=""
+                      formControlName="health"
+                    />
+                  </div>
+                  <div id="insurance" class="insurance-pro">
+                    <label class="labelradio"
+                      >what will you do in insurance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control insurance"
+                      placeholder=""
+                      formControlName="insurance"
+                    />
+                  </div>
+                  <div id="manufacturing" class="manufacturing-pro">
+                    <label class="labelradio"
+                      >what will you do in manufacturing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control manufacturing"
+                      placeholder=""
+                      formControlName="manufacturing"
+                    />
+                    <h3>
+                      Describe the type of goods you make and the primary
+                      material used for making them.(For Example Wood
+                      Furniture).
+                    </h3>
+                  </div>
+                  <div id="professional" class="professional-pro">
+                    <label class="labelradio"
+                      >what will you do in profession?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control professional"
+                      placeholder=""
+                      formControlName="professional"
+                    />
+                  </div>
+                  <div id="realestate" class="realestate-pro">
+                    <label class="labelradio"
+                      >what will you do in real estate?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control realestate"
+                      placeholder=""
+                      formControlName="realestate"
+                    />
+                  </div>
+                  <div id="rental" class="rental-pro">
+                    <label class="labelradio"
+                      >what will you do in rental & leasing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control rental"
+                      placeholder=""
+                      formControlName="rental"
+                    />
+                  </div>
+                  <div id="retail" class="retail-pro">
+                    <label class="labelradio"
+                      >what will you do in retail?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control retail"
+                      placeholder=""
+                      formControlName="retail"
+                    />
+                  </div>
+                  <div id="social" class="social-pro">
+                    <label class="labelradio"
+                      >what will you do in social assistance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control social"
+                      placeholder=""
+                      formControlName="social"
+                    />
+                  </div>
+                  <div id="technology" class="technology-pro">
+                    <label class="labelradio"
+                      >What kind of technology business you will do?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control technology"
+                      placeholder=""
+                      formControlName="technology"
+                    />
+                  </div>
+                  <div id="transportation" class="transportation-pro">
+                    <label class="labelradio"
+                      >what will you do in transportation ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control transportation"
+                      placeholder=""
+                      formControlName="transportation"
+                    />
+                  </div>
+                  <div id="warehousing" class="warehousing-pro">
+                    <label class="labelradio"
+                      >What kind of warehousing business you will do ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control warehousing"
+                      placeholder=""
+                      formControlName="warehousing"
+                    />
+                  </div>
+                  <div id="wholesale" class="wholesale-pro">
+                    <label class="labelradio"
+                      >What will you do in wholesale ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control wholesale"
+                      placeholder=""
+                      formControlName="wholesale"
+                    />
+                  </div>
+                  <div id="other" class="other-pro">
+                    <label class="labelradio"
+                      >In case your option is other&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <h3>Please describe what your business will be doing.</h3>
+                    <input
+                      type="text"
+                      class="form-control other"
+                      placeholder=""
+                      formControlName="other"
+                    />
+                  </div>
+                  <br />
+                </div>
+
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

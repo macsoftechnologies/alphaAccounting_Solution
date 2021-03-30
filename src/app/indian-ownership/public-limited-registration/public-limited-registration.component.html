@@ -2,7 +2,7 @@
   <div class="container card">
     <div class="row fullcard-wrapper card-body">
       <div class="col-md-7 card-body-titleleft">
-        <h2>private limited application form</h2>
+        <h2>Public limited application form</h2>
         <div class="hr-line"></div>
       </div>
 
@@ -99,26 +99,21 @@
             aria-labelledby="pills-Company-tab"
           >
             <p class="filltext">
-              Fill in the below form to apply for Pvt. Ltd. online. It will take
-              less than 5 mins. Your details are secured by SSL.
+              Fill in the below form to apply for Public Ltd. online. It will
+              take less than 5 mins. Your details are secured by SSL.
             </p>
             <p class="suggest">
-              Suggest names for your Private Limited (list two alternates, in
+              Suggest names for your Public Limited (list two alternates, in
               order of preference).
             </p>
 
             <form>
               <div
                 class="form-group company"
-                [ngClass]="{
-                  'has-error':
-                    companyform.controls.namecompany.invalid &&
-                    (companyform.controls.namecompany.dirty ||
-                      companyform.controls.namecompany.touched)
-                }"
+                
               >
                 <label class="labelname"
-                  >What Is the Name of the Private Limited company you want to
+                  >What Is the Name of the Public Limited company you want to
                   register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
@@ -130,25 +125,32 @@
                 <h1>Type in the name EXACTLY as you want it to appear.</h1>
               </div>
               <div class="form-group company">
-                <div class="addon">
-                  <button type="button" id="plus">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </button>
-                </div>
                 <label class="labelname"
-                  >List two alternates, in order of preference&nbsp;<sup
+                  >First Alternate Name&nbsp;<sup
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
                   type="text"
-                  class="form-control add"
+                  class="form-control company"
                   placeholder=""
-                  formControlName="listadd"
+                  formControlName="namecompany"
                 />
               </div>
               <div class="form-group company">
                 <label class="labelname"
-                  >Address of proposed Pvt. Co.&nbsp;<sup
+                  >Second Alternate Name&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany"
+                />
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Address of proposed Public Ltd.&nbsp;<sup
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
@@ -220,7 +222,6 @@
                   formControlName="directorname"
                 />
               </div>
-
               <div class="pan">
                 <label class="labelpan"
                   >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
@@ -283,6 +284,30 @@
                   placeholder="Comment"
                 ></textarea>
               </div>
+
+              <!-- <div class="idproof">
+                <label class="labelidproof"
+                  >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <div class="id-proof-file">
+                  <select class="id-proof">
+                    <option value=""></option>
+                    <option value="Passport">Passport</option>
+                    <option value="Aadhaar Card">Aadhaar Card</option>
+                    <option value="Election Card or Voter Identity Card">
+                      Election Card or Voter Identity Card
+                    </option>
+                    <option value="Ration Card">Ration Card</option>
+                    <option value="Driving License">Driving License</option>
+                  </select>
+                  <input type="file" class="form-control-file" name="file" />
+                </div>
+
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div> -->
               <button type="submit" class="btn-submit">Submit</button>
             </div>
           </div>
@@ -308,7 +333,6 @@
                         id="accomodation"
                         name="tab"
                         value="accomodation"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault1"
@@ -322,7 +346,6 @@
                         id="construction"
                         name="tab"
                         value="construction"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault2"
@@ -336,7 +359,6 @@
                         id="consulting"
                         name="tab"
                         value="consulting"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault3"
@@ -350,7 +372,6 @@
                         id="entertainment"
                         name="tab"
                         value="entertainment"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault4"
@@ -364,7 +385,6 @@
                         id="finance"
                         name="tab"
                         value="finance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault5"
@@ -378,7 +398,6 @@
                         id="foodservice"
                         name="tab"
                         value="foodservice"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault6"
@@ -392,7 +411,6 @@
                         id="healthcare"
                         name="tab"
                         value="health"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault7"
@@ -406,7 +424,6 @@
                         id="insurance"
                         name="tab"
                         value="insurance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault8"
@@ -420,12 +437,9 @@
                         id="manufacturing"
                         name="tab"
                         value="manufacturing"
-                        
                         class="form-check-label"
                         for="flexRadioDefault9"
-                      >&nbsp;&nbsp;<label>
-                        Manufacturing</label
-                      >
+                      />&nbsp;&nbsp;<label> Manufacturing</label>
                     </li>
                     <li class="radio-professional">
                       <input
@@ -433,7 +447,6 @@
                         id="professional"
                         name="tab"
                         value="professional"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -447,7 +460,6 @@
                         id="realestate"
                         name="tab"
                         value="realestate"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault11"
@@ -461,7 +473,6 @@
                         id="rental"
                         name="tab"
                         value="rental"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault12"
@@ -475,7 +486,6 @@
                         id="retail"
                         name="tab"
                         value="retail"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault13"
@@ -489,7 +499,6 @@
                         id="social"
                         name="tab"
                         value="social"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault14"
@@ -503,7 +512,6 @@
                         id="technology"
                         name="tab"
                         value="technology"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault15"
@@ -517,7 +525,6 @@
                         id="transportation"
                         name="tab"
                         value="transportation"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault16"
@@ -531,7 +538,6 @@
                         id="warehousing"
                         name="tab"
                         value="warehousing"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -545,7 +551,6 @@
                         id="wholesale"
                         name="tab"
                         value="wholesale"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -559,7 +564,6 @@
                         id="other"
                         name="tab"
                         value="other"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -800,26 +804,31 @@
                       >In case your option is other&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
                     ></label>
-                    <h3>Please describe what your business will be doing.
-                    </h3>
+                    <h3>Please describe what your business will be doing.</h3>
                     <input
                       type="text"
                       class="form-control other"
                       placeholder=""
                       formControlName="other"
                     />
-                  </div><br>
-
+                  </div>
+                  <br />
                 </div>
-              
+
                 <div
-          class="hr-dotted"
-          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-        ></div>
-        <div class="previous-next">
-          <a href="#previous"><button type="button" class="btn-previous" >PREVIOUS</button></a>
-          <a href="#next"><button type="button" class="btn-next">NEXT</button></a>
-        </div>
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -828,17 +837,3 @@
     </div>
   </div>
 </section>
-<!-- <p>How many check boxes do you want when clicked on a radio button?</p>
-<input type="radio" name="tab" value="igotnone" (click)="show1();" />
-None
-<input type="radio" name="tab" value="igottwo" (click)="show2();" />
-Two
-
-<div id="div1" class="hide">
-  <hr><p>Okay Cool! Here are those two...</p>
-
-</div>
-<div id="div2" class="hide">
-  <hr><p>hello world...</p>
-
-</div> -->

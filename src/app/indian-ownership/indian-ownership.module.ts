@@ -16,6 +16,7 @@ import { LimitedLiabiltyRegistrationComponent } from './limited-liabilty-registr
 import { PartnershipRegistrationComponent } from './partnership-registration/partnership-registration.component';
 import { OnePersonCompanyRegistrationComponent } from './one-person-company-registration/one-person-company-registration.component';
 import { SoleProprietorshipRegistrationComponent } from './sole-proprietorship-registration/sole-proprietorship-registration.component';
+import { PublicLimitedRegistrationComponent } from './public-limited-registration/public-limited-registration.component';
 
 const routes: Routes = [
   
@@ -64,13 +65,15 @@ const routes: Routes = [
   
   {path:'OPCRegistration', component:OnePersonCompanyRegistrationComponent},
   
-  {path:'SoleProprietorshipRegistration', component:SoleProprietorshipRegistrationComponent}
+  {path:'SoleProprietorshipRegistration', component:SoleProprietorshipRegistrationComponent},
+  {
+    path:'PublicLimitedRegistration', component:PublicLimitedRegistrationComponent}
 
 ]
 
 
 @NgModule({
-  declarations: [PrivateLimitedCompanyComponent, PublicLimitedCompanyComponent, LimitedLiabilityPartnershipComponent, OnePersonCompanyComponent, PartnershipFirmComponent, SoleProprietorshipComponent, NidhiCompanyComponent, ProducerCompanyComponent, PrivateLimitedRegistrationComponent, LimitedLiabiltyRegistrationComponent, PartnershipRegistrationComponent, SoleProprietorshipRegistrationComponent],
+  declarations: [PrivateLimitedCompanyComponent, PublicLimitedCompanyComponent, LimitedLiabilityPartnershipComponent, OnePersonCompanyComponent, PartnershipFirmComponent, SoleProprietorshipComponent, NidhiCompanyComponent, ProducerCompanyComponent, PrivateLimitedRegistrationComponent, LimitedLiabiltyRegistrationComponent, PartnershipRegistrationComponent, SoleProprietorshipRegistrationComponent, PublicLimitedRegistrationComponent],
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule,RouterModule.forChild(routes)
   ]
