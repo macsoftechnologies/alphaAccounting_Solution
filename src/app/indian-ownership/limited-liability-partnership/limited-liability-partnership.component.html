@@ -1,100 +1,113 @@
 <section class="limitedliability-wrapper">
-    <div class="limited-banner">
-      <div class="banner-image">
-        <div class="overlay-liabilty">
-          <div class="container">
-            <div class="col-md-12 overlay-liabilty-body">
-              <div class="row">
-                <div class="col-lg-8 col-md-12 overlay-liabilty-left">
-                  <h3>LLP Registration</h3>
-                  <div class="hr" style="border-bottom: 1px solid white; width: 95%;"></div>
-                  <h4>
-                    An Ideal business structure for all “Small and Medium sized
-                    Enterprises” which are going for Partnership
-                  </h4>
-                  <h5>Starting At Rs. 6,999 Onwards</h5>
-                  <p></p>
-                  <h6>SAVE 50% COST..!!!</h6>
-                  <h2>(Takes 15-30 days)</h2>
-                </div>
-  
-                <div class="col-lg-4 col-md-12 card-reg-limited">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="rectangle-limited">
-                        <p>LLP registration</p>
-                      </div>
-                      <div class="triangle-l-limited"></div>
-                      <!-- <div class="card bg-success text-white"> -->
-                        <!-- <div class="card-body company bg-success text-white">company registration</div> -->
-                      <!-- </div> -->
-                      <form>
-                        <div
-                          class="form-group"
-                          
-                        >
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="full name"
-                            id="fullname"
-                            formControlName="fullname"
-                          />
-                        </div>
-                        <div
-                          class="form-group"
-                          
-                        >
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="email"
-                            id="email"
-                            formControlName="email"
-                          />
-                        </div>
-                        <div
-                          class="form-group"
-                          
-                        >
-                          <input
-                            type="number"
-                            class="form-control"
-                            placeholder="mobile number"
-                            id="number"
-                            formControlName="number"
-                          />
-                        </div>
-                        <button type="button"  id="proceed" (click)="proceed()">proceed</button>
-                      </form>
+  <div class="limited-banner">
+    <div class="banner-image">
+      <div class="overlay-liabilty">
+        <div class="container">
+          <div class="col-md-12 overlay-liabilty-body">
+            <div class="row">
+              <div class="col-lg-8 col-md-12 overlay-liabilty-left">
+                <h3>LLP Registration</h3>
+                <div
+                  class="hr"
+                  style="border-bottom: 1px solid white; width: 95%"
+                ></div>
+                <h4>
+                  An Ideal business structure for all “Small and Medium sized
+                  Enterprises” which are going for Partnership
+                </h4>
+                <h5>Starting At Rs. 6,999 Onwards</h5>
+                <p></p>
+                <h6>SAVE 50% COST..!!!</h6>
+                <h2>(Takes 15-30 days)</h2>
+              </div>
+
+              <div class="col-lg-4 col-md-12 card-reg-limited">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="rectangle-limited">
+                      <p>LLP registration</p>
                     </div>
-                  </div>
-                </div>
-  
-                <!-- <input type="text"  class="form-control" placeholder="full name" id="name" formControlName="fullname" />
-                        <input type="email" placeholder="email" id="email" />
+                    <div class="triangle-l-limited"></div>
+
+                    <form [formGroup]="CompanyForm">
+                      <div class="form-group">
                         <input
-                          type="tel"
+                          [class.is-invalid]="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="full name"
+                          id="fullname"
+                          formControlName="fullname"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input  [class.is-invalid]="
+                        (CompanyForm.get('email').invalid &&
+                          CompanyForm.get('email').touched) ||
+                        (CompanyForm.get('email').pristine && hasError)
+                      "
+                          type="text"
+                          class="form-control"
+                          placeholder="Email"
+                          id="email"
+                          formControlName="email"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input [class.is-invalid]="
+                        (CompanyForm.get('number').invalid &&
+                          CompanyForm.get('number').touched) ||
+                        (CompanyForm.get('number').pristine && hasError)
+                      "
+                          type="number"
+                          class="form-control"
                           placeholder="mobile number"
                           id="number"
-                        />
-                        <p><button type="button" id="proceed">proceed</button></p> -->
+                          maxlength="10"
+                          formControlName="number"
+                        /><span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('number').invalid &&
+                            CompanyForm.get('number').touched) ||
+                          (CompanyForm.get('number').pristine && hasError)
+                        "
+                        >This field is required</span
+                      >
+                      </div>
+                      <button type="button" id="proceed"  class="form-control" (click)="proceed()">
+                        proceed
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="container">
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-6">
-            <div class=""></div>
-          </div>
-  
-          <div class="col-md-6"></div>
-        </div>
-      </div>
-    </div> -->
+  </div>
 </section>
-  

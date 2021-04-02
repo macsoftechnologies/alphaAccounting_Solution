@@ -75,9 +75,12 @@ section.privatelimited-registration-wrapper {
           color: #34495e;
           font-size: 17px;
           padding: 10px 0px 0px 0px;
-          margin-bottom: 10px;
         }
       }
+      span.error {
+        color: #dc3545;
+        font-size: 17px;}
+       
   
       a#pills-Company-tab {
         // background-color: transparent;
@@ -93,7 +96,7 @@ section.privatelimited-registration-wrapper {
           font-size: 8px;
         }
       }
-     
+      
   
       input.form-control.company {
         width: 50%;
@@ -102,30 +105,30 @@ section.privatelimited-registration-wrapper {
         box-shadow: none;
         margin-bottom: 10px;
       }
-      .addon {
-        button#plus {
-          position: absolute;
-          right: 0px;
-          margin: 37px 48px 0px 0px;
-          border: none;
-          background-color: transparent;
-          box-shadow: none;
-          display: flex;
-        }
-        i {
-          font-size: 18px;
-        }
-        :focus {
-          outline: none;
-        }
-      }
+      // .addon {
+      //   button#plus {
+      //     position: absolute;
+      //     right: 0px;
+      //     margin: 37px 48px 0px 0px;
+      //     border: none;
+      //     background-color: transparent;
+      //     box-shadow: none;
+      //     display: flex;
+      //   }
+      //   i {
+      //     font-size: 18px;
+      //   }
+      //   :focus {
+      //     outline: none;
+      //   }
+      // }
   
-      input.form-control.add {
-        width: 94%;
-        border-radius: 0px;
-        height: 29px;
-        box-shadow: none;
-      }
+      // input.form-control.add {
+      //   width: 94%;
+      //   border-radius: 0px;
+      //   height: 29px;
+      //   box-shadow: none;
+      // }
       input.form-control.address {
         width: 50%;
         height: 29px;
@@ -192,10 +195,7 @@ section.privatelimited-registration-wrapper {
     color: #e00404;
     font-size: 7px;
   }
-  span.error {
-    color: #dc3545;
-    font-size: 17px;}
-   
+  
   
   .Director-pro {
     padding-left: 0px;
@@ -204,7 +204,9 @@ section.privatelimited-registration-wrapper {
       margin-top: 10px;
       text-transform: capitalize;
     }
-  
+    .Documents-pro{
+        h4{margin-bottom: 0px;}
+    }
   .Director-name {
     margin-bottom: 15px;
     label.dirname {
@@ -213,8 +215,8 @@ section.privatelimited-registration-wrapper {
     input.form-control.directorname {
       height: 30px;
       border-radius: 0px;
+      margin-bottom: 10px;
       box-shadow: none;
-    margin-bottom: 10px;
     }
   }
   .pan{
@@ -227,7 +229,7 @@ section.privatelimited-registration-wrapper {
     font-size: 12px;
     border-color: #ced4da;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   }
   .idproof{
@@ -246,7 +248,7 @@ section.privatelimited-registration-wrapper {
     font-size: 12px;
     border-color: #ced4da;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   }
   button.btn-submit {
@@ -300,6 +302,7 @@ section.privatelimited-registration-wrapper {
   }
   .radio-content {
     padding-left: 0px;
+    // display: none;
     label.labelradio {
       color: #333;
       font-weight: 600;

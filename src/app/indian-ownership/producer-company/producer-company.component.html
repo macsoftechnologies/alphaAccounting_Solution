@@ -1,1 +1,118 @@
-<p>producer-company works!</p>
+<section class="Proprietorship-wrapper">
+    <div class="Proprietorship-banner">
+      <div class="banner-image">
+        <div class="overlay-Proprietorship">
+          <div class="container">
+            <div class="col-md-12 overlay-Proprietorship-body">
+              <div class="row">
+                <div class="col-lg-8 col-md-12 overlay-Proprietorship-left">
+                  <h3>Producer Company Registration</h3>
+                  <div
+                    class="hr"
+                    style="border-bottom: 1px solid white; width: 95%"
+                  ></div>
+                  <h4>
+                    Ideal for people engaged in primary production
+                  </h4>
+                  <h5>Starting At Rs. 55,999 only(All Inclusive)</h5>
+                  <p></p>
+                  <h6>SAVE 40% COST!!!</h6>
+                  <h2>(Takes 20-30 days)</h2>
+                </div>
+  
+                <div class="col-lg-4 col-md-12 card-reg-Proprietorship">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="rectangle-Proprietorship">
+                        <p>Producer Company  </p>
+                      </div>
+                      <div class="triangle-l-Proprietorship"></div>
+  
+                      <form [formGroup]="CompanyForm">
+                        <div class="form-group">
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('fullname').invalid &&
+                                CompanyForm.get('fullname').touched) ||
+                              (CompanyForm.get('fullname').pristine && hasError)
+                            "
+                            type="text"
+                            class="form-control"
+                            placeholder="full name"
+                            id="fullname"
+                            formControlName="fullname"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('fullname').invalid &&
+                                CompanyForm.get('fullname').touched) ||
+                              (CompanyForm.get('fullname').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group">
+                          <input  [class.is-invalid]="
+                          (CompanyForm.get('email').invalid &&
+                            CompanyForm.get('email').touched) ||
+                          (CompanyForm.get('email').pristine && hasError)
+                        "
+                            type="text"
+                            class="form-control"
+                            placeholder="Email"
+                            id="email"
+                            formControlName="email"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('email').invalid &&
+                                CompanyForm.get('email').touched) ||
+                              (CompanyForm.get('email').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group">
+                          <input [class.is-invalid]="
+                          (CompanyForm.get('number').invalid &&
+                            CompanyForm.get('number').touched) ||
+                          (CompanyForm.get('number').pristine && hasError)
+                        "
+                            type="number"
+                            class="form-control"
+                            placeholder="mobile number"
+                            id="number"
+                            maxlength="10"
+                            formControlName="number"
+                          /><span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                        </div>
+                        <button type="button" id="proceed"  class="form-control" (click)="proceed()">
+                          proceed
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+   
+
+

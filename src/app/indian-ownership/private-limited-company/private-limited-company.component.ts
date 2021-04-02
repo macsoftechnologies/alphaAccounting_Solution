@@ -9,37 +9,55 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class PrivateLimitedCompanyComponent implements OnInit {
 
-  // public myform;
+  public CompanyForm;
+  public hasError = false;
 
   constructor(private router:Router) { 
-
+    this.CompanyForm = new FormGroup({
+      
+      fullname: new FormControl("", [
+        Validators.required,
+        
+      ]),
+      
+      email: new FormControl("", [
+        Validators.required,
+        Validators.pattern("[^ @]*@[^ @]*")
+      ]),
+      number:new FormControl("", [ Validators.required
+    ]),
+      
+     
+    });
    
   }
   
 
   ngOnInit(): void {
-    // this.myform = new FormGroup({
-      
-    //   fullname: new FormControl("", [
-    //     Validators.required,
-        
-    //   ]),
-      
-    //   email: new FormControl("", [
-    //     Validators.required,
-    //     Validators.pattern("[^ @]*@[^ @]*")
-    //   ]),
-      
-     
-    // });
+    
+   
   }
+  proceed() {
+
+    if (this.CompanyForm.valid) {
+      console.log('working');
+      this.router.navigateByUrl('/PrivateLimitedRegistration')
+    }
+
+    else {
+      this.hasError = true;
+      console.log("not working")
+    }
+
+  
   // onsubmit()
   // {
   //     console.log(this.myform.value)
   //   }
 
-  proceed(){
-    this.router.navigateByUrl('/PrivateLimitedRegistration')
-  }
+  // proceed(){
+  //   this.router.navigateByUrl('/PrivateLimitedRegistration')
+  // }
 
+  }
 }

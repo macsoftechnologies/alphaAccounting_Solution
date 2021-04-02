@@ -102,20 +102,34 @@
               Fill in the below form to apply for Proprietorship online. It will
               take less than 5 mins. Your details are secured by SSL.
             </p>
-            <form>
+            <form [formGroup]="FirmForm">
               <div class="form-group company">
-                <label class="labelnamecompany"
+                <label class="labelname"
                   >What Is the name of the One Proprietorship Firm you want to
                   register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <h3>Type in the name exactly as you want it to appear.</h3>
 
                 <input
+                [class.is-invalid]="
+                    (FirmForm.get('namecompany').invalid &&
+                      FirmForm.get('namecompany').touched) ||
+                    (FirmForm.get('namecompany').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
                   formControlName="namecompany"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (FirmForm.get('namecompany').invalid &&
+                      FirmForm.get('namecompany').touched) ||
+                    (FirmForm.get('namecompany').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
               </div>
 
               <div class="form-group company">
@@ -124,11 +138,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                    (FirmForm.get('address').invalid &&
+                      FirmForm.get('address').touched) ||
+                    (FirmForm.get('address').pristine && hasError)
+                  "
                   type="text"
                   class="form-control address"
                   placeholder=""
                   formControlName="address"
                 />
+                <span
+                class="error"
+                *ngIf="
+                  (FirmForm.get('address').invalid &&
+                    FirmForm.get('address').touched) ||
+                  (FirmForm.get('address').pristine && hasError)
+                "
+                >This field is required</span
+              >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -136,11 +164,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                    (FirmForm.get('address1').invalid &&
+                      FirmForm.get('address1').touched) ||
+                    (FirmForm.get('address1').pristine && hasError)
+                  "
                   type="text"
                   class="form-control address"
                   placeholder=""
-                  formControlName="address"
+                  formControlName="address1"
                 />
+                <span
+                class="error"
+                *ngIf="
+                  (FirmForm.get('address1').invalid &&
+                    FirmForm.get('address1').touched) ||
+                  (FirmForm.get('address1').pristine && hasError)
+                "
+                >This field is required</span
+              >
               </div>
 
               <div class="form-group company">
@@ -172,27 +214,55 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                    (FirmForm.get('Pincode').invalid &&
+                      FirmForm.get('Pincode').touched) ||
+                    (FirmForm.get('Pincode').pristine && hasError)
+                  "
                   type="number"
                   class="form-control Pincode"
                   placeholder=""
                   formControlName="Pincode"
                 />
+                <span
+                class="error"
+                *ngIf="
+                  (FirmForm.get('Pincode').invalid &&
+                    FirmForm.get('Pincode').touched) ||
+                  (FirmForm.get('Pincode').pristine && hasError)
+                "
+                >This field is required</span
+              >
               </div>
 
               <div class="director-info">
                 <div class=" director-details">
                   <div class="director-details-left">
-                    <div class="form-group director">
+                    <div class="form-group company">
                       <label class="labelname"
                         >Name of the Proprietor&nbsp;<sup
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
+                      [class.is-invalid]="
+                    (FirmForm.get('directorinfo').invalid &&
+                      FirmForm.get('directorinfo').touched) ||
+                    (FirmForm.get('directorinfo').pristine && hasError)
+                  "
                         type="text"
                         class="form-control directorinfo"
                         placeholder=""
                         formControlName="directorinfo"
                       />
+                      <span
+                class="error"
+                *ngIf="
+                  (FirmForm.get('directorinfo').invalid &&
+                    FirmForm.get('directorinfo').touched) ||
+                  (FirmForm.get('directorinfo').pristine && hasError)
+                "
+                >This field is required</span
+              >
                     </div>
                     <div class="category-checkbox">
                       <label class="labelcheckbox"
@@ -245,19 +315,33 @@
                       </div>
                     </div>
 
-                    <div class="form-group director">
+                    <div class="form-group company">
                       <label class="labelname"
                         >Address of Proprietor&nbsp;<sup
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
+                      [class.is-invalid]="
+                    (FirmForm.get('directorinfo1').invalid &&
+                      FirmForm.get('directorinfo1').touched) ||
+                    (FirmForm.get('directorinfo1').pristine && hasError)
+                  "
                         type="text"
                         class="form-control directorinfo"
                         placeholder=""
-                        formControlName="directorinfo"
+                        formControlName="directorinfo1"
                       />
+                      <span
+                      class="error"
+                      *ngIf="
+                        (FirmForm.get('directorinfo1').invalid &&
+                          FirmForm.get('directorinfo1').touched) ||
+                        (FirmForm.get('directorinfo1').pristine && hasError)
+                      "
+                      >This field is required</span
+                    >
                     </div>
-                    <div class="form-group director-prop">
+                    <div class="form-group companystate">
                       <label class="labelname"
                         >State of Proprietor&nbsp;<sup
                           ><i class="fa fa-asterisk"></i></sup
@@ -285,17 +369,31 @@
                         ></i>
                       </div>
                     </div>
-                    <div class="form-group director">
+                    <div class="form-group company">
                       <label class="labelname"
                         >Pin Code of Proprietor &nbsp;<sup
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
+                      [class.is-invalid]="
+                    (FirmForm.get('Pincode1').invalid &&
+                      FirmForm.get('Pincode1').touched) ||
+                    (FirmForm.get('Pincode1').pristine && hasError)
+                  "
                         type="number"
                         class="form-control Pincode"
                         placeholder=""
-                        formControlName="Pincode"
+                        formControlName="Pincode1"
                       />
+                      <span
+                      class="error"
+                      *ngIf="
+                        (FirmForm.get('Pincode1').invalid &&
+                          FirmForm.get('Pincode1').touched) ||
+                        (FirmForm.get('Pincode1').pristine && hasError)
+                      "
+                      >This field is required</span
+                    >
                     </div>
                   </div>
 
@@ -331,7 +429,7 @@
                 class="hr-dotted"
                 style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
               ></div>
-              <button type="submit" class="btn-next">Next</button>
+              <button type="submit" class="btn-next" (click)=" Next()">Next</button>
             </form>
           </div>
 
@@ -342,6 +440,7 @@
             aria-labelledby="pills-Partner-tab"
           >
             <div class="col-md-6 Partner-pro">
+              <form [formGroup]="PartnerForm">
               <div class="Documents-pro">
                 <label class="Documents">Documents required : </label>
               </div>
@@ -350,11 +449,25 @@
                   >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                (PartnerForm.get('partnername').invalid &&
+                PartnerForm.get('partnername').touched) ||
+                (PartnerForm.get('partnername').pristine && hasError)
+              "
                   type="text"
                   class="form-control partnername"
                   placeholder=""
                   formControlName="partnername"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (PartnerForm.get('partnername').invalid &&
+                    PartnerForm.get('partnername').touched) ||
+                    (PartnerForm.get('partnername').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
               </div>
               <div class="pan">
                 <label class="labelpan"
@@ -362,10 +475,25 @@
                   &nbsp;</label
                 >
                 <input
+                [class.is-invalid]="
+                (PartnerForm.get('file').invalid &&
+                PartnerForm.get('file').touched) ||
+                (PartnerForm.get('file').pristine && hasError)
+              "
                   type="file"
                   class="form-control-file border"
                   name="file"
+                  formControlName="file"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (PartnerForm.get('file').invalid &&
+                    PartnerForm.get('file').touched) ||
+                    (PartnerForm.get('file').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
@@ -378,10 +506,25 @@
                   &nbsp;</label
                 >
                 <input
+                [class.is-invalid]="
+                (PartnerForm.get('file1').invalid &&
+                PartnerForm.get('file1').touched) ||
+                (PartnerForm.get('file1').pristine && hasError)
+              "
                   type="file"
                   class="form-control-file border"
                   name="file"
+                  formControlName="file1"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (PartnerForm.get('file1').invalid &&
+                    PartnerForm.get('file1').touched) ||
+                    (PartnerForm.get('file1').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
@@ -393,10 +536,25 @@
                   &nbsp;</label
                 >
                 <input
+                [class.is-invalid]="
+                (PartnerForm.get('file2').invalid &&
+                PartnerForm.get('file2').touched) ||
+                (PartnerForm.get('file2').pristine && hasError)
+              "
                   type="file"
                   class="form-control-file border"
                   name="file"
+                  formControlName="file2"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (PartnerForm.get('file2').invalid &&
+                    PartnerForm.get('file2').touched) ||
+                    (PartnerForm.get('file2').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
@@ -408,17 +566,33 @@
                   &nbsp;</label
                 >
                 <input
+                [class.is-invalid]="
+                (PartnerForm.get('file3').invalid &&
+                PartnerForm.get('file3').touched) ||
+                (PartnerForm.get('file3').pristine && hasError)
+              "
                   type="file"
                   class="form-control-file border"
                   name="file"
+                  formControlName="file3"
                 />
+                <span
+                class="error"
+                *ngIf="
+                  (PartnerForm.get('file3').invalid &&
+                  PartnerForm.get('file3').touched) ||
+                  (PartnerForm.get('file3').pristine && hasError)
+                "
+                >This field is required</span
+              >
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn-submit">Submit</button>
+              <button type="submit" class="btn-submit" (click)="partnersubmit()">Submit</button>
+            </form>
             </div>
           </div>
           <div

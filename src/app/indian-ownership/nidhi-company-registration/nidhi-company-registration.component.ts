@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-
 @Component({
-  selector: 'app-public-limited-registration',
-  templateUrl: './public-limited-registration.component.html',
-  styleUrls: ['./public-limited-registration.component.scss']
+  selector: 'app-nidhi-company-registration',
+  templateUrl: './nidhi-company-registration.component.html',
+  styleUrls: ['./nidhi-company-registration.component.scss']
 })
-export class PublicLimitedRegistrationComponent implements OnInit {
+export class NidhiCompanyRegistrationComponent implements OnInit {
 
+ 
   public CompanyForm;
   public DirectorForm;
   public hasError = false;
@@ -29,6 +29,9 @@ export class PublicLimitedRegistrationComponent implements OnInit {
       file: new FormControl("", [Validators.required]),
       file1: new FormControl("", [Validators.required]),
       file2: new FormControl("", [Validators.required]),
+      file3: new FormControl("", [Validators.required]),
+      file4: new FormControl("", [Validators.required]),
+      file5: new FormControl("", [Validators.required]),
       // address: new FormControl("", [Validators.required]),
       // Pincode: new FormControl("", [Validators.required]),
      

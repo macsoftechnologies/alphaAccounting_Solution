@@ -107,22 +107,34 @@
               order of preference).
             </p>
 
-            <form>
-              <div
-                class="form-group company"
-                
-              >
+            <form [formGroup]="CompanyForm">
+              <div class="form-group company">
                 <label class="labelname"
                   >What Is the Name of the Public Limited company you want to
                   register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
                   formControlName="namecompany"
                 />
+
                 <h1>Type in the name EXACTLY as you want it to appear.</h1>
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -130,11 +142,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                    (CompanyForm.get('namecompany1').invalid &&
+                      CompanyForm.get('namecompany1').touched) ||
+                    (CompanyForm.get('namecompany1').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
-                  formControlName="namecompany"
+                  formControlName="namecompany1"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany1').invalid &&
+                      CompanyForm.get('namecompany1').touched) ||
+                    (CompanyForm.get('namecompany1').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -142,11 +168,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                    (CompanyForm.get('namecompany2').invalid &&
+                      CompanyForm.get('namecompany2').touched) ||
+                    (CompanyForm.get('namecompany2').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
-                  formControlName="namecompany"
+                  formControlName="namecompany2"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany2').invalid &&
+                      CompanyForm.get('namecompany2').touched) ||
+                    (CompanyForm.get('namecompany2').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -154,11 +194,26 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                (CompanyForm.get('address').invalid &&
+                  CompanyForm.get('address').touched) ||
+                (CompanyForm.get('address').pristine && hasError)
+              "
                   type="text"
                   class="form-control address"
                   placeholder=""
                   formControlName="address"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -187,17 +242,31 @@
                   >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                (CompanyForm.get('Pincode').invalid &&
+                  CompanyForm.get('Pincode').touched) ||
+                (CompanyForm.get('Pincode').pristine && hasError)
+              "
                   type="number"
                   class="form-control Pincode"
                   placeholder=""
                   formControlName="Pincode"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div
                 class="hr-dotted"
                 style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
               ></div>
-              <button type="submit" class="btn-next">Next</button>
+              <button type="submit" class="btn-next"  (click)="Next()">Next</button>
             </form>
           </div>
 
@@ -208,6 +277,7 @@
             aria-labelledby="pills-Director-tab"
           >
             <div class="col-md-6 Director-pro">
+              <form [formGroup]="DirectorForm">
               <div class="Documents-pro">
                 <label class="Documents">Documents required : </label>
               </div>
@@ -216,11 +286,25 @@
                   >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                [class.is-invalid]="
+                      (DirectorForm.get('directorname').invalid &&
+                        DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
                   type="text"
                   class="form-control directorname"
                   placeholder=""
                   formControlName="directorname"
                 />
+                <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('directorname').invalid &&
+                        DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
               </div>
               <div class="pan">
                 <label class="labelpan"
@@ -228,10 +312,25 @@
                   &nbsp;</label
                 >
                 <input
+                [class.is-invalid]="
+                      (DirectorForm.get('file').invalid &&
+                        DirectorForm.get('file').touched) ||
+                      (DirectorForm.get('file').pristine && hasError)
+                    "
                   type="file"
                   class="form-control-file border"
                   name="file"
+                  formControlName="file"
                 />
+                <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file').invalid &&
+                        DirectorForm.get('file').touched) ||
+                      (DirectorForm.get('file').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                 <textarea
                   class="form-control-txt"
                   placeholder="Comment"
@@ -253,7 +352,25 @@
                     <option value="Ration Card">Ration Card</option>
                     <option value="Driving License">Driving License</option>
                   </select>
-                  <input type="file" class="form-control-file" name="file" />
+                  <input 
+                  [class.is-invalid]="
+                      (DirectorForm.get('file1').invalid &&
+                        DirectorForm.get('file1').touched) ||
+                      (DirectorForm.get('file1').pristine && hasError)
+                    "
+                  type="file" 
+                  class="form-control-file" 
+                  name="file"
+                  formControlName="file1" />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file1').invalid &&
+                        DirectorForm.get('file1').touched) ||
+                      (DirectorForm.get('file1').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                 </div>
 
                 <textarea
@@ -263,20 +380,36 @@
               </div>
               <div class="idproof">
                 <label class="labelidproof"
-                  >Residential Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  >Residential Proof:&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <div class="id-proof-file">
                   <select class="id-proof">
                     <option value=""></option>
                     <option value="Bank Statement">Bank Statement</option>
                     <option value="Electricity Bill">Electricity Bill</option>
-                    <option value="Telephone Bill">
-                      Telephone Bill
-                    </option>
+                    <option value="Telephone Bill">Telephone Bill</option>
                     <option value="Mobile Bill">Mobile Bill</option>
-                   
                   </select>
-                  <input type="file" class="form-control-file" name="file" />
+                  <input
+                  [class.is-invalid]="
+                      (DirectorForm.get('file2').invalid &&
+                        DirectorForm.get('file2').touched) ||
+                      (DirectorForm.get('file2').pristine && hasError)
+                    " 
+                    type="file" 
+                  class="form-control-file"
+                   name="file" 
+                   formControlName="file2"/>
+                   <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file2').invalid &&
+                        DirectorForm.get('file2').touched) ||
+                      (DirectorForm.get('file2').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                 </div>
 
                 <textarea
@@ -308,7 +441,8 @@
                   placeholder="Comment"
                 ></textarea>
               </div> -->
-              <button type="submit" class="btn-submit">Submit</button>
+              <button type="submit" class="btn-submit"(click)="directorsubmit()">Submit</button>
+              </form>
             </div>
           </div>
           <div

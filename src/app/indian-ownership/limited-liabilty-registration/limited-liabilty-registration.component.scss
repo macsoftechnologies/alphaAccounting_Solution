@@ -70,12 +70,17 @@ section.limitedliabilty-registration-wrapper {
       }
     }
     .form-group.company {
+      margin: 0px 0px 17px 0px;
       h1 {
         color: #34495e;
         font-size: 17px;
         padding: 10px 0px 0px 0px;
       }
     }
+    span.error {
+      color: #dc3545;
+      font-size: 17px;}
+     
 
     a#pills-Company-tab {
       // background-color: transparent;
@@ -93,9 +98,7 @@ section.limitedliabilty-registration-wrapper {
       }
       // h4{margin: 0 0 8px 0px !important;}
     }
-    .form-group.company {
-      margin: 0px 0px 17px 0px;
-    }
+    
 
     input.form-control.company {
       width: 50%;
@@ -103,6 +106,7 @@ section.limitedliabilty-registration-wrapper {
       height: 29px;
       box-shadow: none;
       font-size: 14px;
+      margin-bottom: 10px;
     }
     // .addon {
     //   button#plus {
@@ -133,6 +137,7 @@ section.limitedliabilty-registration-wrapper {
       height: 29px;
       border-radius: 0px;
       box-shadow: none;
+      margin-bottom: 10px;
     }
 
     .custom-select {
@@ -163,6 +168,7 @@ section.limitedliabilty-registration-wrapper {
       border-radius: 0px;
       height: 29px;
       box-shadow: none;
+      margin-bottom: 10px;
     }
     button.btn-next {
       width: 100px;
@@ -209,6 +215,8 @@ i.fa.fa-asterisk {
     input.form-control.partnername {
       height: 30px;
       border-radius: 0px;
+      box-shadow: none;
+    margin-bottom: 10px;
     }
   }
   .pan {
@@ -221,6 +229,7 @@ i.fa.fa-asterisk {
       font-size: 12px;
       border-color: #ced4da;
       margin-bottom: 12px;
+      margin-top: 10px;
     }
   }
   .idproof {
@@ -239,6 +248,7 @@ i.fa.fa-asterisk {
       font-size: 12px;
       border-color: #ced4da;
       margin-bottom: 12px;
+      margin-top: 10px;
     }
   }
   .bank {
@@ -251,6 +261,7 @@ i.fa.fa-asterisk {
       font-size: 12px;
       border-color: #ced4da;
       margin-bottom: 12px;
+      margin-top: 10px;
     }
   }
   button.btn-submit {

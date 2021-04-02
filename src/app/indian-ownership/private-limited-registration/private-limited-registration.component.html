@@ -107,27 +107,34 @@
               order of preference).
             </p>
 
-            <form>
-              <div
-                class="form-group company"
-                [ngClass]="{
-                  'has-error':
-                    companyform.controls.namecompany.invalid &&
-                    (companyform.controls.namecompany.dirty ||
-                      companyform.controls.namecompany.touched)
-                }"
-              >
+            <form [formGroup]="CompanyForm">
+              <div class="form-group company">
                 <label class="labelname"
                   >What Is the Name of the Private Limited company you want to
                   register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
                   formControlName="namecompany"
+                  id="namecompany"
                 />
                 <h1>Type in the name EXACTLY as you want it to appear.</h1>
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
+                  >Type in the name EXACTLY as you want it to appear.</span
+                >
               </div>
               <div class="form-group company">
                 <div class="addon">
@@ -140,11 +147,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('listadd').invalid &&
+                      CompanyForm.get('listadd').touched) ||
+                    (CompanyForm.get('listadd').pristine && hasError)
+                  "
                   type="text"
                   class="form-control add"
                   placeholder=""
                   formControlName="listadd"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('listadd').invalid &&
+                      CompanyForm.get('listadd').touched) ||
+                    (CompanyForm.get('listadd').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -152,11 +173,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
                   type="text"
                   class="form-control address"
                   placeholder=""
                   formControlName="address"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -185,17 +220,33 @@
                   >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
                   type="number"
                   class="form-control Pincode"
                   placeholder=""
                   formControlName="Pincode"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div
                 class="hr-dotted"
                 style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
               ></div>
-              <button type="submit" class="btn-next">Next</button>
+              <button type="submit" class="btn-next" (click)="Next()">
+                Next
+              </button>
             </form>
           </div>
 
@@ -206,84 +257,151 @@
             aria-labelledby="pills-Director-tab"
           >
             <div class="col-md-6 Director-pro">
-              <div class="Documents-pro">
-                <label class="Documents">Documents required : </label>
-              </div>
-              <div class="Director-name">
-                <label class="dirname"
-                  >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <input
-                  type="text"
-                  class="form-control directorname"
-                  placeholder=""
-                  formControlName="directorname"
-                />
-              </div>
+              <form [formGroup]="DirectorForm">
+                <div class="Documents-pro">
+                  <label class="Documents">Documents required : </label>
+                </div>
+                <div class="Director-name">
+                  <label class="dirname"
+                    >Directors Name:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (DirectorForm.get('directorname').invalid &&
+                        DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control directorname"
+                    placeholder=""
+                    formControlName="directorname"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('directorname').invalid &&
+                        DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
+                </div>
 
-              <div class="pan">
-                <label class="labelpan"
-                  >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
+                <div class="pan">
+                  <label class="labelpan"
+                    >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file').invalid &&
+                    DirectorForm.get('file').touched) ||
+                  (DirectorForm.get('file').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file').invalid &&
+                      DirectorForm.get('file').touched) ||
+                    (DirectorForm.get('file').pristine && hasError)
+                  "
+                  >This field is required.</span
                 >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-
-              <div class="idproof">
-                <label class="labelidproof"
-                  >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <div class="id-proof-file">
-                  <select class="id-proof">
-                    <option value=""></option>
-                    <option value="Passport">Passport</option>
-                    <option value="Aadhaar Card">Aadhaar Card</option>
-                    <option value="Election Card or Voter Identity Card">
-                      Election Card or Voter Identity Card
-                    </option>
-                    <option value="Ration Card">Ration Card</option>
-                    <option value="Driving License">Driving License</option>
-                  </select>
-                  <input type="file" class="form-control-file" name="file" />
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
                 </div>
 
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="idproof">
-                <label class="labelidproof"
-                  >Residential Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <div class="id-proof-file">
-                  <select class="id-proof">
-                    <option value=""></option>
-                    <option value="Bank Statement">Bank Statement</option>
-                    <option value="Electricity Bill">Electricity Bill</option>
-                    <option value="Telephone Bill">
-                      Telephone Bill
-                    </option>
-                    <option value="Mobile Bill">Mobile Bill</option>
-                   
-                  </select>
-                  <input type="file" class="form-control-file" name="file" />
-                </div>
+                <div class="idproof">
+                  <label class="labelidproof"
+                    >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <div class="id-proof-file">
+                    <select class="id-proof">
+                      <option value=""></option>
+                      <option value="Passport">Passport</option>
+                      <option value="Aadhaar Card">Aadhaar Card</option>
+                      <option value="Election Card or Voter Identity Card">
+                        Election Card or Voter Identity Card
+                      </option>
+                      <option value="Ration Card">Ration Card</option>
+                      <option value="Driving License">Driving License</option>
+                    </select>
+                    <input
+                    [class.is-invalid]="
+                    (DirectorForm.get('file1').invalid &&
+                      DirectorForm.get('file1').touched) ||
+                    (DirectorForm.get('file1').pristine && hasError)
+                  "
+                     type="file" 
+                     class="form-control-file"
+                      name="file"
+                      formControlName="file1" />
+                      <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file1').invalid &&
+                      DirectorForm.get('file1').touched) ||
+                    (DirectorForm.get('file1').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  </div>
 
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-submit">Submit</button>
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="idproof">
+                  <label class="labelidproof"
+                    >Residential Proof:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <div class="id-proof-file">
+                    <select class="id-proof">
+                      <option value=""></option>
+                      <option value="Bank Statement">Bank Statement</option>
+                      <option value="Electricity Bill">Electricity Bill</option>
+                      <option value="Telephone Bill">Telephone Bill</option>
+                      <option value="Mobile Bill">Mobile Bill</option>
+                    </select>
+                    <input 
+                    [class.is-invalid]="
+                    (DirectorForm.get('file2').invalid &&
+                      DirectorForm.get('file2').touched) ||
+                    (DirectorForm.get('file2').pristine && hasError)
+                  " 
+                  type="file" 
+                    class="form-control-file"
+                     name="file" 
+                     formControlName="file2"
+                     />
+                     <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file2').invalid &&
+                      DirectorForm.get('file2').touched) ||
+                    (DirectorForm.get('file2').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  </div>
+
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-submit"  (click)="directorsubmit()">Submit</button>
+              </form>
             </div>
           </div>
           <div
@@ -308,7 +426,6 @@
                         id="accomodation"
                         name="tab"
                         value="accomodation"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault1"
@@ -322,7 +439,6 @@
                         id="construction"
                         name="tab"
                         value="construction"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault2"
@@ -336,7 +452,6 @@
                         id="consulting"
                         name="tab"
                         value="consulting"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault3"
@@ -350,7 +465,6 @@
                         id="entertainment"
                         name="tab"
                         value="entertainment"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault4"
@@ -364,7 +478,6 @@
                         id="finance"
                         name="tab"
                         value="finance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault5"
@@ -378,7 +491,6 @@
                         id="foodservice"
                         name="tab"
                         value="foodservice"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault6"
@@ -392,7 +504,6 @@
                         id="healthcare"
                         name="tab"
                         value="health"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault7"
@@ -406,7 +517,6 @@
                         id="insurance"
                         name="tab"
                         value="insurance"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault8"
@@ -420,12 +530,9 @@
                         id="manufacturing"
                         name="tab"
                         value="manufacturing"
-                        
                         class="form-check-label"
                         for="flexRadioDefault9"
-                      >&nbsp;&nbsp;<label>
-                        Manufacturing</label
-                      >
+                      />&nbsp;&nbsp;<label> Manufacturing</label>
                     </li>
                     <li class="radio-professional">
                       <input
@@ -433,7 +540,6 @@
                         id="professional"
                         name="tab"
                         value="professional"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -447,7 +553,6 @@
                         id="realestate"
                         name="tab"
                         value="realestate"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault11"
@@ -461,7 +566,6 @@
                         id="rental"
                         name="tab"
                         value="rental"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault12"
@@ -475,7 +579,6 @@
                         id="retail"
                         name="tab"
                         value="retail"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault13"
@@ -489,7 +592,6 @@
                         id="social"
                         name="tab"
                         value="social"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault14"
@@ -503,7 +605,6 @@
                         id="technology"
                         name="tab"
                         value="technology"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault15"
@@ -517,7 +618,6 @@
                         id="transportation"
                         name="tab"
                         value="transportation"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault16"
@@ -531,7 +631,6 @@
                         id="warehousing"
                         name="tab"
                         value="warehousing"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -545,7 +644,6 @@
                         id="wholesale"
                         name="tab"
                         value="wholesale"
-                        
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
@@ -559,7 +657,6 @@
                         id="other"
                         name="tab"
                         value="other"
-                       
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -800,26 +897,31 @@
                       >In case your option is other&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
                     ></label>
-                    <h3>Please describe what your business will be doing.
-                    </h3>
+                    <h3>Please describe what your business will be doing.</h3>
                     <input
                       type="text"
                       class="form-control other"
                       placeholder=""
                       formControlName="other"
                     />
-                  </div><br>
-
+                  </div>
+                  <br />
                 </div>
-              
+
                 <div
-          class="hr-dotted"
-          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-        ></div>
-        <div class="previous-next">
-          <a href="#previous"><button type="button" class="btn-previous" >PREVIOUS</button></a>
-          <a href="#next"><button type="button" class="btn-next">NEXT</button></a>
-        </div>
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>

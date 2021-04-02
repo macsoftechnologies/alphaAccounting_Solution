@@ -49,17 +49,17 @@
               >
             </li>
             <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="pills-Business-tab"
-                  data-toggle="pill"
-                  href="#pills-Business"
-                  role="tab"
-                  aria-controls="pills-Business"
-                  aria-selected="false"
-                  >3&nbsp;About your Business</a
-                >
-              </li>
+              <a
+                class="nav-link"
+                id="pills-Business-tab"
+                data-toggle="pill"
+                href="#pills-Business"
+                role="tab"
+                aria-controls="pills-Business"
+                aria-selected="false"
+                >3&nbsp;About your Business</a
+              >
+            </li>
             <li class="nav-item">
               <a
                 class="nav-link"
@@ -102,20 +102,35 @@
               Fill in the below form to apply for OPC online. It will take less
               than 5 mins. Your details are secured by SSL.
             </p>
-            <form>
+
+            <form [formGroup]="CompanyForm">
               <div class="form-group company">
-                <label class="labelnamecompany"
+                <label class="labelname"
                   >What Is the name of the One Person company you want to
                   register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <h3>Type in the name exactly as you want it to appear.</h3>
 
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
                   type="text"
                   class="form-control company"
                   placeholder=""
                   formControlName="namecompany"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
 
               <div class="form-group company">
@@ -124,11 +139,25 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
                   type="text"
                   class="form-control address"
                   placeholder=""
                   formControlName="address"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -157,95 +186,194 @@
                   >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
                   type="number"
                   class="form-control Pincode"
                   placeholder=""
                   formControlName="Pincode"
                 />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
                 <p>Please provide information about director of the Company.</p>
               </div>
 
               <div class="director-info">
                 <div class="row director-details">
                   <div class="col-md-6 director-details-left">
-                    <div class="form-group director">
-                        <label class="labelname"
-                          >Name of the Director&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="text"
-                          class="form-control directorinfo"
-                          placeholder=""
-                          formControlName="directorinfo"
-                        />
-                      </div>
-                      <div class="form-group director">
-                        <label class="labelname"
-                          >Mobile no.&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="number"
-                          class="form-control Mobile"
-                          placeholder=""
-                          formControlName="Mobile"
-                        />
-                      </div>
-                      <div class="form-group director">
-                        <label class="labelname"
-                          >Name of the Nomineee&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="text"
-                          class="form-control directorinfo"
-                          placeholder=""
-                          formControlName="directorinfo"
-                        />
-                      </div>
-                      <div class="form-group director">
-                        <label class="labelname"
-                          >Total money/capital invested by owner?&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="number"
-                          class="form-control Mobile"
-                          placeholder="
-                          "
-                          formControlName="Mobile"
-                        />
-                      </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of the Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('directorinfo').invalid &&
+                            CompanyForm.get('directorinfo').touched) ||
+                          (CompanyForm.get('directorinfo').pristine && hasError)
+                        "
+                        type="text"
+                        class="form-control directorinfo"
+                        placeholder=""
+                        formControlName="directorinfo"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('directorinfo').invalid &&
+                            CompanyForm.get('directorinfo').touched) ||
+                          (CompanyForm.get('directorinfo').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Mobile no.&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('Mobile').invalid &&
+                            CompanyForm.get('Mobile').touched) ||
+                          (CompanyForm.get('Mobile').pristine && hasError)
+                        "
+                        type="number"
+                        class="form-control Mobile"
+                        placeholder=""
+                        formControlName="Mobile"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('Mobile').invalid &&
+                            CompanyForm.get('Mobile').touched) ||
+                          (CompanyForm.get('Mobile').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of the Nomineee&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('directorinfo1').invalid &&
+                            CompanyForm.get('directorinfo1').touched) ||
+                          (CompanyForm.get('directorinfo1').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control directorinfo"
+                        placeholder=""
+                        formControlName="directorinfo1"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('directorinfo1').invalid &&
+                            CompanyForm.get('directorinfo1').touched) ||
+                          (CompanyForm.get('directorinfo1').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Total money/capital invested by owner?&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('Mobile1').invalid &&
+                            CompanyForm.get('Mobile1').touched) ||
+                          (CompanyForm.get('Mobile1').pristine && hasError)
+                        "
+                        type="number"
+                        class="form-control Mobile"
+                        placeholder=""
+                        formControlName="Mobile1"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('Mobile1').invalid &&
+                            CompanyForm.get('Mobile1').touched) ||
+                          (CompanyForm.get('Mobile1').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
                   </div>
 
-
-
                   <div class="col-md-6 director-details-right">
-                    <div class="form-group addressdirector">
-                        <label class="labelname"
-                          >Full Address of Director&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="text"
-                          class="form-control addressdirector"
-                          placeholder=""
-                          formControlName="addressdirector"
-                        />
-                      </div>
-                      <div class="form-group addressdirector">
-                        <label class="labelname"
-                          >Email of the Director&nbsp;<sup
-                            ><i class="fa fa-asterisk"></i></sup
-                        ></label>
-                        <input
-                          type="text"
-                          class="form-control addressdirector"
-                          placeholder=""
-                          formControlName="addressdirector"
-                        />
-                      </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('addressdirector').invalid &&
+                            CompanyForm.get('addressdirector').touched) ||
+                          (CompanyForm.get('addressdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control addressdirector"
+                        placeholder=""
+                        formControlName="addressdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('addressdirector').invalid &&
+                            CompanyForm.get('addressdirector').touched) ||
+                          (CompanyForm.get('addressdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email of the Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (CompanyForm.get('email').invalid &&
+                            CompanyForm.get('email').touched) ||
+                          (CompanyForm.get('email').pristine && hasError)
+                        "
+                        type="text"
+                        class="form-control email"
+                        placeholder=""
+                        formControlName="email"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (CompanyForm.get('email').invalid &&
+                            CompanyForm.get('email').touched) ||
+                          (CompanyForm.get('email').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -253,7 +381,9 @@
                 class="hr-dotted"
                 style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
               ></div>
-              <button type="submit" class="btn-next">Next</button>
+              <button type="submit" class="btn-next" (click)="Next()">
+                Next
+              </button>
             </form>
           </div>
 
@@ -263,669 +393,815 @@
             role="tabpanel"
             aria-labelledby="pills-Partner-tab"
           >
-            <div class="col-md-6 Partner-pro">
-              <div class="Documents-pro">
-                <label class="Documents">Documents required : </label>
-              </div>
-              <div class="Partner-name">
-                <label class="parname"
-                  >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <input
-                  type="text"
-                  class="form-control partnername"
-                  placeholder=""
-                  formControlName="partnername"
-                />
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Photograph:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-
-              <div class="pan">
-                <label class="labelpan"
-                  >Copy of PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Copy of Electricity Bill:&nbsp;<sup
-                    ><i class="fa fa-asterisk"></i
-                  ></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Sale Deed ( if owned ):&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Copy of Aadhar Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Address Proof ( Bank Statement/Mobile/Telephone bill):&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Copy of rent agreement ( if rented ):&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >NOC:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                />
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn-submit">Submit</button>
-            </div>
-          </div>
-          <div
-              id="pills-Business"
-              class="tab-pane fade"
-              role="tabpanel"
-              aria-labelledby="pills-Business-tab"
-            >
-              <div class="Business-pro">
-                <div class="Business-name">
-                  <label class="labelbusiness"
-                    >What will your Business be doing?&nbsp;<sup
+            <form [formGroup]="DirectorForm">
+              <div class="col-md-6 Partner-pro">
+                <div class="Documents-pro">
+                  <label class="Documents">Documents required : </label>
+                </div>
+                <div class="Partner-name">
+                  <label class="parname"
+                    >Directors Name:&nbsp;<sup
                       ><i class="fa fa-asterisk"></i></sup
                   ></label>
+                  <input
+                    [class.is-invalid]="
+                      (DirectorForm.get('partnername').invalid &&
+                        DirectorForm.get('partnername').touched) ||
+                      (DirectorForm.get('partnername').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control partnername"
+                    placeholder=""
+                    formControlName="partnername"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('partnername').invalid &&
+                      DirectorForm.get('partnername').touched) ||
+                      (DirectorForm.get('partnername').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                 </div>
-                <div class="radiosection-left">
-                  <div class="form-check">
-                    <ul class="radio-button" id="radio-check">
-                      <li class="radio-accomodation">
-                        <input
-                          type="radio"
-                          id="accomodation"
-                          name="tab"
-                          value="accomodation"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault1"
-                        >
-                          Accomodations</label
-                        >
-                      </li>
-                      <li class="radio-construction">
-                        <input
-                          type="radio"
-                          id="construction"
-                          name="tab"
-                          value="construction"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault2"
-                        >
-                          Construction</label
-                        >
-                      </li>
-                      <li class="radio-consulting">
-                        <input
-                          type="radio"
-                          id="consulting"
-                          name="tab"
-                          value="consulting"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault3"
-                        >
-                          Consulting</label
-                        >
-                      </li>
-                      <li class="radio-entertainment">
-                        <input
-                          type="radio"
-                          id="entertainment"
-                          name="tab"
-                          value="entertainment"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault4"
-                        >
-                          Entertainment</label
-                        >
-                      </li>
-                      <li class="radio-finance">
-                        <input
-                          type="radio"
-                          id="finance"
-                          name="tab"
-                          value="finance"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault5"
-                        >
-                          Finance</label
-                        >
-                      </li>
-                      <li class="radio-foodservice">
-                        <input
-                          type="radio"
-                          id="foodservice"
-                          name="tab"
-                          value="foodservice"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault6"
-                        >
-                          Food Service</label
-                        >
-                      </li>
-                      <li class="radio-health">
-                        <input
-                          type="radio"
-                          id="healthcare"
-                          name="tab"
-                          value="health"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault7"
-                        >
-                          Health Care</label
-                        >
-                      </li>
-                      <li class="radio-insurance">
-                        <input
-                          type="radio"
-                          id="insurance"
-                          name="tab"
-                          value="insurance"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault8"
-                        >
-                          Insurance</label
-                        >
-                      </li>
-                      <li class="radio-manufacturing">
-                        <input
-                          type="radio"
-                          id="manufacturing"
-                          name="tab"
-                          value="manufacturing"
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                        />&nbsp;&nbsp;<label> Manufacturing</label>
-                      </li>
-                      <li class="radio-professional">
-                        <input
-                          type="radio"
-                          id="professional"
-                          name="tab"
-                          value="professional"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault10"
-                        >
-                          Professional</label
-                        >
-                      </li>
-                      <li class="radio-realestate">
-                        <input
-                          type="radio"
-                          id="realestate"
-                          name="tab"
-                          value="realestate"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault11"
-                        >
-                          Real Estate</label
-                        >
-                      </li>
-                      <li class="radio-rental">
-                        <input
-                          type="radio"
-                          id="rental"
-                          name="tab"
-                          value="rental"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault12"
-                        >
-                          Rental & Leasing</label
-                        >
-                      </li>
-                      <li class="radio-retail">
-                        <input
-                          type="radio"
-                          id="retail"
-                          name="tab"
-                          value="retail"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault13"
-                        >
-                          Retail</label
-                        >
-                      </li>
-                      <li class="radio-social">
-                        <input
-                          type="radio"
-                          id="social"
-                          name="tab"
-                          value="social"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault14"
-                        >
-                          Social Assistance</label
-                        >
-                      </li>
-                      <li class="radio-technology">
-                        <input
-                          type="radio"
-                          id="technology"
-                          name="tab"
-                          value="technology"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault15"
-                        >
-                          Technology</label
-                        >
-                      </li>
-                      <li class="radio-transportation">
-                        <input
-                          type="radio"
-                          id="transportation"
-                          name="tab"
-                          value="transportation"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault16"
-                        >
-                          Transportation</label
-                        >
-                      </li>
-                      <li class="radio-warehousing">
-                        <input
-                          type="radio"
-                          id="warehousing"
-                          name="tab"
-                          value="warehousing"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                        >
-                          Ware Housing</label
-                        >
-                      </li>
-                      <li class="radio-wholesale">
-                        <input
-                          type="radio"
-                          id="wholesale"
-                          name="tab"
-                          value="wholesale"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                        >
-                          Wholesale</label
-                        >
-                      </li>
-                      <li class="radio-other">
-                        <input
-                          type="radio"
-                          id="other"
-                          name="tab"
-                          value="other"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault10"
-                        >
-                          Other</label
-                        >
-                      </li>
-                    </ul>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Photograph:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                      (DirectorForm.get('file').invalid &&
+                        DirectorForm.get('file').touched) ||
+                      (DirectorForm.get('file').pristine && hasError)
+                    "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file').invalid &&
+                      DirectorForm.get('file').touched) ||
+                      (DirectorForm.get('file').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+
+                <div class="pan">
+                  <label class="labelpan"
+                    >Copy of PAN Card:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file1').invalid &&
+                    DirectorForm.get('file1').touched) ||
+                  (DirectorForm.get('file1').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file1"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file1').invalid &&
+                    DirectorForm.get('file1').touched) ||
+                    (DirectorForm.get('file1').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Copy of Electricity Bill:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file2').invalid &&
+                    DirectorForm.get('file2').touched) ||
+                  (DirectorForm.get('file2').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file2"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file2').invalid &&
+                    DirectorForm.get('file2').touched) ||
+                    (DirectorForm.get('file2').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Sale Deed ( if owned ):&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file3').invalid &&
+                    DirectorForm.get('file3').touched) ||
+                  (DirectorForm.get('file3').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file3"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file3').invalid &&
+                    DirectorForm.get('file3').touched) ||
+                    (DirectorForm.get('file3').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Copy of Aadhar Card:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file4').invalid &&
+                    DirectorForm.get('file4').touched) ||
+                  (DirectorForm.get('file4').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file4"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file4').invalid &&
+                    DirectorForm.get('file4').touched) ||
+                    (DirectorForm.get('file4').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Address Proof ( Bank Statement/Mobile/Telephone
+                    bill):&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file5').invalid &&
+                    DirectorForm.get('file5').touched) ||
+                  (DirectorForm.get('file5').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file5"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file5').invalid &&
+                    DirectorForm.get('file5').touched) ||
+                    (DirectorForm.get('file5').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Copy of rent agreement ( if rented ):&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file6').invalid &&
+                    DirectorForm.get('file6').touched) ||
+                  (DirectorForm.get('file6').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file6"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file6').invalid &&
+                    DirectorForm.get('file6').touched) ||
+                    (DirectorForm.get('file6').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >NOC:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file7').invalid &&
+                    DirectorForm.get('file7').touched) ||
+                  (DirectorForm.get('file7').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file7"
+                  />
+                  <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('file7').invalid &&
+                    DirectorForm.get('file7').touched) ||
+                    (DirectorForm.get('file7').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit"  (click)="directorsubmit()">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div
+            id="pills-Business"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Business-tab"
+          >
+            <div class="Business-pro">
+              <div class="Business-name">
+                <label class="labelbusiness"
+                  >What will your Business be doing?&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+              </div>
+              <div class="radiosection-left">
+                <div class="form-check">
+                  <ul class="radio-button" id="radio-check">
+                    <li class="radio-accomodation">
+                      <input
+                        type="radio"
+                        id="accomodation"
+                        name="tab"
+                        value="accomodation"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        Accomodations</label
+                      >
+                    </li>
+                    <li class="radio-construction">
+                      <input
+                        type="radio"
+                        id="construction"
+                        name="tab"
+                        value="construction"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault2"
+                      >
+                        Construction</label
+                      >
+                    </li>
+                    <li class="radio-consulting">
+                      <input
+                        type="radio"
+                        id="consulting"
+                        name="tab"
+                        value="consulting"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault3"
+                      >
+                        Consulting</label
+                      >
+                    </li>
+                    <li class="radio-entertainment">
+                      <input
+                        type="radio"
+                        id="entertainment"
+                        name="tab"
+                        value="entertainment"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault4"
+                      >
+                        Entertainment</label
+                      >
+                    </li>
+                    <li class="radio-finance">
+                      <input
+                        type="radio"
+                        id="finance"
+                        name="tab"
+                        value="finance"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault5"
+                      >
+                        Finance</label
+                      >
+                    </li>
+                    <li class="radio-foodservice">
+                      <input
+                        type="radio"
+                        id="foodservice"
+                        name="tab"
+                        value="foodservice"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault6"
+                      >
+                        Food Service</label
+                      >
+                    </li>
+                    <li class="radio-health">
+                      <input
+                        type="radio"
+                        id="healthcare"
+                        name="tab"
+                        value="health"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault7"
+                      >
+                        Health Care</label
+                      >
+                    </li>
+                    <li class="radio-insurance">
+                      <input
+                        type="radio"
+                        id="insurance"
+                        name="tab"
+                        value="insurance"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault8"
+                      >
+                        Insurance</label
+                      >
+                    </li>
+                    <li class="radio-manufacturing">
+                      <input
+                        type="radio"
+                        id="manufacturing"
+                        name="tab"
+                        value="manufacturing"
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      />&nbsp;&nbsp;<label> Manufacturing</label>
+                    </li>
+                    <li class="radio-professional">
+                      <input
+                        type="radio"
+                        id="professional"
+                        name="tab"
+                        value="professional"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        Professional</label
+                      >
+                    </li>
+                    <li class="radio-realestate">
+                      <input
+                        type="radio"
+                        id="realestate"
+                        name="tab"
+                        value="realestate"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault11"
+                      >
+                        Real Estate</label
+                      >
+                    </li>
+                    <li class="radio-rental">
+                      <input
+                        type="radio"
+                        id="rental"
+                        name="tab"
+                        value="rental"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault12"
+                      >
+                        Rental & Leasing</label
+                      >
+                    </li>
+                    <li class="radio-retail">
+                      <input
+                        type="radio"
+                        id="retail"
+                        name="tab"
+                        value="retail"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault13"
+                      >
+                        Retail</label
+                      >
+                    </li>
+                    <li class="radio-social">
+                      <input
+                        type="radio"
+                        id="social"
+                        name="tab"
+                        value="social"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault14"
+                      >
+                        Social Assistance</label
+                      >
+                    </li>
+                    <li class="radio-technology">
+                      <input
+                        type="radio"
+                        id="technology"
+                        name="tab"
+                        value="technology"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault15"
+                      >
+                        Technology</label
+                      >
+                    </li>
+                    <li class="radio-transportation">
+                      <input
+                        type="radio"
+                        id="transportation"
+                        name="tab"
+                        value="transportation"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault16"
+                      >
+                        Transportation</label
+                      >
+                    </li>
+                    <li class="radio-warehousing">
+                      <input
+                        type="radio"
+                        id="warehousing"
+                        name="tab"
+                        value="warehousing"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        Ware Housing</label
+                      >
+                    </li>
+                    <li class="radio-wholesale">
+                      <input
+                        type="radio"
+                        id="wholesale"
+                        name="tab"
+                        value="wholesale"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        Wholesale</label
+                      >
+                    </li>
+                    <li class="radio-other">
+                      <input
+                        type="radio"
+                        id="other"
+                        name="tab"
+                        value="other"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        Other</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6 radio-content">
+                  <div id="accomodation" class="accomodation-pro">
+                    <label class="labelradio"
+                      >what will you do in accomodation?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control accomodation"
+                      placeholder=""
+                      formControlName="accomodation"
+                    />
                   </div>
-                  <div class="col-md-6 radio-content">
-                    <div id="accomodation" class="accomodation-pro">
-                      <label class="labelradio"
-                        >what will you do in accomodation?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control accomodation"
-                        placeholder=""
-                        formControlName="accomodation"
-                      />
-                    </div>
-                    <div id="construction" class="construction-pro">
-                      <label class="labelradio"
-                        >what will you do in construction?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control construction"
-                        placeholder=""
-                        formControlName="construction"
-                      />
-                    </div>
-                    <div id="consulting" class="consulting-pro">
-                      <label class="labelradio"
-                        >what will you do in consulting?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control consulting"
-                        placeholder=""
-                        formControlName="consulting"
-                      />
-                      <h3>
-                        Describe the Type of Consulting service you provide.
-                        (Management, Marketing etc.)
-                      </h3>
-                    </div>
-                    <div id="entertainment" class="entertainment-pro">
-                      <label class="labelradio"
-                        >what will you do in entertainment?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control entertainment"
-                        placeholder=""
-                        formControlName="entertainment"
-                      />
-                    </div>
-                    <div id="finance" class="finance-pro">
-                      <label class="labelradio"
-                        >what will you do in finance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control finance"
-                        placeholder=""
-                        formControlName="finance"
-                      />
-                    </div>
-                    <div id="foodservice" class="foodservice-pro">
-                      <label class="labelradio"
-                        >what will you do in foodservice?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control foodservice"
-                        placeholder=""
-                        formControlName="foodservice"
-                      />
-                    </div>
-                    <div id="health" class="health-pro">
-                      <label class="labelradio"
-                        >what will you do in health care?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control health"
-                        placeholder=""
-                        formControlName="health"
-                      />
-                    </div>
-                    <div id="insurance" class="insurance-pro">
-                      <label class="labelradio"
-                        >what will you do in insurance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control insurance"
-                        placeholder=""
-                        formControlName="insurance"
-                      />
-                    </div>
-                    <div id="manufacturing" class="manufacturing-pro">
-                      <label class="labelradio"
-                        >what will you do in manufacturing?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control manufacturing"
-                        placeholder=""
-                        formControlName="manufacturing"
-                      />
-                      <h3>
-                        Describe the type of goods you make and the primary
-                        material used for making them.(For Example Wood
-                        Furniture).
-                      </h3>
-                    </div>
-                    <div id="professional" class="professional-pro">
-                      <label class="labelradio"
-                        >what will you do in profession?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control professional"
-                        placeholder=""
-                        formControlName="professional"
-                      />
-                    </div>
-                    <div id="realestate" class="realestate-pro">
-                      <label class="labelradio"
-                        >what will you do in real estate?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control realestate"
-                        placeholder=""
-                        formControlName="realestate"
-                      />
-                    </div>
-                    <div id="rental" class="rental-pro">
-                      <label class="labelradio"
-                        >what will you do in rental & leasing?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control rental"
-                        placeholder=""
-                        formControlName="rental"
-                      />
-                    </div>
-                    <div id="retail" class="retail-pro">
-                      <label class="labelradio"
-                        >what will you do in retail?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control retail"
-                        placeholder=""
-                        formControlName="retail"
-                      />
-                    </div>
-                    <div id="social" class="social-pro">
-                      <label class="labelradio"
-                        >what will you do in social assistance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control social"
-                        placeholder=""
-                        formControlName="social"
-                      />
-                    </div>
-                    <div id="technology" class="technology-pro">
-                      <label class="labelradio"
-                        >What kind of technology business you will do?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control technology"
-                        placeholder=""
-                        formControlName="technology"
-                      />
-                    </div>
-                    <div id="transportation" class="transportation-pro">
-                      <label class="labelradio"
-                        >what will you do in transportation ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control transportation"
-                        placeholder=""
-                        formControlName="transportation"
-                      />
-                    </div>
-                    <div id="warehousing" class="warehousing-pro">
-                      <label class="labelradio"
-                        >What kind of warehousing business you will do ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control warehousing"
-                        placeholder=""
-                        formControlName="warehousing"
-                      />
-                    </div>
-                    <div id="wholesale" class="wholesale-pro">
-                      <label class="labelradio"
-                        >What will you do in wholesale ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control wholesale"
-                        placeholder=""
-                        formControlName="wholesale"
-                      />
-                    </div>
-                    <div id="other" class="other-pro">
-                      <label class="labelradio"
-                        >In case your option is other&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <h3>Please describe what your business will be doing.</h3>
-                      <input
-                        type="text"
-                        class="form-control other"
-                        placeholder=""
-                        formControlName="other"
-                      />
-                    </div>
-                    <br />
+                  <div id="construction" class="construction-pro">
+                    <label class="labelradio"
+                      >what will you do in construction?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control construction"
+                      placeholder=""
+                      formControlName="construction"
+                    />
                   </div>
-  
-                  <div
-                    class="hr-dotted"
-                    style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-                  ></div>
-                  <div class="previous-next">
-                    <a href="#previous"
-                      ><button type="button" class="btn-previous">
-                        PREVIOUS
-                      </button></a
-                    >
-                    <a href="#next"
-                      ><button type="button" class="btn-next">NEXT</button></a
-                    >
+                  <div id="consulting" class="consulting-pro">
+                    <label class="labelradio"
+                      >what will you do in consulting?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control consulting"
+                      placeholder=""
+                      formControlName="consulting"
+                    />
+                    <h3>
+                      Describe the Type of Consulting service you provide.
+                      (Management, Marketing etc.)
+                    </h3>
                   </div>
+                  <div id="entertainment" class="entertainment-pro">
+                    <label class="labelradio"
+                      >what will you do in entertainment?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control entertainment"
+                      placeholder=""
+                      formControlName="entertainment"
+                    />
+                  </div>
+                  <div id="finance" class="finance-pro">
+                    <label class="labelradio"
+                      >what will you do in finance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control finance"
+                      placeholder=""
+                      formControlName="finance"
+                    />
+                  </div>
+                  <div id="foodservice" class="foodservice-pro">
+                    <label class="labelradio"
+                      >what will you do in foodservice?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control foodservice"
+                      placeholder=""
+                      formControlName="foodservice"
+                    />
+                  </div>
+                  <div id="health" class="health-pro">
+                    <label class="labelradio"
+                      >what will you do in health care?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control health"
+                      placeholder=""
+                      formControlName="health"
+                    />
+                  </div>
+                  <div id="insurance" class="insurance-pro">
+                    <label class="labelradio"
+                      >what will you do in insurance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control insurance"
+                      placeholder=""
+                      formControlName="insurance"
+                    />
+                  </div>
+                  <div id="manufacturing" class="manufacturing-pro">
+                    <label class="labelradio"
+                      >what will you do in manufacturing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control manufacturing"
+                      placeholder=""
+                      formControlName="manufacturing"
+                    />
+                    <h3>
+                      Describe the type of goods you make and the primary
+                      material used for making them.(For Example Wood
+                      Furniture).
+                    </h3>
+                  </div>
+                  <div id="professional" class="professional-pro">
+                    <label class="labelradio"
+                      >what will you do in profession?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control professional"
+                      placeholder=""
+                      formControlName="professional"
+                    />
+                  </div>
+                  <div id="realestate" class="realestate-pro">
+                    <label class="labelradio"
+                      >what will you do in real estate?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control realestate"
+                      placeholder=""
+                      formControlName="realestate"
+                    />
+                  </div>
+                  <div id="rental" class="rental-pro">
+                    <label class="labelradio"
+                      >what will you do in rental & leasing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control rental"
+                      placeholder=""
+                      formControlName="rental"
+                    />
+                  </div>
+                  <div id="retail" class="retail-pro">
+                    <label class="labelradio"
+                      >what will you do in retail?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control retail"
+                      placeholder=""
+                      formControlName="retail"
+                    />
+                  </div>
+                  <div id="social" class="social-pro">
+                    <label class="labelradio"
+                      >what will you do in social assistance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control social"
+                      placeholder=""
+                      formControlName="social"
+                    />
+                  </div>
+                  <div id="technology" class="technology-pro">
+                    <label class="labelradio"
+                      >What kind of technology business you will do?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control technology"
+                      placeholder=""
+                      formControlName="technology"
+                    />
+                  </div>
+                  <div id="transportation" class="transportation-pro">
+                    <label class="labelradio"
+                      >what will you do in transportation ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control transportation"
+                      placeholder=""
+                      formControlName="transportation"
+                    />
+                  </div>
+                  <div id="warehousing" class="warehousing-pro">
+                    <label class="labelradio"
+                      >What kind of warehousing business you will do ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control warehousing"
+                      placeholder=""
+                      formControlName="warehousing"
+                    />
+                  </div>
+                  <div id="wholesale" class="wholesale-pro">
+                    <label class="labelradio"
+                      >What will you do in wholesale ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control wholesale"
+                      placeholder=""
+                      formControlName="wholesale"
+                    />
+                  </div>
+                  <div id="other" class="other-pro">
+                    <label class="labelradio"
+                      >In case your option is other&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <h3>Please describe what your business will be doing.</h3>
+                    <input
+                      type="text"
+                      class="form-control other"
+                      placeholder=""
+                      formControlName="other"
+                    />
+                  </div>
+                  <br />
+                </div>
+
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>

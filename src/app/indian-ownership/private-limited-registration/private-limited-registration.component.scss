@@ -70,12 +70,27 @@ section.privatelimited-registration-wrapper {
       }
     }
     .form-group.company {
+      margin: 0px 0px 17px 0px;
       h1 {
         color: #34495e;
         font-size: 17px;
         padding: 10px 0px 0px 0px;
+        margin-bottom: 12px;
       }
     }
+    // .form-group.company.labelname.is-invalid.error{ border-top: 1px solid #c89797;
+    //     padding-top: 12px;
+    //     background-color: rgba(255,223,224,.25);
+    //     margin: 0px;
+    //     padding-bottom: 12px;}
+        span.error {
+          color: #dc3545;
+          font-size: 17px;}
+         
+
+    
+    
+    
 
     a#pills-Company-tab {
       // background-color: transparent;
@@ -91,9 +106,8 @@ section.privatelimited-registration-wrapper {
         font-size: 8px;
       }
     }
-    .form-group.company {
-      margin: 0px 0px 17px 0px;
-    }
+    
+    
 
     input.form-control.company {
       width: 50%;
@@ -124,12 +138,14 @@ section.privatelimited-registration-wrapper {
       border-radius: 0px;
       height: 29px;
       box-shadow: none;
+      margin-bottom: 10px;
     }
     input.form-control.address {
       width: 50%;
       height: 29px;
       border-radius: 0px;
       box-shadow: none;
+      margin-bottom: 10px;
     }
 
     .custom-select {
@@ -160,6 +176,7 @@ section.privatelimited-registration-wrapper {
       border-radius: 0px;
       height: 29px;
       box-shadow: none;
+      margin-bottom: 10px;
     }
     button.btn-next {
       width: 100px;
@@ -207,6 +224,8 @@ i.fa.fa-asterisk {
   input.form-control.directorname {
     height: 30px;
     border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 10px;
   }
 }
 .pan{
@@ -219,6 +238,7 @@ textarea.form-control-txt {
   font-size: 12px;
   border-color: #ced4da;
   margin-bottom: 12px;
+  margin-top: 10px;
 }
 }
 .idproof{
@@ -237,6 +257,7 @@ textarea.form-control-txt {
   font-size: 12px;
   border-color: #ced4da;
   margin-bottom: 12px;
+  margin-top: 10px;
 }
 }
 button.btn-submit {

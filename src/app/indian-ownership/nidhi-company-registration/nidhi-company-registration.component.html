@@ -1,12 +1,12 @@
-<section class="partnership-registration-wrapper">
+<section class="privatelimited-registration-wrapper">
   <div class="container card">
     <div class="row fullcard-wrapper card-body">
-      <div class="col-md-7 partnership-card-body-titleleft">
-        <h2>Partnership application form</h2>
+      <div class="col-md-7 card-body-titleleft">
+        <h2>Nidhi Company application form</h2>
         <div class="hr-line"></div>
       </div>
 
-      <div class="col-md-5 partnership-card-body-titleright">
+      <div class="col-md-5 card-body-titleright">
         <div class="row align">
           <div class="col-md-2 image-left">
             <img
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="col-md-12 partnership-tabs">
+      <div class="col-md-12 tabs">
         <div class="tab-navpills-section">
           <ul class="nav nav-pills" id="pills-tab" role="tablist">
             <li class="nav-item">
@@ -32,20 +32,20 @@
                 role="tab"
                 aria-controls="pills-home"
                 aria-selected="true"
-                >1&nbsp;Firm Info</a
+                >1&nbsp;Company Info</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link"
-                id="pills-Partner-tab"
+                id="pills-Director-tab"
                 data-toggle="pill"
-                href="#pills-Partner"
-                id="pills-Partner-tab"
+                href="#pills-Director"
+                id="pills-Director-tab"
                 role="tab"
-                aria-controls="pills-Partner"
+                aria-controls="pills-Director"
                 aria-selected="false"
-                >2&nbsp;Partner details</a
+                >2&nbsp;Director details</a
               >
             </li>
             <li class="nav-item">
@@ -99,21 +99,25 @@
             aria-labelledby="pills-Company-tab"
           >
             <p class="filltext">
-              Fill in the below form to apply for Partnership online. It will
-              take less than 5 mins. Your details are secured by SSL.
+              Fill in the below form to apply for Nidhi Co. online. It will take
+              less than 5 mins. Your details are secured by SSL.
             </p>
-            <form [formGroup]="FirmForm">
+            <p class="suggest">
+              Suggest names for your Nidhi company (list two alternates, in
+              order of preference).
+            </p>
+
+            <form [formGroup]="CompanyForm">
               <div class="form-group company">
                 <label class="labelname"
-                  >What Is the name Of the Partnership firm?&nbsp;<sup
-                    ><i class="fa fa-asterisk"></i></sup
+                  >What Is the Name of the Nidhi company you want to
+                  register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
-
                 <input
                   [class.is-invalid]="
-                    (FirmForm.get('namecompany').invalid &&
-                      FirmForm.get('namecompany').touched) ||
-                    (FirmForm.get('namecompany').pristine && hasError)
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
                   "
                   type="text"
                   class="form-control company"
@@ -123,24 +127,76 @@
                 <span
                   class="error"
                   *ngIf="
-                    (FirmForm.get('namecompany').invalid &&
-                      FirmForm.get('namecompany').touched) ||
-                    (FirmForm.get('namecompany').pristine && hasError)
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
                   "
-                  >This field is required</span
+                  >This field is required.</span
                 >
+                <h1>Type in the name EXACTLY as you want it to appear.</h1>
               </div>
-
               <div class="form-group company">
                 <label class="labelname"
-                  >Address of Partnership firm&nbsp;<sup
+                  >First Alternate Name&nbsp;<sup
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
                   [class.is-invalid]="
-                    (FirmForm.get('address').invalid &&
-                      FirmForm.get('address').touched) ||
-                    (FirmForm.get('address').pristine && hasError)
+                    (CompanyForm.get('namecompany1').invalid &&
+                      CompanyForm.get('namecompany1').touched) ||
+                    (CompanyForm.get('namecompany1').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany1"
+                />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany1').invalid &&
+                      CompanyForm.get('namecompany1').touched) ||
+                    (CompanyForm.get('namecompany1').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Second Alternate Name&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('namecompany2').invalid &&
+                      CompanyForm.get('namecompany2').touched) ||
+                    (CompanyForm.get('namecompany2').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany2"
+                />
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('namecompany2').invalid &&
+                      CompanyForm.get('namecompany2').touched) ||
+                    (CompanyForm.get('namecompany2').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Address of proposed Nidhi Co.&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  [class.is-invalid]="
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
                   "
                   type="text"
                   class="form-control address"
@@ -150,11 +206,11 @@
                 <span
                   class="error"
                   *ngIf="
-                    (FirmForm.get('address').invalid &&
-                      FirmForm.get('address').touched) ||
-                    (FirmForm.get('address').pristine && hasError)
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
                   "
-                  >This field is required</span
+                  >This field is required.</span
                 >
               </div>
               <div class="form-group company">
@@ -162,13 +218,10 @@
                   >State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
                 ></label>
 
-                <select name="states" class="custom-select mb-3" value="select">
-                  <option value selected="selected" class="gf_placeholder">
-                    select
-                  </option>
+                <select name="states" class="custom-select mb-3">
                   <option value="AndhraPradesh">AndhraPradesh</option>
                   <option value="ArunachalPradesh">ArunachalPradesh</option>
-                  <option value="Delhi">Delhi</option>
+                  <option selected>Delhi</option>
                   <option value="Mumbai">Mumbai</option>
                   <option value="Jaipur">Jaipur</option>
                   <option value="Karnataka">Karnataka</option>
@@ -188,9 +241,9 @@
                 ></label>
                 <input
                   [class.is-invalid]="
-                    (FirmForm.get('Pincode').invalid &&
-                      FirmForm.get('Pincode').touched) ||
-                    (FirmForm.get('Pincode').pristine && hasError)
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
                   "
                   type="number"
                   class="form-control Pincode"
@@ -200,11 +253,11 @@
                 <span
                   class="error"
                   *ngIf="
-                    (FirmForm.get('Pincode').invalid &&
-                      FirmForm.get('Pincode').touched) ||
-                    (FirmForm.get('Pincode').pristine && hasError)
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
                   "
-                  >This field is required</span
+                  >This field is required.</span
                 >
               </div>
               <div
@@ -218,41 +271,42 @@
           </div>
 
           <div
-            id="pills-Partner"
+            id="pills-Director"
             class="tab-pane fade"
             role="tabpanel"
-            aria-labelledby="pills-Partner-tab"
+            aria-labelledby="pills-Director-tab"
           >
-            <div class="col-md-6 Partner-pro">
-              <form [formGroup]="PartnerForm">
+            <div class="col-md-6 Director-pro">
+              <form [formGroup]="DirectorForm">
                 <div class="Documents-pro">
                   <label class="Documents">Documents required : </label>
+                  <h4>From Directors or Shareholders:</h4>
                 </div>
-                <div class="Partner-name">
-                  <label class="parname"
-                    >Partners Name:&nbsp;<sup
+                <div class="Director-name">
+                  <label class="dirname"
+                    >Directors Name:&nbsp;<sup
                       ><i class="fa fa-asterisk"></i></sup
                   ></label>
                   <input
-                  [class.is-invalid]="
-                    (PartnerForm.get('partnername').invalid &&
-                    PartnerForm.get('partnername').touched) ||
-                    (PartnerForm.get('partnername').pristine && hasError)
-                  "
+                    [class.is-invalid]="
+                      (DirectorForm.get('directorname').invalid &&
+                        DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
                     type="text"
-                    class="form-control partnername"
+                    class="form-control directorname"
                     placeholder=""
-                    formControlName="partnername"
+                    formControlName="directorname"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('partnername').invalid &&
-                    PartnerForm.get('partnername').touched) ||
-                    (PartnerForm.get('partnername').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('directorname').invalid &&
+                      DirectorForm.get('directorname').touched) ||
+                      (DirectorForm.get('directorname').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                 </div>
                 <div class="pan">
                   <label class="labelpan"
@@ -261,55 +315,54 @@
                   >
                   <input
                   [class.is-invalid]="
-                    (PartnerForm.get('file').invalid &&
-                    PartnerForm.get('file').touched) ||
-                    (PartnerForm.get('file').pristine && hasError)
-                  "
+                  (DirectorForm.get('file').invalid &&
+                    DirectorForm.get('file').touched) ||
+                  (DirectorForm.get('file').pristine && hasError)
+                "
                     type="file"
                     class="form-control-file border"
                     name="file"
                     formControlName="file"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file').invalid &&
-                    PartnerForm.get('file').touched) ||
-                    (PartnerForm.get('file').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file').invalid &&
+                      DirectorForm.get('file').touched) ||
+                      (DirectorForm.get('file').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                   <textarea
                     class="form-control-txt"
                     placeholder="Comment"
                   ></textarea>
                 </div>
-
                 <div class="pan">
                   <label class="labelpan"
-                    >Passport:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    >Photographs:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
                     &nbsp;</label
                   >
                   <input
                   [class.is-invalid]="
-                    (PartnerForm.get('file1').invalid &&
-                    PartnerForm.get('file1').touched) ||
-                    (PartnerForm.get('file1').pristine && hasError)
-                  "
+                  (DirectorForm.get('file1').invalid &&
+                    DirectorForm.get('file1').touched) ||
+                  (DirectorForm.get('file1').pristine && hasError)
+                "
                     type="file"
                     class="form-control-file border"
                     name="file"
                     formControlName="file1"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file1').invalid &&
-                    PartnerForm.get('file1').touched) ||
-                    (PartnerForm.get('file1').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file1').invalid &&
+                      DirectorForm.get('file1').touched) ||
+                      (DirectorForm.get('file1').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                   <textarea
                     class="form-control-txt"
                     placeholder="Comment"
@@ -317,31 +370,31 @@
                 </div>
                 <div class="pan">
                   <label class="labelpan"
-                    >Drivers License:&nbsp;<sup
+                    >Digital signature:&nbsp;<sup
                       ><i class="fa fa-asterisk"></i
                     ></sup>
                     &nbsp;</label
                   >
                   <input
                   [class.is-invalid]="
-                    (PartnerForm.get('file2').invalid &&
-                    PartnerForm.get('file2').touched) ||
-                    (PartnerForm.get('file2').pristine && hasError)
-                  "
+                  (DirectorForm.get('file2').invalid &&
+                    DirectorForm.get('file2').touched) ||
+                  (DirectorForm.get('file2').pristine && hasError)
+                "
                     type="file"
                     class="form-control-file border"
                     name="file"
                     formControlName="file2"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file2').invalid &&
-                    PartnerForm.get('file2').touched) ||
-                    (PartnerForm.get('file2').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file2').invalid &&
+                      DirectorForm.get('file2').touched) ||
+                      (DirectorForm.get('file2').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                   <textarea
                     class="form-control-txt"
                     placeholder="Comment"
@@ -349,29 +402,31 @@
                 </div>
                 <div class="pan">
                   <label class="labelpan"
-                    >Aadhar Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    >Aadhar Card or Voter Card:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
                     &nbsp;</label
                   >
                   <input
                   [class.is-invalid]="
-                  (PartnerForm.get('file3').invalid &&
-                  PartnerForm.get('file3').touched) ||
-                  (PartnerForm.get('file3').pristine && hasError)
+                  (DirectorForm.get('file3').invalid &&
+                    DirectorForm.get('file3').touched) ||
+                  (DirectorForm.get('file3').pristine && hasError)
                 "
                     type="file"
                     class="form-control-file border"
                     name="file"
-                    formControlName="file3"
+                     formControlName="file3"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file3').invalid &&
-                    PartnerForm.get('file3').touched) ||
-                    (PartnerForm.get('file3').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file3').invalid &&
+                      DirectorForm.get('file3').touched) ||
+                      (DirectorForm.get('file3').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                   <textarea
                     class="form-control-txt"
                     placeholder="Comment"
@@ -379,36 +434,113 @@
                 </div>
                 <div class="pan">
                   <label class="labelpan"
-                    >Voters ID:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    >Address Proof:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
                     &nbsp;</label
                   >
                   <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file4').invalid &&
+                    DirectorForm.get('file4').touched) ||
+                  (DirectorForm.get('file4').pristine && hasError)
+                "
                     type="file"
-                    [class.is-invalid]="
-                    (PartnerForm.get('file4').invalid &&
-                    PartnerForm.get('file4').touched) ||
-                    (PartnerForm.get('file4').pristine && hasError)
-                  "
                     class="form-control-file border"
                     name="file"
                     formControlName="file4"
                   />
                   <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file4').invalid &&
-                    PartnerForm.get('file4').touched) ||
-                    (PartnerForm.get('file4').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file4').invalid &&
+                      DirectorForm.get('file4').touched) ||
+                      (DirectorForm.get('file4').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >DIN:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                  [class.is-invalid]="
+                  (DirectorForm.get('file5').invalid &&
+                    DirectorForm.get('file5').touched) ||
+                  (DirectorForm.get('file5').pristine && hasError)
+                "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file5"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (DirectorForm.get('file5').invalid &&
+                      DirectorForm.get('file5').touched) ||
+                      (DirectorForm.get('file5').pristine && hasError)
+                    "
+                    >This field is required.</span
+                  >
                   <textarea
                     class="form-control-txt"
                     placeholder="Comment"
                   ></textarea>
                 </div>
 
-                <button type="submit" class="btn-submit" (click)="partnersubmit()">Submit</button>
+                <!-- <div class="idproof">
+                <label class="labelidproof"
+                  >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <div class="id-proof-file">
+                  <select class="id-proof">
+                    <option value=""></option>
+                    <option value="Passport">Passport</option>
+                    <option value="Aadhaar Card">Aadhaar Card</option>
+                    <option value="Election Card or Voter Identity Card">
+                      Election Card or Voter Identity Card
+                    </option>
+                    <option value="Ration Card">Ration Card</option>
+                    <option value="Driving License">Driving License</option>
+                  </select>
+                  <input type="file" class="form-control-file" name="file" />
+                </div>
+
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+              <div class="idproof">
+                <label class="labelidproof"
+                  >Residential Proof:&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <div class="id-proof-file">
+                  <select class="id-proof">
+                    <option value=""></option>
+                    <option value="Bank Statement">Bank Statement</option>
+                    <option value="Electricity Bill">Electricity Bill</option>
+                    <option value="Telephone Bill">Telephone Bill</option>
+                    <option value="Mobile Bill">Mobile Bill</option>
+                  </select>
+                  <input type="file" class="form-control-file" name="file" />
+                </div>
+
+                <textarea
+                  class="form-control-txt"
+                  placeholder="Comment"
+                ></textarea>
+              </div> -->
+
+                <button type="submit" class="btn-submit" (click)="directorsubmit()">Submit</button>
               </form>
             </div>
           </div>

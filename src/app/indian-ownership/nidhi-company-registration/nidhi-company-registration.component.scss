@@ -70,14 +70,16 @@ section.privatelimited-registration-wrapper {
         }
       }
       .form-group.company {
-        margin: 0px 0px 17px 0px;
         h1 {
           color: #34495e;
           font-size: 17px;
           padding: 10px 0px 0px 0px;
-          margin-bottom: 10px;
         }
       }
+      span.error {
+        color: #dc3545;
+        font-size: 17px;}
+       
   
       a#pills-Company-tab {
         // background-color: transparent;
@@ -93,7 +95,9 @@ section.privatelimited-registration-wrapper {
           font-size: 8px;
         }
       }
-     
+      .form-group.company {
+        margin: 0px 0px 17px 0px;
+      }
   
       input.form-control.company {
         width: 50%;
@@ -120,12 +124,12 @@ section.privatelimited-registration-wrapper {
         }
       }
   
-      input.form-control.add {
-        width: 94%;
-        border-radius: 0px;
-        height: 29px;
-        box-shadow: none;
-      }
+      // input.form-control.add {
+      //   width: 94%;
+      //   border-radius: 0px;
+      //   height: 29px;
+      //   box-shadow: none;
+      // }
       input.form-control.address {
         width: 50%;
         height: 29px;
@@ -192,10 +196,7 @@ section.privatelimited-registration-wrapper {
     color: #e00404;
     font-size: 7px;
   }
-  span.error {
-    color: #dc3545;
-    font-size: 17px;}
-   
+  
   
   .Director-pro {
     padding-left: 0px;
@@ -204,7 +205,9 @@ section.privatelimited-registration-wrapper {
       margin-top: 10px;
       text-transform: capitalize;
     }
-  
+    .Documents-pro{
+        h4{margin-bottom: 0px;}
+    }
   .Director-name {
     margin-bottom: 15px;
     label.dirname {
@@ -227,7 +230,7 @@ section.privatelimited-registration-wrapper {
     font-size: 12px;
     border-color: #ced4da;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   }
   .idproof{
@@ -246,7 +249,7 @@ section.privatelimited-registration-wrapper {
     font-size: 12px;
     border-color: #ced4da;
     margin-bottom: 12px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   }
   button.btn-submit {
