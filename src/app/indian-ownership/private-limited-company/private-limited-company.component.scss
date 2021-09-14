@@ -12,44 +12,44 @@
         height: 100%;
         width: 100%;
         .overlay-body {
-        padding-bottom: 60px;
-        .overlay-left {
-          h3 {
-            color: #fff;
-            font-size: 38px;
-            text-transform: capitalize;
-            // display: flex;
-            align-items: center;
-            justify-content: center;
-            //   height: 100%;
-            //   padding: 31px 0px 0px 0px;
-            padding: 84px 0px 41px 0px;
-            margin: 0px !important;
-          }
-          h4 {
-            color: white;
-            font-size: 24px;
-            line-height: 1.5;
-            margin: 16px 0px 0px 0px;
-          }
-          h5 {
-            color: white;
-    margin-top: 19px;
-    font-size: 20px;
-    margin-bottom: 21px;
-          }
-          h6 {
-            color: white;
-    font-size: 20px;
-    padding: 0px 0px 18px 0px;
-    margin: 0px;
-          }
-          h2 {
-            font-size: 20px;
-            color: white;
+          padding-bottom: 60px;
+          .overlay-left {
+            h3 {
+              color: #fff;
+              font-size: 38px;
+              text-transform: capitalize;
+              // display: flex;
+              align-items: center;
+              justify-content: center;
+              //   height: 100%;
+              //   padding: 31px 0px 0px 0px;
+              padding: 84px 0px 41px 0px;
+              margin: 0px !important;
+            }
+            h4 {
+              color: white;
+              font-size: 24px;
+              line-height: 1.5;
+              margin: 16px 0px 0px 0px;
+            }
+            h5 {
+              color: white;
+              margin-top: 19px;
+              font-size: 20px;
+              margin-bottom: 21px;
+            }
+            h6 {
+              color: white;
+              font-size: 20px;
+              padding: 0px 0px 18px 0px;
+              margin: 0px;
+            }
+            h2 {
+              font-size: 20px;
+              color: white;
+            }
           }
         }
-      }
       }
     }
   }
@@ -111,7 +111,8 @@
   }
   span.error {
     color: #dc3545;
-    font-size: 10px;}
+    font-size: 10px;
+  }
   input#email {
     margin: 17px 0px 0px 0px;
     padding: 8px 0px 8px 8px;
@@ -153,35 +154,34 @@ input::-webkit-inner-spin-button {
 @media only screen and (max-width: 992px) {
   .privatelimited-wrapper {
     .private-banner {
-    .overlay-left {
-      h3 {
-        font-size: 35px;
-        line-height: 50px;
+      .overlay-left {
+        h3 {
+          font-size: 35px;
+          line-height: 50px;
+        }
       }
-    }
-    .card-reg {
-      .rectangle {
-        width: 90%;
-        p {
-          font-size: 16px;
+      .card-reg {
+        .rectangle {
+          width: 90%;
+          p {
+            font-size: 16px;
+          }
         }
       }
     }
   }
 }
-}
 
 @media only screen and (max-width: 768px) {
   .privatelimited-wrapper {
     .private-banner {
-      
-      
       .card-body {
         .rectangle {
-          p{font-size: 18px;}
+          p {
+            font-size: 18px;
+          }
         }
       }
-      
     }
   }
 }

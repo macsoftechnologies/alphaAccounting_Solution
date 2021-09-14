@@ -111,7 +111,7 @@
                 <h3>Type in the name exactly as you want it to appear.</h3>
 
                 <input
-                [class.is-invalid]="
+                  [class.is-invalid]="
                     (FirmForm.get('namecompany').invalid &&
                       FirmForm.get('namecompany').touched) ||
                     (FirmForm.get('namecompany').pristine && hasError)
@@ -138,7 +138,7 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
-                [class.is-invalid]="
+                  [class.is-invalid]="
                     (FirmForm.get('address').invalid &&
                       FirmForm.get('address').touched) ||
                     (FirmForm.get('address').pristine && hasError)
@@ -149,14 +149,14 @@
                   formControlName="address"
                 />
                 <span
-                class="error"
-                *ngIf="
-                  (FirmForm.get('address').invalid &&
-                    FirmForm.get('address').touched) ||
-                  (FirmForm.get('address').pristine && hasError)
-                "
-                >This field is required</span
-              >
+                  class="error"
+                  *ngIf="
+                    (FirmForm.get('address').invalid &&
+                      FirmForm.get('address').touched) ||
+                    (FirmForm.get('address').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
               </div>
               <div class="form-group company">
                 <label class="labelname"
@@ -164,7 +164,7 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
-                [class.is-invalid]="
+                  [class.is-invalid]="
                     (FirmForm.get('address1').invalid &&
                       FirmForm.get('address1').touched) ||
                     (FirmForm.get('address1').pristine && hasError)
@@ -175,14 +175,14 @@
                   formControlName="address1"
                 />
                 <span
-                class="error"
-                *ngIf="
-                  (FirmForm.get('address1').invalid &&
-                    FirmForm.get('address1').touched) ||
-                  (FirmForm.get('address1').pristine && hasError)
-                "
-                >This field is required</span
-              >
+                  class="error"
+                  *ngIf="
+                    (FirmForm.get('address1').invalid &&
+                      FirmForm.get('address1').touched) ||
+                    (FirmForm.get('address1').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
               </div>
 
               <div class="form-group company">
@@ -214,7 +214,7 @@
                     ><i class="fa fa-asterisk"></i></sup
                 ></label>
                 <input
-                [class.is-invalid]="
+                  [class.is-invalid]="
                     (FirmForm.get('Pincode').invalid &&
                       FirmForm.get('Pincode').touched) ||
                     (FirmForm.get('Pincode').pristine && hasError)
@@ -225,18 +225,18 @@
                   formControlName="Pincode"
                 />
                 <span
-                class="error"
-                *ngIf="
-                  (FirmForm.get('Pincode').invalid &&
-                    FirmForm.get('Pincode').touched) ||
-                  (FirmForm.get('Pincode').pristine && hasError)
-                "
-                >This field is required</span
-              >
+                  class="error"
+                  *ngIf="
+                    (FirmForm.get('Pincode').invalid &&
+                      FirmForm.get('Pincode').touched) ||
+                    (FirmForm.get('Pincode').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
               </div>
 
               <div class="director-info">
-                <div class=" director-details">
+                <div class="director-details">
                   <div class="director-details-left">
                     <div class="form-group company">
                       <label class="labelname"
@@ -244,25 +244,25 @@
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
-                      [class.is-invalid]="
-                    (FirmForm.get('directorinfo').invalid &&
-                      FirmForm.get('directorinfo').touched) ||
-                    (FirmForm.get('directorinfo').pristine && hasError)
-                  "
+                        [class.is-invalid]="
+                          (FirmForm.get('directorinfo').invalid &&
+                            FirmForm.get('directorinfo').touched) ||
+                          (FirmForm.get('directorinfo').pristine && hasError)
+                        "
                         type="text"
                         class="form-control directorinfo"
                         placeholder=""
                         formControlName="directorinfo"
                       />
                       <span
-                class="error"
-                *ngIf="
-                  (FirmForm.get('directorinfo').invalid &&
-                    FirmForm.get('directorinfo').touched) ||
-                  (FirmForm.get('directorinfo').pristine && hasError)
-                "
-                >This field is required</span
-              >
+                        class="error"
+                        *ngIf="
+                          (FirmForm.get('directorinfo').invalid &&
+                            FirmForm.get('directorinfo').touched) ||
+                          (FirmForm.get('directorinfo').pristine && hasError)
+                        "
+                        >This field is required</span
+                      >
                     </div>
                     <div class="category-checkbox">
                       <label class="labelcheckbox"
@@ -321,25 +321,25 @@
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
-                      [class.is-invalid]="
-                    (FirmForm.get('directorinfo1').invalid &&
-                      FirmForm.get('directorinfo1').touched) ||
-                    (FirmForm.get('directorinfo1').pristine && hasError)
-                  "
+                        [class.is-invalid]="
+                          (FirmForm.get('directorinfo1').invalid &&
+                            FirmForm.get('directorinfo1').touched) ||
+                          (FirmForm.get('directorinfo1').pristine && hasError)
+                        "
                         type="text"
                         class="form-control directorinfo"
                         placeholder=""
                         formControlName="directorinfo1"
                       />
                       <span
-                      class="error"
-                      *ngIf="
-                        (FirmForm.get('directorinfo1').invalid &&
-                          FirmForm.get('directorinfo1').touched) ||
-                        (FirmForm.get('directorinfo1').pristine && hasError)
-                      "
-                      >This field is required</span
-                    >
+                        class="error"
+                        *ngIf="
+                          (FirmForm.get('directorinfo1').invalid &&
+                            FirmForm.get('directorinfo1').touched) ||
+                          (FirmForm.get('directorinfo1').pristine && hasError)
+                        "
+                        >This field is required</span
+                      >
                     </div>
                     <div class="form-group companystate">
                       <label class="labelname"
@@ -375,25 +375,25 @@
                           ><i class="fa fa-asterisk"></i></sup
                       ></label>
                       <input
-                      [class.is-invalid]="
-                    (FirmForm.get('Pincode1').invalid &&
-                      FirmForm.get('Pincode1').touched) ||
-                    (FirmForm.get('Pincode1').pristine && hasError)
-                  "
+                        [class.is-invalid]="
+                          (FirmForm.get('Pincode1').invalid &&
+                            FirmForm.get('Pincode1').touched) ||
+                          (FirmForm.get('Pincode1').pristine && hasError)
+                        "
                         type="number"
                         class="form-control Pincode"
                         placeholder=""
                         formControlName="Pincode1"
                       />
                       <span
-                      class="error"
-                      *ngIf="
-                        (FirmForm.get('Pincode1').invalid &&
-                          FirmForm.get('Pincode1').touched) ||
-                        (FirmForm.get('Pincode1').pristine && hasError)
-                      "
-                      >This field is required</span
-                    >
+                        class="error"
+                        *ngIf="
+                          (FirmForm.get('Pincode1').invalid &&
+                            FirmForm.get('Pincode1').touched) ||
+                          (FirmForm.get('Pincode1').pristine && hasError)
+                        "
+                        >This field is required</span
+                      >
                     </div>
                   </div>
 
@@ -429,7 +429,9 @@
                 class="hr-dotted"
                 style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
               ></div>
-              <button type="submit" class="btn-next" (click)=" Next()">Next</button>
+              <button type="submit" class="btn-next" (click)="Next()">
+                Next
+              </button>
             </form>
           </div>
 
@@ -441,158 +443,169 @@
           >
             <div class="col-md-6 Partner-pro">
               <form [formGroup]="PartnerForm">
-              <div class="Documents-pro">
-                <label class="Documents">Documents required : </label>
-              </div>
-              <div class="Partner-name">
-                <label class="parname"
-                  >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                ></label>
-                <input
-                [class.is-invalid]="
-                (PartnerForm.get('partnername').invalid &&
-                PartnerForm.get('partnername').touched) ||
-                (PartnerForm.get('partnername').pristine && hasError)
-              "
-                  type="text"
-                  class="form-control partnername"
-                  placeholder=""
-                  formControlName="partnername"
-                />
-                <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('partnername').invalid &&
-                    PartnerForm.get('partnername').touched) ||
-                    (PartnerForm.get('partnername').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Aadhar Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                [class.is-invalid]="
-                (PartnerForm.get('file').invalid &&
-                PartnerForm.get('file').touched) ||
-                (PartnerForm.get('file').pristine && hasError)
-              "
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                  formControlName="file"
-                />
-                <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file').invalid &&
-                    PartnerForm.get('file').touched) ||
-                    (PartnerForm.get('file').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
+                <div class="Documents-pro">
+                  <label class="Documents">Documents required : </label>
+                </div>
+                <div class="Partner-name">
+                  <label class="parname"
+                    >Directors Name:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (PartnerForm.get('partnername').invalid &&
+                        PartnerForm.get('partnername').touched) ||
+                      (PartnerForm.get('partnername').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control partnername"
+                    placeholder=""
+                    formControlName="partnername"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (PartnerForm.get('partnername').invalid &&
+                        PartnerForm.get('partnername').touched) ||
+                      (PartnerForm.get('partnername').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Aadhar Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                    [class.is-invalid]="
+                      (PartnerForm.get('file').invalid &&
+                        PartnerForm.get('file').touched) ||
+                      (PartnerForm.get('file').pristine && hasError)
+                    "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (PartnerForm.get('file').invalid &&
+                        PartnerForm.get('file').touched) ||
+                      (PartnerForm.get('file').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
 
-              <div class="pan">
-                <label class="labelpan"
-                  >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                [class.is-invalid]="
-                (PartnerForm.get('file1').invalid &&
-                PartnerForm.get('file1').touched) ||
-                (PartnerForm.get('file1').pristine && hasError)
-              "
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                  formControlName="file1"
-                />
-                <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file1').invalid &&
-                    PartnerForm.get('file1').touched) ||
-                    (PartnerForm.get('file1').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Bank Account:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                [class.is-invalid]="
-                (PartnerForm.get('file2').invalid &&
-                PartnerForm.get('file2').touched) ||
-                (PartnerForm.get('file2').pristine && hasError)
-              "
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                  formControlName="file2"
-                />
-                <span
-                  class="error"
-                  *ngIf="
-                    (PartnerForm.get('file2').invalid &&
-                    PartnerForm.get('file2').touched) ||
-                    (PartnerForm.get('file2').pristine && hasError)
-                  "
-                  >This field is required</span
-                >
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
-              <div class="pan">
-                <label class="labelpan"
-                  >Registered office proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                  &nbsp;</label
-                >
-                <input
-                [class.is-invalid]="
-                (PartnerForm.get('file3').invalid &&
-                PartnerForm.get('file3').touched) ||
-                (PartnerForm.get('file3').pristine && hasError)
-              "
-                  type="file"
-                  class="form-control-file border"
-                  name="file"
-                  formControlName="file3"
-                />
-                <span
-                class="error"
-                *ngIf="
-                  (PartnerForm.get('file3').invalid &&
-                  PartnerForm.get('file3').touched) ||
-                  (PartnerForm.get('file3').pristine && hasError)
-                "
-                >This field is required</span
-              >
-                <textarea
-                  class="form-control-txt"
-                  placeholder="Comment"
-                ></textarea>
-              </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                    [class.is-invalid]="
+                      (PartnerForm.get('file1').invalid &&
+                        PartnerForm.get('file1').touched) ||
+                      (PartnerForm.get('file1').pristine && hasError)
+                    "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file1"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (PartnerForm.get('file1').invalid &&
+                        PartnerForm.get('file1').touched) ||
+                      (PartnerForm.get('file1').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Bank Account:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                    [class.is-invalid]="
+                      (PartnerForm.get('file2').invalid &&
+                        PartnerForm.get('file2').touched) ||
+                      (PartnerForm.get('file2').pristine && hasError)
+                    "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file2"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (PartnerForm.get('file2').invalid &&
+                        PartnerForm.get('file2').touched) ||
+                      (PartnerForm.get('file2').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
+                <div class="pan">
+                  <label class="labelpan"
+                    >Registered office proof:&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i
+                    ></sup>
+                    &nbsp;</label
+                  >
+                  <input
+                    [class.is-invalid]="
+                      (PartnerForm.get('file3').invalid &&
+                        PartnerForm.get('file3').touched) ||
+                      (PartnerForm.get('file3').pristine && hasError)
+                    "
+                    type="file"
+                    class="form-control-file border"
+                    name="file"
+                    formControlName="file3"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (PartnerForm.get('file3').invalid &&
+                        PartnerForm.get('file3').touched) ||
+                      (PartnerForm.get('file3').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                  <textarea
+                    class="form-control-txt"
+                    placeholder="Comment"
+                  ></textarea>
+                </div>
 
-              <button type="submit" class="btn-submit" (click)="partnersubmit()">Submit</button>
-            </form>
+                <button
+                  type="submit"
+                  class="btn-submit"
+                  (click)="partnersubmit()"
+                >
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
           <div
@@ -616,7 +629,8 @@
                         type="radio"
                         id="accomodation"
                         name="tab"
-                        value="accomodation"
+                        [(ngModel)]="type"
+                        [value]="0"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault1"
@@ -629,7 +643,8 @@
                         type="radio"
                         id="construction"
                         name="tab"
-                        value="construction"
+                        [(ngModel)]="type"
+                        [value]="1"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault2"
@@ -642,7 +657,8 @@
                         type="radio"
                         id="consulting"
                         name="tab"
-                        value="consulting"
+                        [(ngModel)]="type"
+                        [value]="2"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault3"
@@ -655,7 +671,8 @@
                         type="radio"
                         id="entertainment"
                         name="tab"
-                        value="entertainment"
+                        [(ngModel)]="type"
+                        [value]="3"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault4"
@@ -668,7 +685,8 @@
                         type="radio"
                         id="finance"
                         name="tab"
-                        value="finance"
+                        [(ngModel)]="type"
+                        [value]="4"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault5"
@@ -681,7 +699,8 @@
                         type="radio"
                         id="foodservice"
                         name="tab"
-                        value="foodservice"
+                        [(ngModel)]="type"
+                        [value]="5"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault6"
@@ -694,7 +713,8 @@
                         type="radio"
                         id="healthcare"
                         name="tab"
-                        value="health"
+                        [(ngModel)]="type"
+                        [value]="6"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault7"
@@ -707,7 +727,8 @@
                         type="radio"
                         id="insurance"
                         name="tab"
-                        value="insurance"
+                        [(ngModel)]="type"
+                        [value]="7"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault8"
@@ -720,17 +741,22 @@
                         type="radio"
                         id="manufacturing"
                         name="tab"
-                        value="manufacturing"
+                        [(ngModel)]="type"
+                        [value]="8"
+                      />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault9"
-                      />&nbsp;&nbsp;<label> Manufacturing</label>
+                      >
+                        Manufacturing</label
+                      >
                     </li>
                     <li class="radio-professional">
                       <input
                         type="radio"
                         id="professional"
                         name="tab"
-                        value="professional"
+                        [(ngModel)]="type"
+                        [value]="9"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault10"
@@ -743,7 +769,8 @@
                         type="radio"
                         id="realestate"
                         name="tab"
-                        value="realestate"
+                        [(ngModel)]="type"
+                        [value]="10"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault11"
@@ -756,7 +783,8 @@
                         type="radio"
                         id="rental"
                         name="tab"
-                        value="rental"
+                        [(ngModel)]="type"
+                        [value]="11"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault12"
@@ -769,7 +797,8 @@
                         type="radio"
                         id="retail"
                         name="tab"
-                        value="retail"
+                        [(ngModel)]="type"
+                        [value]="12"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault13"
@@ -782,7 +811,8 @@
                         type="radio"
                         id="social"
                         name="tab"
-                        value="social"
+                        [(ngModel)]="type"
+                        [value]="13"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault14"
@@ -795,7 +825,8 @@
                         type="radio"
                         id="technology"
                         name="tab"
-                        value="technology"
+                        [(ngModel)]="type"
+                        [value]="14"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault15"
@@ -808,7 +839,8 @@
                         type="radio"
                         id="transportation"
                         name="tab"
-                        value="transportation"
+                        [(ngModel)]="type"
+                        [value]="15"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
                         for="flexRadioDefault16"
@@ -821,10 +853,11 @@
                         type="radio"
                         id="warehousing"
                         name="tab"
-                        value="warehousing"
+                        [(ngModel)]="type"
+                        [value]="16"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
-                        for="flexRadioDefault9"
+                        for="flexRadioDefault17"
                       >
                         Ware Housing</label
                       >
@@ -834,10 +867,11 @@
                         type="radio"
                         id="wholesale"
                         name="tab"
-                        value="wholesale"
+                        [(ngModel)]="type"
+                        [value]="17"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
-                        for="flexRadioDefault9"
+                        for="flexRadioDefault18"
                       >
                         Wholesale</label
                       >
@@ -847,10 +881,11 @@
                         type="radio"
                         id="other"
                         name="tab"
-                        value="other"
+                        [(ngModel)]="type"
+                        [value]="18"
                       />&nbsp;&nbsp;<label
                         class="form-check-label"
-                        for="flexRadioDefault10"
+                        for="flexRadioDefault19"
                       >
                         Other</label
                       >
@@ -858,7 +893,11 @@
                   </ul>
                 </div>
                 <div class="col-md-6 radio-content">
-                  <div id="accomodation" class="accomodation-pro">
+                  <div
+                    id="accomodation"
+                    class="accomodation-pro"
+                    *ngIf="type == 0"
+                  >
                     <label class="labelradio"
                       >what will you do in accomodation?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -870,7 +909,11 @@
                       formControlName="accomodation"
                     />
                   </div>
-                  <div id="construction" class="construction-pro">
+                  <div
+                    id="construction"
+                    class="construction-pro"
+                    *ngIf="type == 1"
+                  >
                     <label class="labelradio"
                       >what will you do in construction?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -882,7 +925,7 @@
                       formControlName="construction"
                     />
                   </div>
-                  <div id="consulting" class="consulting-pro">
+                  <div id="consulting" class="consulting-pro" *ngIf="type == 2">
                     <label class="labelradio"
                       >what will you do in consulting?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -893,12 +936,16 @@
                       placeholder=""
                       formControlName="consulting"
                     />
-                    <h3>
+                    <h4>
                       Describe the Type of Consulting service you provide.
                       (Management, Marketing etc.)
-                    </h3>
+                    </h4>
                   </div>
-                  <div id="entertainment" class="entertainment-pro">
+                  <div
+                    id="entertainment"
+                    class="entertainment-pro"
+                    *ngIf="type == 3"
+                  >
                     <label class="labelradio"
                       >what will you do in entertainment?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -910,7 +957,7 @@
                       formControlName="entertainment"
                     />
                   </div>
-                  <div id="finance" class="finance-pro">
+                  <div id="finance" class="finance-pro" *ngIf="type == 4">
                     <label class="labelradio"
                       >what will you do in finance?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -922,7 +969,11 @@
                       formControlName="finance"
                     />
                   </div>
-                  <div id="foodservice" class="foodservice-pro">
+                  <div
+                    id="foodservice"
+                    class="foodservice-pro"
+                    *ngIf="type == 5"
+                  >
                     <label class="labelradio"
                       >what will you do in foodservice?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -934,7 +985,7 @@
                       formControlName="foodservice"
                     />
                   </div>
-                  <div id="health" class="health-pro">
+                  <div id="health" class="health-pro" *ngIf="type == 6">
                     <label class="labelradio"
                       >what will you do in health care?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -946,7 +997,7 @@
                       formControlName="health"
                     />
                   </div>
-                  <div id="insurance" class="insurance-pro">
+                  <div id="insurance" class="insurance-pro" *ngIf="type == 7">
                     <label class="labelradio"
                       >what will you do in insurance?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -958,7 +1009,11 @@
                       formControlName="insurance"
                     />
                   </div>
-                  <div id="manufacturing" class="manufacturing-pro">
+                  <div
+                    id="manufacturing"
+                    class="manufacturing-pro"
+                    *ngIf="type == 8"
+                  >
                     <label class="labelradio"
                       >what will you do in manufacturing?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -969,13 +1024,17 @@
                       placeholder=""
                       formControlName="manufacturing"
                     />
-                    <h3>
+                    <h4>
                       Describe the type of goods you make and the primary
                       material used for making them.(For Example Wood
                       Furniture).
-                    </h3>
+                    </h4>
                   </div>
-                  <div id="professional" class="professional-pro">
+                  <div
+                    id="professional"
+                    class="professional-pro"
+                    *ngIf="type == 9"
+                  >
                     <label class="labelradio"
                       >what will you do in profession?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -987,7 +1046,11 @@
                       formControlName="professional"
                     />
                   </div>
-                  <div id="realestate" class="realestate-pro">
+                  <div
+                    id="realestate"
+                    class="realestate-pro"
+                    *ngIf="type == 10"
+                  >
                     <label class="labelradio"
                       >what will you do in real estate?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -999,7 +1062,7 @@
                       formControlName="realestate"
                     />
                   </div>
-                  <div id="rental" class="rental-pro">
+                  <div id="rental" class="rental-pro" *ngIf="type == 11">
                     <label class="labelradio"
                       >what will you do in rental & leasing?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1011,7 +1074,7 @@
                       formControlName="rental"
                     />
                   </div>
-                  <div id="retail" class="retail-pro">
+                  <div id="retail" class="retail-pro" *ngIf="type == 12">
                     <label class="labelradio"
                       >what will you do in retail?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1023,7 +1086,7 @@
                       formControlName="retail"
                     />
                   </div>
-                  <div id="social" class="social-pro">
+                  <div id="social" class="social-pro" *ngIf="type == 13">
                     <label class="labelradio"
                       >what will you do in social assistance?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1035,7 +1098,11 @@
                       formControlName="social"
                     />
                   </div>
-                  <div id="technology" class="technology-pro">
+                  <div
+                    id="technology"
+                    class="technology-pro"
+                    *ngIf="type == 14"
+                  >
                     <label class="labelradio"
                       >What kind of technology business you will do?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1047,7 +1114,11 @@
                       formControlName="technology"
                     />
                   </div>
-                  <div id="transportation" class="transportation-pro">
+                  <div
+                    id="transportation"
+                    class="transportation-pro"
+                    *ngIf="type == 15"
+                  >
                     <label class="labelradio"
                       >what will you do in transportation ?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1059,7 +1130,11 @@
                       formControlName="transportation"
                     />
                   </div>
-                  <div id="warehousing" class="warehousing-pro">
+                  <div
+                    id="warehousing"
+                    class="warehousing-pro"
+                    *ngIf="type == 16"
+                  >
                     <label class="labelradio"
                       >What kind of warehousing business you will do ?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1071,7 +1146,7 @@
                       formControlName="warehousing"
                     />
                   </div>
-                  <div id="wholesale" class="wholesale-pro">
+                  <div id="wholesale" class="wholesale-pro" *ngIf="type == 17">
                     <label class="labelradio"
                       >What will you do in wholesale ?&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
@@ -1083,12 +1158,12 @@
                       formControlName="wholesale"
                     />
                   </div>
-                  <div id="other" class="other-pro">
+                  <div id="other" class="other-pro" *ngIf="type == 18">
                     <label class="labelradio"
                       >In case your option is other&nbsp;<sup
                         ><i class="fa fa-asterisk"></i></sup
                     ></label>
-                    <h3>Please describe what your business will be doing.</h3>
+                    <h4>Please describe what your business will be doing.</h4>
                     <input
                       type="text"
                       class="form-control other"

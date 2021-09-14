@@ -110,14 +110,13 @@ const routes: Routes = [
     PublicLimitedRegistrationComponent,
     NidhiCompanyRegistrationComponent,
     ProducerCompanyRegistrationComponent,
-    OnePersonCompanyRegistrationComponent
+    OnePersonCompanyRegistrationComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-   
   ],
 })
 export class IndianOwnershipModule {}

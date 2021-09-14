@@ -79,8 +79,8 @@ section.limitedliabilty-registration-wrapper {
     }
     span.error {
       color: #dc3545;
-      font-size: 17px;}
-     
+      font-size: 12px;
+    }
 
     a#pills-Company-tab {
       // background-color: transparent;
@@ -98,7 +98,6 @@ section.limitedliabilty-registration-wrapper {
       }
       // h4{margin: 0 0 8px 0px !important;}
     }
-    
 
     input.form-control.company {
       width: 50%;
@@ -216,7 +215,7 @@ i.fa.fa-asterisk {
       height: 30px;
       border-radius: 0px;
       box-shadow: none;
-    margin-bottom: 10px;
+      margin-bottom: 10px;
     }
   }
   .pan {

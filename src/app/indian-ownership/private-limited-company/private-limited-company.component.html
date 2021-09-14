@@ -51,11 +51,12 @@
                         >
                       </div>
                       <div class="form-group">
-                        <input  [class.is-invalid]="
-                        (CompanyForm.get('email').invalid &&
-                          CompanyForm.get('email').touched) ||
-                        (CompanyForm.get('email').pristine && hasError)
-                      "
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
                           type="text"
                           class="form-control"
                           placeholder="Email"
@@ -73,11 +74,12 @@
                         >
                       </div>
                       <div class="form-group">
-                        <input [class.is-invalid]="
-                        (CompanyForm.get('number').invalid &&
-                          CompanyForm.get('number').touched) ||
-                        (CompanyForm.get('number').pristine && hasError)
-                      "
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
                           type="number"
                           class="form-control"
                           placeholder="mobile number"
@@ -85,16 +87,21 @@
                           maxlength="10"
                           formControlName="number"
                         /><span
-                        class="error"
-                        *ngIf="
-                          (CompanyForm.get('number').invalid &&
-                            CompanyForm.get('number').touched) ||
-                          (CompanyForm.get('number').pristine && hasError)
-                        "
-                        >This field is required</span
-                      >
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
                       </div>
-                      <button type="button" id="proceed"  class="form-control" (click)="proceed()">
+                      <button
+                        type="button"
+                        id="proceed"
+                        class="form-control"
+                        (click)="proceed()"
+                      >
                         proceed
                       </button>
                     </form>

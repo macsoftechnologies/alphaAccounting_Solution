@@ -83,10 +83,8 @@ section.partnership-registration-wrapper {
     }
     span.error {
       color: #dc3545;
-      font-size: 17px;}
-     
-
-    
+      font-size: 12px;
+    }
 
     a#pills-Company-tab {
       // background-color: transparent;
@@ -159,9 +157,8 @@ section.partnership-registration-wrapper {
     }
     .director-info {
       .director-details-left {
-        
-          padding-right: 0px;
-      
+        padding-right: 0px;
+
         // padding-left: 0px;
         // padding-right: 0px;
         .form-group.director {
@@ -221,7 +218,6 @@ section.partnership-registration-wrapper {
       outline: none;
     }
   }
-  
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -526,13 +522,16 @@ i.fa.fa-asterisk {
         .selectarrow {
           width: 100%;
         }
-        .director-info{
-          .director-details-left{
-            input.form-control.directorinfo{ width: 97%;}
-            input.form-control.Mobile{width: 97%;}
+        .director-info {
+          .director-details-left {
+            input.form-control.directorinfo {
+              width: 97%;
+            }
+            input.form-control.Mobile {
+              width: 97%;
+            }
           }
         }
-       
       }
       .image-left {
         padding-left: 0px;

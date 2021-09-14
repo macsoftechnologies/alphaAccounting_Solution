@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 @Component({
-  selector: 'app-nidhi-company-registration',
-  templateUrl: './nidhi-company-registration.component.html',
-  styleUrls: ['./nidhi-company-registration.component.scss']
+  selector: "app-nidhi-company-registration",
+  templateUrl: "./nidhi-company-registration.component.html",
+  styleUrls: ["./nidhi-company-registration.component.scss"],
 })
 export class NidhiCompanyRegistrationComponent implements OnInit {
-
- 
+  type: any;
   public CompanyForm;
   public DirectorForm;
   public hasError = false;
 
-  constructor(private router: Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.CompanyForm = new FormGroup({
       namecompany: new FormControl("", [Validators.required]),
       namecompany1: new FormControl("", [Validators.required]),
@@ -34,7 +33,6 @@ export class NidhiCompanyRegistrationComponent implements OnInit {
       file5: new FormControl("", [Validators.required]),
       // address: new FormControl("", [Validators.required]),
       // Pincode: new FormControl("", [Validators.required]),
-     
     });
   }
 
@@ -48,7 +46,7 @@ export class NidhiCompanyRegistrationComponent implements OnInit {
       console.log("not working");
     }
   }
-  directorsubmit(){
+  directorsubmit() {
     if (this.DirectorForm.valid) {
       console.log("working");
       this.router.navigateByUrl("");
@@ -56,6 +54,5 @@ export class NidhiCompanyRegistrationComponent implements OnInit {
       this.hasError = true;
       console.log("not working");
     }
-
   }
 }

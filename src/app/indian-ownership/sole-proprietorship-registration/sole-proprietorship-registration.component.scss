@@ -81,7 +81,7 @@ section.partnership-registration-wrapper {
     }
     span.error {
       color: #dc3545;
-      font-size: 17px;
+      font-size: 12px;
     }
 
     a#pills-Company-tab {
@@ -192,8 +192,6 @@ section.partnership-registration-wrapper {
             width: 50%;
           }
         }
-
-        
       }
       .form-group.companystate {
         margin: 0px 0px 46px 0px;
@@ -246,13 +244,12 @@ i.fa.fa-asterisk {
       height: 30px;
       border-radius: 0px;
       box-shadow: none;
-    margin-bottom: 10px;
+      margin-bottom: 10px;
     }
   }
   .pan {
     input.form-control-file.border {
       margin-bottom: 15px;
-     
     }
     textarea.form-control-txt {
       width: 100%;

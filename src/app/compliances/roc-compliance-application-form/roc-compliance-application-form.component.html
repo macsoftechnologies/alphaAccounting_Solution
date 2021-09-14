@@ -1,0 +1,773 @@
+<section class="limitedliabilty-registration-wrapper">
+  <div class="container card">
+    <div class="row fullcard-wrapper card-body">
+      <div class="col-md-7 limitedliabilty-card-body-titleleft">
+        <h2>ROC Compliance Application Form</h2>
+        <div class="hr-line"></div>
+      </div>
+
+      <div class="col-md-5 limitedliabilty-card-body-titleright">
+        <div class="row align">
+          <div class="col-md-2 image-left">
+            <img
+              src="../../../assets/images/contact-us-legalraasta-form-1.png"
+            />
+          </div>
+          <div class="col-md-10 contact-right">
+            <h6>Have any Problems?</h6>
+            <p>Call us now at +91-875 000 8585</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 limitedliabilty-tabs">
+        <div class="step">
+          <h4>Step 1 of 2</h4>
+          <div class="progress">
+            <div
+              class="progress-bar progress-bar-striped active"
+              role="progressbar"
+              aria-valuenow="40"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width: 50%"
+            >
+              50%
+            </div>
+          </div>
+        </div>
+        <!-- <div class="tab-navpills-section">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-toggle="pill"
+                  href="#pills-Company"
+                  id="pills-Company-tab"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                  >1&nbsp;Company Info</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-Partner-tab"
+                  data-toggle="pill"
+                  href="#pills-Partner"
+                  id="pills-Partner-tab"
+                  role="tab"
+                  aria-controls="pills-Partner"
+                  aria-selected="false"
+                  >2&nbsp;Partner details</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-Business-tab"
+                  data-toggle="pill"
+                  href="#pills-Business"
+                  role="tab"
+                  aria-controls="pills-Business"
+                  aria-selected="false"
+                  >3&nbsp;Business Activity</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-Pricing-tab"
+                  data-toggle="pill"
+                  href="#pills-Pricing"
+                  role="tab"
+                  aria-controls="pills-Pricing"
+                  aria-selected="false"
+                  >4&nbsp;Pricing and Packages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="pills-abc-tab"
+                  data-toggle="pill"
+                  href="#pills-abc"
+                  role="tab"
+                  aria-controls="pills-abc"
+                  aria-selected="false"
+                  >5</a
+                >
+              </li>
+            </ul>
+          </div> -->
+
+        <!-- <div
+              id="pills-Company"
+              class="tab-pane fade show active"
+              role="tabpanel"
+              aria-labelledby="pills-Company-tab"
+            >
+              <p class="filltext">
+                Fill in the below form to apply for LLP online. It will take less
+                than 5 mins. Your details are secured by SSL.
+              </p>
+              <p class="suggest">
+                Suggest names for your LLP firm (in order of preference)
+              </p>
+  
+              <form [formGroup]="CompanyForm">
+                <div class="form-group company">
+                  <label class="labelname"
+                    >LLP Name Preference 1&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <h4>
+                    E.g XYZ solutions LLP. Government will approve the name which
+                    is not already registered.
+                  </h4>
+  
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('namecompany').invalid &&
+                        CompanyForm.get('namecompany').touched) ||
+                      (CompanyForm.get('namecompany').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company"
+                    placeholder=""
+                    formControlName="namecompany"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('namecompany').invalid &&
+                        CompanyForm.get('namecompany').touched) ||
+                      (CompanyForm.get('namecompany').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="form-group company">
+                  <label class="labelname"
+                    >LLP Name Preference 2&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('namecompany1').invalid &&
+                        CompanyForm.get('namecompany1').touched) ||
+                      (CompanyForm.get('namecompany1').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company"
+                    placeholder=""
+                    formControlName="namecompany1"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('namecompany1').invalid &&
+                        CompanyForm.get('namecompany1').touched) ||
+                      (CompanyForm.get('namecompany1').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="form-group company">
+                  <label class="labelname"
+                    >LLP Name Preference 3&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('namecompany2').invalid &&
+                        CompanyForm.get('namecompany2').touched) ||
+                      (CompanyForm.get('namecompany2').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company"
+                    placeholder=""
+                    formControlName="namecompany2"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('namecompany2').invalid &&
+                        CompanyForm.get('namecompany2').touched) ||
+                      (CompanyForm.get('namecompany2').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="form-group company">
+                  <label class="labelname"
+                    >Address of proposed LLP&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('address').invalid &&
+                        CompanyForm.get('address').touched) ||
+                      (CompanyForm.get('address').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control address"
+                    placeholder=""
+                    formControlName="address"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('address').invalid &&
+                        CompanyForm.get('address').touched) ||
+                      (CompanyForm.get('address').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="form-group company">
+                  <label class="labelname"
+                    >Select a State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  ></label>
+  
+                  <select name="states" class="custom-select mb-3" value="select">
+                    <option value selected="selected" class="gf_placeholder">
+                      select
+                    </option>
+                    <option value="AndhraPradesh">AndhraPradesh</option>
+                    <option value="ArunachalPradesh">ArunachalPradesh</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Karnataka">Karnataka</option>
+                  </select>
+                  <div class="selectarrow">
+                    <i
+                      class="fa fa-angle-down"
+                      aria-hidden="true"
+                      aria-disabled="true"
+                    ></i>
+                  </div>
+                </div>
+                <br />
+                <div class="form-group company">
+                  <label class="labelname"
+                    >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('Pincode').invalid &&
+                        CompanyForm.get('Pincode').touched) ||
+                      (CompanyForm.get('Pincode').pristine && hasError)
+                    "
+                    type="number"
+                    class="form-control Pincode"
+                    placeholder=""
+                    formControlName="Pincode"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('Pincode').invalid &&
+                        CompanyForm.get('Pincode').touched) ||
+                      (CompanyForm.get('Pincode').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <button type="submit" class="btn-next" (click)="Next()">
+                  Next
+                </button>
+              </form>
+            </div> -->
+
+        <!-- <div
+              id="pills-Partner"
+              class="tab-pane fade"
+              role="tabpanel"
+              aria-labelledby="pills-Partner-tab"
+            >
+              <div class="col-md-6 Partner-pro">
+                <form [formGroup]="DirectorForm">
+                  <div class="Documents-pro">
+                    <label class="Documents">Documents required : </label>
+                  </div>
+                  <div class="Partner-name">
+                    <label class="parname"
+                      >Partners Name:&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      [class.is-invalid]="
+                        (DirectorForm.get('partnername').invalid &&
+                          DirectorForm.get('partnername').touched) ||
+                        (DirectorForm.get('partnername').pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control partnername"
+                      placeholder=""
+                      formControlName="partnername"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (DirectorForm.get('partnername').invalid &&
+                          DirectorForm.get('partnername').touched) ||
+                        (DirectorForm.get('partnername').pristine && hasError)
+                      "
+                      >This field is required</span
+                    >
+                  </div>
+  
+                  <div class="pan">
+                    <label class="labelpan"
+                      >PAN Card or Passport for Foreigners:&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i
+                      ></sup>
+                      &nbsp;</label
+                    >
+                    <input
+                      [class.is-invalid]="
+                        (DirectorForm.get('file').invalid &&
+                          DirectorForm.get('file').touched) ||
+                        (DirectorForm.get('file').pristine && hasError)
+                      "
+                      type="file"
+                      class="form-control-file border"
+                      name="file"
+                      formControlName="file"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (DirectorForm.get('file').invalid &&
+                          DirectorForm.get('file').touched) ||
+                        (DirectorForm.get('file').pristine && hasError)
+                      "
+                      >This field is required</span
+                    >
+                    <textarea
+                      class="form-control-txt"
+                      placeholder="Comment"
+                    ></textarea>
+                  </div>
+  
+                  <div class="idproof">
+                    <label class="labelidproof"
+                      >Drivers License/Aadhar card/Residence card/Election
+                      identity card/Any identity proof issued by the
+                      Government:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <div class="id-proof-file">
+                      <select class="id-proof">
+                        <option value=""></option>
+                        <option value="Driving">Driving License</option>
+                        <option value="Aadhaar">Aadhaar Card</option>
+                        <option value="Residence">Residence Card</option>
+                        <option value="Election Card or Voter Identity Card">
+                          Election Card or Voter Identity Card
+                        </option>
+                        <option value="anyother">
+                          Any other identity proof issued by the Government
+                        </option>
+                      </select>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('file1').invalid &&
+                            DirectorForm.get('file1').touched) ||
+                          (DirectorForm.get('file1').pristine && hasError)
+                        "
+                        type="file"
+                        class="form-control-file"
+                        name="file"
+                        formControlName="file1"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('file1').invalid &&
+                            DirectorForm.get('file1').touched) ||
+                          (DirectorForm.get('file1').pristine && hasError)
+                        "
+                        >This field is required</span
+                      >
+                    </div>
+  
+                    <textarea
+                      class="form-control-txt"
+                      placeholder="Comment"
+                    ></textarea>
+                  </div>
+                  <div class="bank">
+                    <label class="labelbank"
+                      >Less than 3 months Old Bank Statement or Telephone
+                      Bill:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
+                      &nbsp;</label
+                    >
+                    <input
+                      [class.is-invalid]="
+                        (DirectorForm.get('file2').invalid &&
+                          DirectorForm.get('file2').touched) ||
+                        (DirectorForm.get('file2').pristine && hasError)
+                      "
+                      type="file"
+                      class="form-control-file border"
+                      name="file"
+                      formControlName="file2"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (DirectorForm.get('file2').invalid &&
+                          DirectorForm.get('file2').touched) ||
+                        (DirectorForm.get('file2').pristine && hasError)
+                      "
+                      >This field is required</span
+                    >
+                    <textarea
+                      class="form-control-txt"
+                      placeholder="Comment"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-submit"
+                    (click)="directorsubmit()"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div> -->
+
+        <!-- <div class="Business-pro">
+          <div class="Business-name">
+            <label class="labelbusiness"
+              >Application type&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+            ></label>
+          </div>
+        </div> -->
+        <div
+          id="pills-Company"
+          class="tab-pane fade show active"
+          role="tabpanel"
+          aria-labelledby="pills-Company-tab"
+        >
+          <p class="filltext">
+            Below is a simple application form for ROC Compliances for Private
+            limited Company. This form will take approx. 2 min. It will
+            automatically submit your details to government. All your details
+            are secured by SSL security.
+          </p>
+          <!-- <p class="suggest">
+            Suggest names for your LLP firm (in order of preference)
+          </p> -->
+
+          <form [formGroup]="CompanyForm">
+            <div class="form-group company">
+              <label class="labelname"
+                >Name of the Company&nbsp;<sup
+                  ><i class="fa fa-asterisk"></i></sup
+              ></label>
+
+              <input
+                [class.is-invalid]="
+                  (CompanyForm.get('namecompany').invalid &&
+                    CompanyForm.get('namecompany').touched) ||
+                  (CompanyForm.get('namecompany').pristine && hasError)
+                "
+                type="text"
+                class="form-control company"
+                placeholder=""
+                formControlName="namecompany"
+              />
+              <span
+                class="error"
+                *ngIf="
+                  (CompanyForm.get('namecompany').invalid &&
+                    CompanyForm.get('namecompany').touched) ||
+                  (CompanyForm.get('namecompany').pristine && hasError)
+                "
+                >This field is required</span
+              >
+            </div>
+
+            <div class="form-group company">
+              <label class="labelname"
+                >Registered Address&nbsp;<sup
+                  ><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <input
+                [class.is-invalid]="
+                  (CompanyForm.get('address').invalid &&
+                    CompanyForm.get('address').touched) ||
+                  (CompanyForm.get('address').pristine && hasError)
+                "
+                type="text"
+                class="form-control address"
+                placeholder=""
+                formControlName="address"
+              />
+              <span
+                class="error"
+                *ngIf="
+                  (CompanyForm.get('address').invalid &&
+                    CompanyForm.get('address').touched) ||
+                  (CompanyForm.get('address').pristine && hasError)
+                "
+                >This field is required</span
+              >
+            </div>
+            <div class="form-group company">
+              <label class="labelname"
+                >State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+              ></label>
+
+              <select name="states" class="custom-select mb-3" value="select">
+                <option value selected="selected" class="gf_placeholder">
+                  select
+                </option>
+                <option value="AndhraPradesh">AndhraPradesh</option>
+                <option value="ArunachalPradesh">ArunachalPradesh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Karnataka">Karnataka</option>
+              </select>
+              <div class="selectarrow">
+                <i
+                  class="fa fa-angle-down"
+                  aria-hidden="true"
+                  aria-disabled="true"
+                ></i>
+              </div>
+            </div>
+            <br />
+
+            <div class="form-group company">
+              <label class="labelname"
+                >Email ID&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <input
+                [class.is-invalid]="
+                  (CompanyForm.get('email').invalid &&
+                    CompanyForm.get('email').touched) ||
+                  (CompanyForm.get('email').pristine && hasError)
+                "
+                type="text"
+                class="form-control company"
+                placeholder=""
+                formControlName="email"
+              />
+              <span
+                class="error"
+                *ngIf="
+                  (CompanyForm.get('email').invalid &&
+                    CompanyForm.get('email').touched) ||
+                  (CompanyForm.get('email').pristine && hasError)
+                "
+                >This field is required</span
+              >
+            </div>
+            <div class="form-group company">
+              <label class="labelname"
+                >Contact Number&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <input
+                [class.is-invalid]="
+                  (CompanyForm.get('Number').invalid &&
+                    CompanyForm.get('Number').touched) ||
+                  (CompanyForm.get('Number').pristine && hasError)
+                "
+                type="number"
+                class="form-control company"
+                placeholder=""
+                formControlName="Number"
+              />
+              <span
+                class="error"
+                *ngIf="
+                  (CompanyForm.get('Number').invalid &&
+                    CompanyForm.get('Number').touched) ||
+                  (CompanyForm.get('Number').pristine && hasError)
+                "
+                >This field is required</span
+              >
+            </div>
+            <div class="form-group company form-check">
+              <label class="labelname"
+                >Number of directors&nbsp;<sup
+                  ><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <ul class="radio-button" id="radio-check">
+                <li class="radio-yes">
+                  <input type="radio" id="" name="tab" />&nbsp;&nbsp;<label
+                    class="form-check-label"
+                    for="flexRadioDefault1"
+                  >
+                    2</label
+                  >
+                </li>
+                <li class="radio-no">
+                  <input type="radio" id="" name="tab" />&nbsp;&nbsp;<label
+                    class="form-check-label"
+                    for="flexRadioDefault2"
+                  >
+                    3</label
+                  >
+                </li>
+                <li class="radio-no">
+                  <input type="radio" id="" name="tab" />&nbsp;&nbsp;<label
+                    class="form-check-label"
+                    for="flexRadioDefault3"
+                  >
+                    4</label
+                  >
+                </li>
+                <li class="radio-no">
+                  <input type="radio" id="" name="tab" />&nbsp;&nbsp;<label
+                    class="form-check-label"
+                    for="flexRadioDefault4"
+                  >
+                    5</label
+                  >
+                </li>
+
+                <span
+                  class="error"
+                  *ngIf="
+                    (CompanyForm.get('Applicant').invalid &&
+                      CompanyForm.get('Applicant').touched) ||
+                    (CompanyForm.get('Applicant').pristine && hasError)
+                  "
+                  >This field is required</span
+                >
+              </ul>
+            </div>
+            <div class="form-group company">
+              <label class="labelname"
+                >Director details&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <div class="row">
+                <div class="col-md-4">
+                  <label class="labelname">Name of the Director</label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('Directorname').invalid &&
+                        CompanyForm.get('Directorname').touched) ||
+                      (CompanyForm.get('Directorname').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company1"
+                    placeholder=""
+                    formControlName="Director"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('Directorname').invalid &&
+                        CompanyForm.get('Directorname').touched) ||
+                      (CompanyForm.get('Directorname').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="col-md-4">
+                  <label class="labelname">Address of the Director</label>
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('DirectorAddress').invalid &&
+                        CompanyForm.get('DirectorAddress').touched) ||
+                      (CompanyForm.get('DirectorAddress').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company1"
+                    placeholder=""
+                    formControlName="DirectorAddress"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('DirectorAddress').invalid &&
+                        CompanyForm.get('DirectorAddress').touched) ||
+                      (CompanyForm.get('DirectorAddress').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <div class="col-md-4">
+                  <label class="labelname"
+                    >Director interest in other entities</label
+                  >
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('Directorinterest').invalid &&
+                        CompanyForm.get('Directorinterest').touched) ||
+                      (CompanyForm.get('Directorinterest').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company1"
+                    placeholder=""
+                    formControlName="Directorinterest"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('Directorinterest').invalid &&
+                        CompanyForm.get('Directorinterest').touched) ||
+                      (CompanyForm.get('Directorinterest').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="form-group company">
+              <label class="labelname"
+                >Name of the signing authority&nbsp;<sup
+                  ><i class="fa fa-asterisk"></i></sup
+              ></label>
+              <h4>
+                Mention the director's name, who has the signing authority in
+                the company
+              </h4>
+
+              <input
+                [class.is-invalid]="
+                  (CompanyForm.get('namecompany').invalid &&
+                    CompanyForm.get('namecompany').touched) ||
+                  (CompanyForm.get('namecompany').pristine && hasError)
+                "
+                type="text"
+                class="form-control company"
+                placeholder=""
+                formControlName="namecompany"
+              />
+              <span
+                class="error"
+                *ngIf="
+                  (CompanyForm.get('namecompany').invalid &&
+                    CompanyForm.get('namecompany').touched) ||
+                  (CompanyForm.get('namecompany').pristine && hasError)
+                "
+                >This field is required</span
+              >
+            </div>
+            <div
+              class="hr-dotted"
+              style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+            ></div>
+            <button type="submit" class="btn-next" (click)="Next()">
+              Next
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

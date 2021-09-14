@@ -1,0 +1,126 @@
+<section class="privatelimited-wrapper">
+  <div class="private-banner">
+    <div class="banner-image">
+      <div class="overlay">
+        <div class="container">
+          <div class="col-md-12 overlay-body">
+            <div class="row">
+              <div class="col-lg-8 col-md-12 overlay-left">
+                <h3>GST Registration</h3>
+                <div class="hr" style="border-bottom: 1px solid white"></div>
+                <h4>
+                  Register for GST online for Free* and stay ahead on GST
+                  Compliance!
+                </h4>
+                <h5>
+                  GST is a tax registration mandatory for all businesses in
+                  India meeting ANY of these conditions:
+                </h5>
+                <h5>
+                  Also See:
+                  <button type="button" class="btn btn-primary">
+                    GST SOFTWARE
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    GST RETURN
+                  </button>
+                </h5>
+              </div>
+
+              <div class="col-lg-4 col-md-12 card-reg">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="rectangle">
+                      <p>GST Registration</p>
+                    </div>
+                    <div class="triangle-l"></div>
+
+                    <form [formGroup]="CompanyForm">
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="full name"
+                          id="fullname"
+                          formControlName="fullname"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="Email"
+                          id="email"
+                          formControlName="email"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          type="number"
+                          class="form-control"
+                          placeholder="mobile number"
+                          id="number"
+                          maxlength="10"
+                          formControlName="number"
+                        /><span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        id="proceed"
+                        class="form-control"
+                        (click)="proceed()"
+                      >
+                        proceed
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -8,7 +8,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
   styleUrls: ['./partnership-registration.component.scss']
 })
 export class PartnershipRegistrationComponent implements OnInit {
-
+  type: any;
   public FirmForm;
   public PartnerForm;
   public hasError = false;

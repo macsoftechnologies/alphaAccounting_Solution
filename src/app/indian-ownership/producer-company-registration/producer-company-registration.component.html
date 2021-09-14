@@ -1,127 +1,130 @@
 <section class="privatelimited-registration-wrapper">
-    <div class="container card">
-      <div class="row fullcard-wrapper card-body">
-        <div class="col-md-7 card-body-titleleft">
-          <h2>producer company application form</h2>
-          <div class="hr-line"></div>
-        </div>
-  
-        <div class="col-md-5 card-body-titleright">
-          <div class="row align">
-            <div class="col-md-2 image-left">
-              <img
-                src="../../../assets/images/contact-us-legalraasta-form-1.png"
-              />
-            </div>
-            <div class="col-md-10 contact-right">
-              <h6>Have any Problems?</h6>
-              <p>Call us now at +91-875 000 8585</p>
-            </div>
+  <div class="container card">
+    <div class="row fullcard-wrapper card-body">
+      <div class="col-md-7 card-body-titleleft">
+        <h2>Producer Company application form</h2>
+        <div class="hr-line"></div>
+      </div>
+
+      <div class="col-md-5 card-body-titleright">
+        <div class="row align">
+          <div class="col-md-2 image-left">
+            <img
+              src="../../../assets/images/contact-us-legalraasta-form-1.png"
+            />
+          </div>
+          <div class="col-md-10 contact-right">
+            <h6>Have any Problems?</h6>
+            <p>Call us now at +91-875 000 8585</p>
           </div>
         </div>
-  
-        <div class="col-md-12 tabs">
-          <div class="tab-navpills-section">
-            <ul class="nav nav-pills" id="pills-tab" role="tablist">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-toggle="pill"
-                  href="#pills-Company"
-                  id="pills-Company-tab"
-                  role="tab"
-                  aria-controls="pills-home"
-                  aria-selected="true"
-                  >1&nbsp;Company Info</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="pills-Director-tab"
-                  data-toggle="pill"
-                  href="#pills-Director"
-                  id="pills-Director-tab"
-                  role="tab"
-                  aria-controls="pills-Director"
-                  aria-selected="false"
-                  >2&nbsp;Director details</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="pills-Business-tab"
-                  data-toggle="pill"
-                  href="#pills-Business"
-                  role="tab"
-                  aria-controls="pills-Business"
-                  aria-selected="false"
-                  >3&nbsp;Business Activity</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="pills-Pricing-tab"
-                  data-toggle="pill"
-                  href="#pills-Pricing"
-                  role="tab"
-                  aria-controls="pills-Pricing"
-                  aria-selected="false"
-                  >4&nbsp;Pricing and Packages</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  id="pills-abc-tab"
-                  data-toggle="pill"
-                  href="#pills-abc"
-                  role="tab"
-                  aria-controls="pills-abc"
-                  aria-selected="false"
-                  >5</a
-                >
-              </li>
-            </ul>
-          </div>
+      </div>
+
+      <div class="col-md-12 tabs">
+        <div class="tab-navpills-section">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-toggle="pill"
+                href="#pills-Company"
+                id="pills-Company-tab"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+                >1&nbsp;Company Info</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Director-tab"
+                data-toggle="pill"
+                href="#pills-Director"
+                id="pills-Director-tab"
+                role="tab"
+                aria-controls="pills-Director"
+                aria-selected="false"
+                >2&nbsp;Director details</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Business-tab"
+                data-toggle="pill"
+                href="#pills-Business"
+                role="tab"
+                aria-controls="pills-Business"
+                aria-selected="false"
+                >3&nbsp;Business Activity</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Pricing-tab"
+                data-toggle="pill"
+                href="#pills-Pricing"
+                role="tab"
+                aria-controls="pills-Pricing"
+                aria-selected="false"
+                >4&nbsp;Pricing and Packages</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-abc-tab"
+                data-toggle="pill"
+                href="#pills-abc"
+                role="tab"
+                aria-controls="pills-abc"
+                aria-selected="false"
+                >5</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="hr-dotted"
+          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+        ></div>
+
+        <div class="tab-content" id="pills-tabContent">
           <div
-            class="hr-dotted"
-            style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-          ></div>
-  
-          <div class="tab-content" id="pills-tabContent">
-            <div
-              id="pills-Company"
-              class="tab-pane fade show active"
-              role="tabpanel"
-              aria-labelledby="pills-Company-tab"
-            >
-              <p class="filltext">
-                Fill in the below form to apply for Producer Co. online. It will take less than 5 mins. Your details are secured by SSL.
-              </p>
-              <p class="suggest">
-                Suggest names for your Producer company (list two alternates, in order of preference).
-              </p>
-  
-              <form [formGroup]="CompanyForm">
-                <div class="form-group company">
-                  <label class="labelname"
-                    >What Is the Name of the Producer company you want to register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
+            id="pills-Company"
+            class="tab-pane fade show active"
+            role="tabpanel"
+            aria-labelledby="pills-Company-tab"
+          >
+            <p class="filltext">
+              Fill in the below form to apply for Producer Co. online. It will
+              take less than 5 mins. Your details are secured by SSL.
+            </p>
+            <p class="suggest">
+              Suggest names for your Producer company (list two alternates, in
+              order of preference).
+            </p>
+
+            <form [formGroup]="CompanyForm">
+              <div class="form-group company">
+                <label class="labelname"
+                  >What Is the Name of the Producer company you want to
+                  register?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
                   [class.is-invalid]="
-                  (CompanyForm.get('namecompany').invalid &&
-                    CompanyForm.get('namecompany').touched) ||
-                  (CompanyForm.get('namecompany').pristine && hasError)
-                "
-                    type="text"
-                    class="form-control company"
-                    placeholder=""
-                    formControlName="namecompany"
-                  />
-                  <span
+                    (CompanyForm.get('namecompany').invalid &&
+                      CompanyForm.get('namecompany').touched) ||
+                    (CompanyForm.get('namecompany').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany"
+                />
+                <span
                   class="error"
                   *ngIf="
                     (CompanyForm.get('namecompany').invalid &&
@@ -130,25 +133,25 @@
                   "
                   >This field is required.</span
                 >
-                  <h1>Type in the name EXACTLY as you want it to appear.</h1>
-                </div>
-                <div class="form-group company">
-                  <label class="labelname"
-                    >First Alternate Name&nbsp;<sup
-                      ><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
+                <h1>Type in the name EXACTLY as you want it to appear.</h1>
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >First Alternate Name&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
                   [class.is-invalid]="
-                  (CompanyForm.get('namecompany1').invalid &&
-                    CompanyForm.get('namecompany1').touched) ||
-                  (CompanyForm.get('namecompany1').pristine && hasError)
-                "
-                    type="text"
-                    class="form-control company"
-                    placeholder=""
-                    formControlName="namecompany1"
-                  />
-                  <span
+                    (CompanyForm.get('namecompany1').invalid &&
+                      CompanyForm.get('namecompany1').touched) ||
+                    (CompanyForm.get('namecompany1').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany1"
+                />
+                <span
                   class="error"
                   *ngIf="
                     (CompanyForm.get('namecompany1').invalid &&
@@ -157,24 +160,24 @@
                   "
                   >This field is required.</span
                 >
-                </div>
-                <div class="form-group company">
-                  <label class="labelname"
-                    >Second Alternate Name&nbsp;<sup
-                      ><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Second Alternate Name&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
                   [class.is-invalid]="
-                  (CompanyForm.get('namecompany2').invalid &&
-                    CompanyForm.get('namecompany2').touched) ||
-                  (CompanyForm.get('namecompany2').pristine && hasError)
-                "
-                    type="text"
-                    class="form-control company"
-                    placeholder=""
-                    formControlName="namecompany2"
-                  />
-                  <span
+                    (CompanyForm.get('namecompany2').invalid &&
+                      CompanyForm.get('namecompany2').touched) ||
+                    (CompanyForm.get('namecompany2').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control company"
+                  placeholder=""
+                  formControlName="namecompany2"
+                />
+                <span
                   class="error"
                   *ngIf="
                     (CompanyForm.get('namecompany2').invalid &&
@@ -183,24 +186,24 @@
                   "
                   >This field is required.</span
                 >
-                </div>
-                <div class="form-group company">
-                  <label class="labelname"
-                    >Address of proposed Producer Co.&nbsp;<sup
-                      ><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >Address of proposed Producer Co.&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
                   [class.is-invalid]="
-                  (CompanyForm.get('address').invalid &&
-                    CompanyForm.get('address').touched) ||
-                  (CompanyForm.get('address').pristine && hasError)
-                "
-                    type="text"
-                    class="form-control address"
-                    placeholder=""
-                    formControlName="address"
-                  />
-                  <span
+                    (CompanyForm.get('address').invalid &&
+                      CompanyForm.get('address').touched) ||
+                    (CompanyForm.get('address').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control address"
+                  placeholder=""
+                  formControlName="address"
+                />
+                <span
                   class="error"
                   *ngIf="
                     (CompanyForm.get('address').invalid &&
@@ -209,45 +212,45 @@
                   "
                   >This field is required.</span
                 >
+              </div>
+              <div class="form-group company">
+                <label class="labelname"
+                  >State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+
+                <select name="states" class="custom-select mb-3">
+                  <option value="AndhraPradesh">AndhraPradesh</option>
+                  <option value="ArunachalPradesh">ArunachalPradesh</option>
+                  <option selected>Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Karnataka">Karnataka</option>
+                </select>
+                <div class="selectarrow">
+                  <i
+                    class="fa fa-angle-down"
+                    aria-hidden="true"
+                    aria-disabled="true"
+                  ></i>
                 </div>
-                <div class="form-group company">
-                  <label class="labelname"
-                    >State&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                  ></label>
-  
-                  <select name="states" class="custom-select mb-3">
-                    <option value="AndhraPradesh">AndhraPradesh</option>
-                    <option value="ArunachalPradesh">ArunachalPradesh</option>
-                    <option selected>Delhi</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Jaipur">Jaipur</option>
-                    <option value="Karnataka">Karnataka</option>
-                  </select>
-                  <div class="selectarrow">
-                    <i
-                      class="fa fa-angle-down"
-                      aria-hidden="true"
-                      aria-disabled="true"
-                    ></i>
-                  </div>
-                </div>
-                <br />
-                <div class="form-group company">
-                  <label class="labelname"
-                    >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
+              </div>
+              <br />
+              <div class="form-group company">
+                <label class="labelname"
+                  >Pincode.&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
                   [class.is-invalid]="
-                  (CompanyForm.get('Pincode').invalid &&
-                    CompanyForm.get('Pincode').touched) ||
-                  (CompanyForm.get('Pincode').pristine && hasError)
-                "
-                    type="number"
-                    class="form-control Pincode"
-                    placeholder=""
-                    formControlName="Pincode"
-                  />
-                  <span
+                    (CompanyForm.get('Pincode').invalid &&
+                      CompanyForm.get('Pincode').touched) ||
+                    (CompanyForm.get('Pincode').pristine && hasError)
+                  "
+                  type="number"
+                  class="form-control Pincode"
+                  placeholder=""
+                  formControlName="Pincode"
+                />
+                <span
                   class="error"
                   *ngIf="
                     (CompanyForm.get('Pincode').invalid &&
@@ -256,865 +259,1276 @@
                   "
                   >This field is required.</span
                 >
+              </div>
+              <div
+                class="hr-dotted"
+                style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+              ></div>
+              <button type="submit" class="btn-next" (click)="Next()">
+                Next
+              </button>
+            </form>
+          </div>
+
+          <div
+            id="pills-Director"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Director-tab"
+          >
+            <p class="filltext">
+              Provide details of all the directors of proposed Producer Co
+            </p>
+
+            <form [formGroup]="DirectorForm">
+              <div class="form-group company">
+                <label class="labelname"
+                  >No of Directors in the company&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <input
+                  [class.is-invalid]="
+                    (DirectorForm.get('Num').invalid &&
+                      DirectorForm.get('Num').touched) ||
+                    (DirectorForm.get('Num').pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control Num"
+                  placeholder=""
+                  formControlName="Num"
+                />
+                <small>Please enter a number from 5 to 15.</small>
+                <br />
+                <span
+                  class="error"
+                  *ngIf="
+                    (DirectorForm.get('Num').invalid &&
+                      DirectorForm.get('Num').touched) ||
+                    (DirectorForm.get('Num').pristine && hasError)
+                  "
+                  >This field is required.</span
+                >
+              </div>
+
+              <br />
+
+              <div class="director-info">
+                <div class="row director-details">
+                  <div class="col-md-6 director-details-left">
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of 1st Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Name1stdirector').invalid &&
+                            DirectorForm.get('Name1stdirector').touched) ||
+                          (DirectorForm.get('Name1stdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Name1stdirector"
+                        placeholder=""
+                        formControlName="Name1stdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Name1stdirector').invalid &&
+                            DirectorForm.get('Name1stdirector').touched) ||
+                          (DirectorForm.get('Name1stdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Contact no. of 1st Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Contact1stdirector').invalid &&
+                            DirectorForm.get('Contact1stdirector').touched) ||
+                          (DirectorForm.get('Contact1stdirector').pristine &&
+                            hasError)
+                        "
+                        type="number"
+                        class="form-control Contact1stdirector"
+                        placeholder=""
+                        formControlName="Contact1stdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Contact1stdirector').invalid &&
+                            DirectorForm.get('Contact1stdirector').touched) ||
+                          (DirectorForm.get('Contact1stdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of 2nd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Name2nddirector').invalid &&
+                            DirectorForm.get('Name2nddirector').touched) ||
+                          (DirectorForm.get('Name2nddirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Name2nddirector"
+                        placeholder=""
+                        formControlName="Name2nddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Name2nddirector').invalid &&
+                            DirectorForm.get('Name2nddirector').touched) ||
+                          (DirectorForm.get('Name2nddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Contact no. of 2nd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Contact2nddirector').invalid &&
+                            DirectorForm.get('Contact2nddirector').touched) ||
+                          (DirectorForm.get('Contact2nddirector').pristine &&
+                            hasError)
+                        "
+                        type="number"
+                        class="form-control Contact2nddirector"
+                        placeholder=""
+                        formControlName="Contact2nddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Contact2nddirector').invalid &&
+                            DirectorForm.get('Contact2nddirector').touched) ||
+                          (DirectorForm.get('Contact2nddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of 3rd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Name3rddirector').invalid &&
+                            DirectorForm.get('Name3rddirector').touched) ||
+                          (DirectorForm.get('Name3rddirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Name3rddirector"
+                        placeholder=""
+                        formControlName="Name3rddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Name3rddirector').invalid &&
+                            DirectorForm.get('Name3rddirector').touched) ||
+                          (DirectorForm.get('Name3rddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Contact no. of 3rd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Contact3rddirector').invalid &&
+                            DirectorForm.get('Contact3rddirector').touched) ||
+                          (DirectorForm.get('Contact3rddirector').pristine &&
+                            hasError)
+                        "
+                        type="number"
+                        class="form-control Contact3rddirector"
+                        placeholder=""
+                        formControlName="Contact3rddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Contact3rddirector').invalid &&
+                            DirectorForm.get('Contact3rddirector').touched) ||
+                          (DirectorForm.get('Contact3rddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of 4th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Name4thdirector').invalid &&
+                            DirectorForm.get('Name4thdirector').touched) ||
+                          (DirectorForm.get('Name4thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Name4thdirector"
+                        placeholder=""
+                        formControlName="Name4thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Name4thdirector').invalid &&
+                            DirectorForm.get('Name4thdirector').touched) ||
+                          (DirectorForm.get('Name4thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Contact no. of 4th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Contact4thdirector').invalid &&
+                            DirectorForm.get('Contact4thdirector').touched) ||
+                          (DirectorForm.get('Contact4thdirector').pristine &&
+                            hasError)
+                        "
+                        type="number"
+                        class="form-control Contact4thdirector"
+                        placeholder=""
+                        formControlName="Contact4thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Contact4thdirector').invalid &&
+                            DirectorForm.get('Contact4thdirector').touched) ||
+                          (DirectorForm.get('Contact4thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Name of 5th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Name5thdirector').invalid &&
+                            DirectorForm.get('Name5thdirector').touched) ||
+                          (DirectorForm.get('Name5thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Name5thdirector"
+                        placeholder=""
+                        formControlName="Name5thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Name5thdirector').invalid &&
+                            DirectorForm.get('Name5thdirector').touched) ||
+                          (DirectorForm.get('Name5thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Contact no. of 5th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Contact5thdirector').invalid &&
+                            DirectorForm.get('Contact5thdirector').touched) ||
+                          (DirectorForm.get('Contact5thdirector').pristine &&
+                            hasError)
+                        "
+                        type="number"
+                        class="form-control Contact5thdirector"
+                        placeholder=""
+                        formControlName="Contact5thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Contact5thdirector').invalid &&
+                            DirectorForm.get('Contact5thdirector').touched) ||
+                          (DirectorForm.get('Contact5thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Total money/capital all directors will
+                        invest?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('money').invalid &&
+                            DirectorForm.get('money').touched) ||
+                          (DirectorForm.get('money').pristine && hasError)
+                        "
+                        type="number"
+                        class="form-control money"
+                        placeholder=""
+                        formControlName="money"
+                      />
+                      <small
+                        >Minimum capital investment in Producer Co. is Rs.
+                        5,00,000.</small
+                      ><br />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('money').invalid &&
+                            DirectorForm.get('money').touched) ||
+                          (DirectorForm.get('money').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Capital/ Profit sharing ratio&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Profit').invalid &&
+                            DirectorForm.get('Profit').touched) ||
+                          (DirectorForm.get('Profit').pristine && hasError)
+                        "
+                        type="number"
+                        class="form-control Profit"
+                        placeholder=""
+                        formControlName="Profit"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Profit').invalid &&
+                            DirectorForm.get('Profit').touched) ||
+                          (DirectorForm.get('Profit').pristine && hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 director-details-right">
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of 1st Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Address1stdirector').invalid &&
+                            DirectorForm.get('Address1stdirector').touched) ||
+                          (DirectorForm.get('Address1stdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Address1stdirector"
+                        placeholder=""
+                        formControlName="Address1stdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Address1stdirector').invalid &&
+                            DirectorForm.get('Address1stdirector').touched) ||
+                          (DirectorForm.get('Address1stdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email ID of 1st Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Email1stdirector').invalid &&
+                            DirectorForm.get('Email1stdirector').touched) ||
+                          (DirectorForm.get('Email1stdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Email1stdirector"
+                        placeholder=""
+                        formControlName="Email1stdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Email1stdirector').invalid &&
+                            DirectorForm.get('Email1stdirector').touched) ||
+                          (DirectorForm.get('Email1stdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of 2nd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Address2ndirector').invalid &&
+                            DirectorForm.get('Address2ndirector').touched) ||
+                          (DirectorForm.get('Address2ndirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Address2ndirector"
+                        placeholder=""
+                        formControlName="Address2ndirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Address2ndirector').invalid &&
+                            DirectorForm.get('Address2ndirector').touched) ||
+                          (DirectorForm.get('Address2ndirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email ID of 2nd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Email2ndirector').invalid &&
+                            DirectorForm.get('Email2ndirector').touched) ||
+                          (DirectorForm.get('Email2ndirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Email2ndirector"
+                        placeholder=""
+                        formControlName="Email2ndirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Email2ndirector').invalid &&
+                            DirectorForm.get('Email2ndirector').touched) ||
+                          (DirectorForm.get('Email2ndirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of 3rd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Address3rddirector').invalid &&
+                            DirectorForm.get('Address3rddirector').touched) ||
+                          (DirectorForm.get('Address3rddirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Address3rddirector"
+                        placeholder=""
+                        formControlName="Address3rddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Address3rddirector').invalid &&
+                            DirectorForm.get('Address3rddirector').touched) ||
+                          (DirectorForm.get('Address3rddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email ID of 3rd Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Email3rddirector').invalid &&
+                            DirectorForm.get('Email3rddirector').touched) ||
+                          (DirectorForm.get('Email3rddirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Email3rddirector"
+                        placeholder=""
+                        formControlName="Email3rddirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Email3rddirector').invalid &&
+                            DirectorForm.get('Email3rddirector').touched) ||
+                          (DirectorForm.get('Email3rddirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of 4th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Address4thdirector').invalid &&
+                            DirectorForm.get('Address4thdirector').touched) ||
+                          (DirectorForm.get('Address4thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Address4thdirector"
+                        placeholder=""
+                        formControlName="Address4thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Address4thdirector').invalid &&
+                            DirectorForm.get('Address4thdirector').touched) ||
+                          (DirectorForm.get('Address4thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email ID of 4th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Email4thdirector').invalid &&
+                            DirectorForm.get('Email4thdirector').touched) ||
+                          (DirectorForm.get('Email4thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Email4thdirector"
+                        placeholder=""
+                        formControlName="Email4thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Email4thdirector').invalid &&
+                            DirectorForm.get('Email4thdirector').touched) ||
+                          (DirectorForm.get('Email4thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Full Address of 5th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Address5thdirector').invalid &&
+                            DirectorForm.get('Address5thdirector').touched) ||
+                          (DirectorForm.get('Address5thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Address5thdirector"
+                        placeholder=""
+                        formControlName="Address5thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Address5thdirector').invalid &&
+                            DirectorForm.get('Address5thdirector').touched) ||
+                          (DirectorForm.get('Address5thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                    <div class="form-group company">
+                      <label class="labelname"
+                        >Email ID of 5th Director&nbsp;<sup
+                          ><i class="fa fa-asterisk"></i></sup
+                      ></label>
+                      <input
+                        [class.is-invalid]="
+                          (DirectorForm.get('Email5thdirector').invalid &&
+                            DirectorForm.get('Email5thdirector').touched) ||
+                          (DirectorForm.get('Email5thdirector').pristine &&
+                            hasError)
+                        "
+                        type="text"
+                        class="form-control Email5thdirector"
+                        placeholder=""
+                        formControlName="Email5thdirector"
+                      />
+                      <span
+                        class="error"
+                        *ngIf="
+                          (DirectorForm.get('Email5thdirector').invalid &&
+                            DirectorForm.get('Email5thdirector').touched) ||
+                          (DirectorForm.get('Email5thdirector').pristine &&
+                            hasError)
+                        "
+                        >This field is required.</span
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div
+                class="hr-dotted"
+                style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+              ></div>
+              <a href="#previous"
+                ><button type="button" class="btn-previous">PREVIOUS</button></a
+              >
+              <button type="submit" class="btn-next" (click)="Next()">
+                Next
+              </button>
+            </form>
+          </div>
+          <div
+            id="pills-Business"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Business-tab"
+          >
+            <div class="Business-pro">
+              <div class="Business-name">
+                <label class="labelbusiness"
+                  >What will your Business be doing?&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+              </div>
+              <div class="radiosection-left">
+                <div class="form-check">
+                  <ul class="radio-button" id="radio-check">
+                    <li class="radio-accomodation">
+                      <input
+                        type="radio"
+                        id="accomodation"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="0"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        Accomodations</label
+                      >
+                    </li>
+                    <li class="radio-construction">
+                      <input
+                        type="radio"
+                        id="construction"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="1"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault2"
+                      >
+                        Construction</label
+                      >
+                    </li>
+                    <li class="radio-consulting">
+                      <input
+                        type="radio"
+                        id="consulting"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="2"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault3"
+                      >
+                        Consulting</label
+                      >
+                    </li>
+                    <li class="radio-entertainment">
+                      <input
+                        type="radio"
+                        id="entertainment"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="3"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault4"
+                      >
+                        Entertainment</label
+                      >
+                    </li>
+                    <li class="radio-finance">
+                      <input
+                        type="radio"
+                        id="finance"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="4"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault5"
+                      >
+                        Finance</label
+                      >
+                    </li>
+                    <li class="radio-foodservice">
+                      <input
+                        type="radio"
+                        id="foodservice"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="5"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault6"
+                      >
+                        Food Service</label
+                      >
+                    </li>
+                    <li class="radio-health">
+                      <input
+                        type="radio"
+                        id="healthcare"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="6"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault7"
+                      >
+                        Health Care</label
+                      >
+                    </li>
+                    <li class="radio-insurance">
+                      <input
+                        type="radio"
+                        id="insurance"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="7"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault8"
+                      >
+                        Insurance</label
+                      >
+                    </li>
+                    <li class="radio-manufacturing">
+                      <input
+                        type="radio"
+                        id="manufacturing"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="8"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        Manufacturing</label
+                      >
+                    </li>
+                    <li class="radio-professional">
+                      <input
+                        type="radio"
+                        id="professional"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="9"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        Professional</label
+                      >
+                    </li>
+                    <li class="radio-realestate">
+                      <input
+                        type="radio"
+                        id="realestate"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="10"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault11"
+                      >
+                        Real Estate</label
+                      >
+                    </li>
+                    <li class="radio-rental">
+                      <input
+                        type="radio"
+                        id="rental"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="11"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault12"
+                      >
+                        Rental & Leasing</label
+                      >
+                    </li>
+                    <li class="radio-retail">
+                      <input
+                        type="radio"
+                        id="retail"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="12"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault13"
+                      >
+                        Retail</label
+                      >
+                    </li>
+                    <li class="radio-social">
+                      <input
+                        type="radio"
+                        id="social"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="13"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault14"
+                      >
+                        Social Assistance</label
+                      >
+                    </li>
+                    <li class="radio-technology">
+                      <input
+                        type="radio"
+                        id="technology"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="14"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault15"
+                      >
+                        Technology</label
+                      >
+                    </li>
+                    <li class="radio-transportation">
+                      <input
+                        type="radio"
+                        id="transportation"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="15"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault16"
+                      >
+                        Transportation</label
+                      >
+                    </li>
+                    <li class="radio-warehousing">
+                      <input
+                        type="radio"
+                        id="warehousing"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="16"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault17"
+                      >
+                        Ware Housing</label
+                      >
+                    </li>
+                    <li class="radio-wholesale">
+                      <input
+                        type="radio"
+                        id="wholesale"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="17"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault18"
+                      >
+                        Wholesale</label
+                      >
+                    </li>
+                    <li class="radio-other">
+                      <input
+                        type="radio"
+                        id="other"
+                        name="tab"
+                        [(ngModel)]="type"
+                        [value]="18"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault19"
+                      >
+                        Other</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6 radio-content">
+                  <div
+                    id="accomodation"
+                    class="accomodation-pro"
+                    *ngIf="type == 0"
+                  >
+                    <label class="labelradio"
+                      >what will you do in accomodation?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control accomodation"
+                      placeholder=""
+                      formControlName="accomodation"
+                    />
+                  </div>
+                  <div
+                    id="construction"
+                    class="construction-pro"
+                    *ngIf="type == 1"
+                  >
+                    <label class="labelradio"
+                      >what will you do in construction?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control construction"
+                      placeholder=""
+                      formControlName="construction"
+                    />
+                  </div>
+                  <div id="consulting" class="consulting-pro" *ngIf="type == 2">
+                    <label class="labelradio"
+                      >what will you do in consulting?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control consulting"
+                      placeholder=""
+                      formControlName="consulting"
+                    />
+                    <h4>
+                      Describe the Type of Consulting service you provide.
+                      (Management, Marketing etc.)
+                    </h4>
+                  </div>
+                  <div
+                    id="entertainment"
+                    class="entertainment-pro"
+                    *ngIf="type == 3"
+                  >
+                    <label class="labelradio"
+                      >what will you do in entertainment?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control entertainment"
+                      placeholder=""
+                      formControlName="entertainment"
+                    />
+                  </div>
+                  <div id="finance" class="finance-pro" *ngIf="type == 4">
+                    <label class="labelradio"
+                      >what will you do in finance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control finance"
+                      placeholder=""
+                      formControlName="finance"
+                    />
+                  </div>
+                  <div
+                    id="foodservice"
+                    class="foodservice-pro"
+                    *ngIf="type == 5"
+                  >
+                    <label class="labelradio"
+                      >what will you do in foodservice?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control foodservice"
+                      placeholder=""
+                      formControlName="foodservice"
+                    />
+                  </div>
+                  <div id="health" class="health-pro" *ngIf="type == 6">
+                    <label class="labelradio"
+                      >what will you do in health care?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control health"
+                      placeholder=""
+                      formControlName="health"
+                    />
+                  </div>
+                  <div id="insurance" class="insurance-pro" *ngIf="type == 7">
+                    <label class="labelradio"
+                      >what will you do in insurance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control insurance"
+                      placeholder=""
+                      formControlName="insurance"
+                    />
+                  </div>
+                  <div
+                    id="manufacturing"
+                    class="manufacturing-pro"
+                    *ngIf="type == 8"
+                  >
+                    <label class="labelradio"
+                      >what will you do in manufacturing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control manufacturing"
+                      placeholder=""
+                      formControlName="manufacturing"
+                    />
+                    <h4>
+                      Describe the type of goods you make and the primary
+                      material used for making them.(For Example Wood
+                      Furniture).
+                    </h4>
+                  </div>
+                  <div
+                    id="professional"
+                    class="professional-pro"
+                    *ngIf="type == 9"
+                  >
+                    <label class="labelradio"
+                      >what will you do in profession?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control professional"
+                      placeholder=""
+                      formControlName="professional"
+                    />
+                  </div>
+                  <div
+                    id="realestate"
+                    class="realestate-pro"
+                    *ngIf="type == 10"
+                  >
+                    <label class="labelradio"
+                      >what will you do in real estate?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control realestate"
+                      placeholder=""
+                      formControlName="realestate"
+                    />
+                  </div>
+                  <div id="rental" class="rental-pro" *ngIf="type == 11">
+                    <label class="labelradio"
+                      >what will you do in rental & leasing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control rental"
+                      placeholder=""
+                      formControlName="rental"
+                    />
+                  </div>
+                  <div id="retail" class="retail-pro" *ngIf="type == 12">
+                    <label class="labelradio"
+                      >what will you do in retail?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control retail"
+                      placeholder=""
+                      formControlName="retail"
+                    />
+                  </div>
+                  <div id="social" class="social-pro" *ngIf="type == 13">
+                    <label class="labelradio"
+                      >what will you do in social assistance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control social"
+                      placeholder=""
+                      formControlName="social"
+                    />
+                  </div>
+                  <div
+                    id="technology"
+                    class="technology-pro"
+                    *ngIf="type == 14"
+                  >
+                    <label class="labelradio"
+                      >What kind of technology business you will do?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control technology"
+                      placeholder=""
+                      formControlName="technology"
+                    />
+                  </div>
+                  <div
+                    id="transportation"
+                    class="transportation-pro"
+                    *ngIf="type == 15"
+                  >
+                    <label class="labelradio"
+                      >what will you do in transportation ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control transportation"
+                      placeholder=""
+                      formControlName="transportation"
+                    />
+                  </div>
+                  <div
+                    id="warehousing"
+                    class="warehousing-pro"
+                    *ngIf="type == 16"
+                  >
+                    <label class="labelradio"
+                      >What kind of warehousing business you will do ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control warehousing"
+                      placeholder=""
+                      formControlName="warehousing"
+                    />
+                  </div>
+                  <div id="wholesale" class="wholesale-pro" *ngIf="type == 17">
+                    <label class="labelradio"
+                      >What will you do in wholesale ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control wholesale"
+                      placeholder=""
+                      formControlName="wholesale"
+                    />
+                  </div>
+                  <div id="other" class="other-pro" *ngIf="type == 18">
+                    <label class="labelradio"
+                      >In case your option is other&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <h4>Please describe what your business will be doing.</h4>
+                    <input
+                      type="text"
+                      class="form-control other"
+                      placeholder=""
+                      formControlName="other"
+                    />
+                  </div>
+                  <br />
+                </div>
+
                 <div
                   class="hr-dotted"
                   style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
                 ></div>
-                <button type="submit" class="btn-next" (click)="Next()">Next</button>
-              </form>
-            </div>
-  
-            <div
-              id="pills-Director"
-              class="tab-pane fade"
-              role="tabpanel"
-              aria-labelledby="pills-Director-tab"
-            >
-              <div class="col-md-6 Director-pro">
-                <form [formGroup]="DirectorForm">
-                <div class="Documents-pro">
-                    
-                  <label class="Documents">Documents required : </label>
-                  <h4>From Directors or Shareholders:</h4>
-                </div>
-                <div class="Director-name">
-                  <label class="dirname"
-                    >Directors Name:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('directorname').invalid &&
-                  DirectorForm.get('directorname').touched) ||
-                  (DirectorForm.get('directorname').pristine && hasError)
-                "
-                    type="text"
-                    class="form-control directorname"
-                    placeholder=""
-                    formControlName="directorname"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('directorname').invalid &&
-                    DirectorForm.get('directorname').touched) ||
-                    (DirectorForm.get('directorname').pristine && hasError)
-                  "
-                  >This field is required.</span
-                >
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >PAN Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
                   >
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('file').invalid &&
-                  DirectorForm.get('file').touched) ||
-                  (DirectorForm.get('file').pristine && hasError)
-                "
-                    type="file"
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file').invalid &&
-                    DirectorForm.get('file').touched) ||
-                    (DirectorForm.get('file').pristine && hasError)
-                  "
-                  >This field is required.</span
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
                   >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >Photographs:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
-                  >
-                  <input
-                    type="file"
-                    [class.is-invalid]="
-                  (DirectorForm.get('file1').invalid &&
-                  DirectorForm.get('file1').touched) ||
-                  (DirectorForm.get('file1').pristine && hasError)
-                "
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file1"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file1').invalid &&
-                    DirectorForm.get('file1').touched) ||
-                    (DirectorForm.get('file1').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >Digital signature:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
-                  >
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('file2').invalid &&
-                  DirectorForm.get('file2').touched) ||
-                  (DirectorForm.get('file2').pristine && hasError)
-                "
-                    type="file"
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file2"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file2').invalid &&
-                    DirectorForm.get('file2').touched) ||
-                    (DirectorForm.get('file2').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >Aadhar Card or Voter Card:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
-                  >
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('file3').invalid &&
-                  DirectorForm.get('file3').touched) ||
-                  (DirectorForm.get('file3').pristine && hasError)
-                "
-                    type="file"
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file3"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file3').invalid &&
-                    DirectorForm.get('file3').touched) ||
-                    (DirectorForm.get('file3').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >Address Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
-                  >
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('file4').invalid &&
-                  DirectorForm.get('file4').touched) ||
-                  (DirectorForm.get('file4').pristine && hasError)
-                "
-                    type="file"
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file4"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file4').invalid &&
-                    DirectorForm.get('file4').touched) ||
-                    (DirectorForm.get('file4').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="pan">
-                  <label class="labelpan"
-                    >DIN:&nbsp;<sup><i class="fa fa-asterisk"></i></sup>
-                    &nbsp;</label
-                  >
-                  <input
-                  [class.is-invalid]="
-                  (DirectorForm.get('file5').invalid &&
-                  DirectorForm.get('file5').touched) ||
-                  (DirectorForm.get('file5').pristine && hasError)
-                "
-                    type="file"
-                    class="form-control-file border"
-                    name="file"
-                    formControlName="file5"
-                  />
-                  <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file5').invalid &&
-                    DirectorForm.get('file5').touched) ||
-                    (DirectorForm.get('file5').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-  
-                <div class="idproof">
-                  <label class="labelidproof"
-                    >ID Proof:&nbsp;<sup><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <div class="id-proof-file">
-                    <select class="id-proof">
-                      <option value=""></option>
-                      <option value="Passport">Passport</option>
-                      <option value="Aadhaar Card">Aadhaar Card</option>
-                      <option value="Election Card or Voter Identity Card">
-                        Election Card or Voter Identity Card
-                      </option>
-                      <option value="Ration Card">Ration Card</option>
-                      <option value="Driving License">Driving License</option>
-                    </select>
-                    <input
-                    [class.is-invalid]="
-                    (DirectorForm.get('file6').invalid &&
-                    DirectorForm.get('file6').touched) ||
-                    (DirectorForm.get('file6').pristine && hasError)
-                  "
-                     type="file" 
-                     class="form-control-file" 
-                     name="file"
-                     formControlName="file6"
-                      />
-                      <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file6').invalid &&
-                    DirectorForm.get('file6').touched) ||
-                    (DirectorForm.get('file6').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  </div>
-  
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-                <div class="idproof">
-                  <label class="labelidproof"
-                    >Residential Proof:&nbsp;<sup
-                      ><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                  <div class="id-proof-file">
-                    <select class="id-proof">
-                      <option value=""></option>
-                      <option value="Bank Statement">Bank Statement</option>
-                      <option value="Electricity Bill">Electricity Bill</option>
-                      <option value="Telephone Bill">Telephone Bill</option>
-                      <option value="Mobile Bill">Mobile Bill</option>
-                    </select>
-                    <input 
-                    [class.is-invalid]="
-                    (DirectorForm.get('file7').invalid &&
-                    DirectorForm.get('file7').touched) ||
-                    (DirectorForm.get('file7').pristine && hasError)
-                  "
-                    type="file"
-                     class="form-control-file"
-                      name="file" 
-                      formControlName="file7"
-                      />
-                      <span
-                  class="error"
-                  *ngIf="
-                    (DirectorForm.get('file7').invalid &&
-                    DirectorForm.get('file7').touched) ||
-                    (DirectorForm.get('file7').pristine && hasError)
-                  "
-                  >This field is required.</span
-                  >
-                  </div>
-  
-                  <textarea
-                    class="form-control-txt"
-                    placeholder="Comment"
-                  ></textarea>
-                </div>
-  
-                
-                <button type="submit" class="btn-submit" (click)="directorsubmit()">Submit</button>
-                </form>
-              </div>
-            </div>
-            <div
-              id="pills-Business"
-              class="tab-pane fade"
-              role="tabpanel"
-              aria-labelledby="pills-Business-tab"
-            >
-              <div class="Business-pro">
-                <div class="Business-name">
-                  <label class="labelbusiness"
-                    >What will your Business be doing?&nbsp;<sup
-                      ><i class="fa fa-asterisk"></i></sup
-                  ></label>
-                </div>
-                <div class="radiosection-left" >
-                  <div class="form-check"  >
-                    <ul class="radio-button" id="radio-check">
-                      <li class="radio-accomodation">
-                        <input
-                          type="radio"
-                          id="accomodation"
-                          name="tab"
-                          value="accomodation"
-                          (change)="mychange('accomodation')"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault1"
-                          
-                        >
-                          Accomodations</label
-                        >
-                      </li>
-                      <li class="radio-construction">
-                        <input
-                          type="radio"
-                          id="construction"
-                          name="tab"
-                          value="construction"
-                          (change)="mychange('construction')"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault2"
-                          
-                        >
-                          Construction</label
-                        >
-                      </li>
-                      <li class="radio-consulting">
-                        <input
-                          type="radio"
-                          id="consulting"
-                          name="tab"
-                          value="consulting"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault3"
-                          (change)="mychange()"
-                        >
-                          Consulting</label
-                        >
-                      </li>
-                      <li class="radio-entertainment">
-                        <input
-                          type="radio"
-                          id="entertainment"
-                          name="tab"
-                          value="entertainment"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault4"
-                          (change)="mychange()"
-                        >
-                          Entertainment</label
-                        >
-                      </li>
-                      <li class="radio-finance">
-                        <input
-                          type="radio"
-                          id="finance"
-                          name="tab"
-                          value="finance"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault5"
-                          (change)="mychange()"
-                        >
-                          Finance</label
-                        >
-                      </li>
-                      <li class="radio-foodservice">
-                        <input
-                          type="radio"
-                          id="foodservice"
-                          name="tab"
-                          value="foodservice"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault6"
-                          (change)="mychange()"
-                        >
-                          Food Service</label
-                        >
-                      </li>
-                      <li class="radio-health">
-                        <input
-                          type="radio"
-                          id="healthcare"
-                          name="tab"
-                          value="health"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault7"
-                          (change)="mychange()"
-                        >
-                          Health Care</label
-                        >
-                      </li>
-                      <li class="radio-insurance">
-                        <input
-                          type="radio"
-                          id="insurance"
-                          name="tab"
-                          value="insurance"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault8"
-                          (change)="mychange()"
-                        >
-                          Insurance</label
-                        >
-                      </li>
-                      
-                      <li class="radio-manufacturing">
-                        <input
-                          type="radio"
-                          id="manufacturing"
-                          name="tab"
-                          value="manufacturing"
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                          (change)="mychange()"
-                        />&nbsp;&nbsp;<label> Manufacturing</label>
-                      </li>
-                      <li class="radio-professional">
-                        <input
-                          type="radio"
-                          id="professional"
-                          name="tab"
-                          value="professional"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault10"
-                          (change)="mychange()"
-                        >
-                          Professional</label
-                        >
-                      </li>
-                      <li class="radio-realestate">
-                        <input
-                          type="radio"
-                          id="realestate"
-                          name="tab"
-                          value="realestate"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault11"
-                          (change)="mychange()"
-                        >
-                          Real Estate</label
-                        >
-                      </li>
-                      <li class="radio-rental">
-                        <input
-                          type="radio"
-                          id="rental"
-                          name="tab"
-                          value="rental"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault12"
-                          (change)="mychange()"
-                        >
-                          Rental & Leasing</label
-                        >
-                      </li>
-                      <li class="radio-retail">
-                        <input
-                          type="radio"
-                          id="retail"
-                          name="tab"
-                          value="retail"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault13"
-                          (change)="mychange()"
-                        >
-                          Retail</label
-                        >
-                      </li>
-                      <li class="radio-social">
-                        <input
-                          type="radio"
-                          id="social"
-                          name="tab"
-                          value="social"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault14"
-                          (change)="mychange()"
-                        >
-                          Social Assistance</label
-                        >
-                      </li>
-                      <li class="radio-technology">
-                        <input
-                          type="radio"
-                          id="technology"
-                          name="tab"
-                          value="technology"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault15"
-                          (change)="mychange()"
-                        >
-                          Technology</label
-                        >
-                      </li>
-                      <li class="radio-transportation">
-                        <input
-                          type="radio"
-                          id="transportation"
-                          name="tab"
-                          value="transportation"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault16"
-                          (change)="mychange()"
-                        >
-                          Transportation</label
-                        >
-                      </li>
-                      <li class="radio-warehousing">
-                        <input
-                          type="radio"
-                          id="warehousing"
-                          name="tab"
-                          value="warehousing"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                          (change)="mychange()"
-                        >
-                          Ware Housing</label
-                        >
-                      </li>
-                      <li class="radio-wholesale">
-                        <input
-                          type="radio"
-                          id="wholesale"
-                          name="tab"
-                          value="wholesale"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault9"
-                          (change)="mychange()"
-                        >
-                          Wholesale</label
-                        >
-                      </li>
-                      <li class="radio-other">
-                        <input
-                          type="radio"
-                          id="other"
-                          name="tab"
-                          value="other"
-                        />&nbsp;&nbsp;<label
-                          class="form-check-label"
-                          for="flexRadioDefault10"
-                          (change)="mychange()"
-                        >
-                          Other</label
-                        >
-                      </li>
-                    </ul>
-                  </div>-->
-                  <!-- *ngIf="checkboxVal==='accomodation'" -->
-                  <div class="col-md-6 radio-content">
-                    <div id="accomodation" class="accomodation-pro">
-                      <label class="labelradio"
-                        >what will you do in accomodation?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control accomodation"
-                        placeholder=""
-                        formControlName="accomodation"
-                      />
-                    </div> -->
-                    <!-- {{checkboxVal==='construction'}} 
-                    *ngIf="checkboxVal==='construction'"-->
-                    <div id="construction" class="construction-pro" >
-                      <label class="labelradio"
-                        >what will you do in construction?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control construction"
-                        placeholder=""
-                        formControlName="construction"
-                      />
-                    </div>
-                    <div id="consulting" class="consulting-pro">
-                      <label class="labelradio"
-                        >what will you do in consulting?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control consulting"
-                        placeholder=""
-                        formControlName="consulting"
-                      />
-                      <h3>
-                        Describe the Type of Consulting service you provide.
-                        (Management, Marketing etc.)
-                      </h3>
-                    </div>
-                    <div id="entertainment" class="entertainment-pro">
-                      <label class="labelradio"
-                        >what will you do in entertainment?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control entertainment"
-                        placeholder=""
-                        formControlName="entertainment"
-                      />
-                    </div>
-                    <div id="finance" class="finance-pro">
-                      <label class="labelradio"
-                        >what will you do in finance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control finance"
-                        placeholder=""
-                        formControlName="finance"
-                      />
-                    </div>
-                    <div id="foodservice" class="foodservice-pro">
-                      <label class="labelradio"
-                        >what will you do in foodservice?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control foodservice"
-                        placeholder=""
-                        formControlName="foodservice"
-                      />
-                    </div>
-                    <div id="health" class="health-pro">
-                      <label class="labelradio"
-                        >what will you do in health care?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control health"
-                        placeholder=""
-                        formControlName="health"
-                      />
-                    </div>
-                    <div id="insurance" class="insurance-pro">
-                      <label class="labelradio"
-                        >what will you do in insurance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control insurance"
-                        placeholder=""
-                        formControlName="insurance"
-                      />
-                    </div>
-                    <div id="manufacturing" class="manufacturing-pro">
-                      <label class="labelradio"
-                        >what will you do in manufacturing?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control manufacturing"
-                        placeholder=""
-                        formControlName="manufacturing"
-                      />
-                      <h3>
-                        Describe the type of goods you make and the primary
-                        material used for making them.(For Example Wood
-                        Furniture).
-                      </h3>
-                    </div>
-                    <div id="professional" class="professional-pro">
-                      <label class="labelradio"
-                        >what will you do in profession?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control professional"
-                        placeholder=""
-                        formControlName="professional"
-                      />
-                    </div>
-                    <div id="realestate" class="realestate-pro">
-                      <label class="labelradio"
-                        >what will you do in real estate?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control realestate"
-                        placeholder=""
-                        formControlName="realestate"
-                      />
-                    </div>
-                    <div id="rental" class="rental-pro">
-                      <label class="labelradio"
-                        >what will you do in rental & leasing?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control rental"
-                        placeholder=""
-                        formControlName="rental"
-                      />
-                    </div>
-                    <div id="retail" class="retail-pro">
-                      <label class="labelradio"
-                        >what will you do in retail?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control retail"
-                        placeholder=""
-                        formControlName="retail"
-                      />
-                    </div>
-                    <div id="social" class="social-pro">
-                      <label class="labelradio"
-                        >what will you do in social assistance?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control social"
-                        placeholder=""
-                        formControlName="social"
-                      />
-                    </div>
-                    <div id="technology" class="technology-pro">
-                      <label class="labelradio"
-                        >What kind of technology business you will do?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control technology"
-                        placeholder=""
-                        formControlName="technology"
-                      />
-                    </div>
-                    <div id="transportation" class="transportation-pro">
-                      <label class="labelradio"
-                        >what will you do in transportation ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control transportation"
-                        placeholder=""
-                        formControlName="transportation"
-                      />
-                    </div>
-                    <div id="warehousing" class="warehousing-pro">
-                      <label class="labelradio"
-                        >What kind of warehousing business you will do ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control warehousing"
-                        placeholder=""
-                        formControlName="warehousing"
-                      />
-                    </div>
-                    <div id="wholesale" class="wholesale-pro">
-                      <label class="labelradio"
-                        >What will you do in wholesale ?&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <input
-                        type="text"
-                        class="form-control wholesale"
-                        placeholder=""
-                        formControlName="wholesale"
-                      />
-                    </div>
-                    <div id="other" class="other-pro">
-                      <label class="labelradio"
-                        >In case your option is other&nbsp;<sup
-                          ><i class="fa fa-asterisk"></i></sup
-                      ></label>
-                      <h3>Please describe what your business will be doing.</h3>
-                      <input
-                        type="text"
-                        class="form-control other"
-                        placeholder=""
-                        formControlName="other"
-                      />
-                    </div>
-                    <br />
-                  </div>
-  
-                  <div
-                    class="hr-dotted"
-                    style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
-                  ></div>
-                  <div class="previous-next">
-                    <a href="#previous"
-                      ><button type="button" class="btn-previous">
-                        PREVIOUS
-                      </button></a
-                    >
-                    <a href="#next"
-                      ><button type="button" class="btn-next">NEXT</button></a
-                    >
-                  </div>
                 </div>
               </div>
             </div>
@@ -1122,5 +1536,5 @@
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

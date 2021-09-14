@@ -1,0 +1,2285 @@
+<section class="privatelimited-registration-wrapper">
+  <div class="container card">
+    <div class="row fullcard-wrapper card-body">
+      <div class="col-md-7 card-body-titleleft">
+        <h2>Trademark Application Form</h2>
+        <div class="hr-line"></div>
+      </div>
+
+      <div class="col-md-5 card-body-titleright">
+        <div class="row align">
+          <div class="col-md-2 image-left">
+            <img
+              src="../../../assets/images/contact-us-legalraasta-form-1.png"
+            />
+          </div>
+          <div class="col-md-10 contact-right">
+            <h6>Have any Problems?</h6>
+            <p>Call us now at +91-875 000 8585</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 tabs">
+        <div class="tab-navpills-section">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                data-toggle="pill"
+                href="#pills-Company"
+                id="pills-Company-tab"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+                >1&nbsp;Applicant Info</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-toggle="pill"
+                href="#pills-Business"
+                id="pills-Business-tab"
+                role="tab"
+                aria-controls="pills-Business"
+                aria-selected="false"
+                >2&nbsp;About your Trademark</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-abc-tab"
+                data-toggle="pill"
+                href="#pills-abc"
+                role="tab"
+                aria-controls="pills-abc"
+                aria-selected="false"
+                >Trademark Class</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="pills-Pricing-tab"
+                data-toggle="pill"
+                href="#pills-Pricing"
+                role="tab"
+                aria-controls="pills-Pricing"
+                aria-selected="false"
+                >2&nbsp;Pricing and Packages</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="hr-dotted"
+          style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+        ></div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            id="pills-Company"
+            class="tab-pane fade show active"
+            role="tabpanel"
+            aria-labelledby="pills-Company-tab"
+          >
+            <p class="filltext">
+              Fill in the below form to apply for Trademark online. It will take
+              less than 5 mins. Your details are secured by SSL.
+            </p>
+            <div class="Business-pro">
+              <div class="Business-name">
+                <label class="labelname"
+                  >Trademark Application is for&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+              </div>
+              <div class="radiosection-left">
+                <div class="form-check">
+                  <ul class="radio-button" id="radio-check">
+                    <li class="radio-accomodation">
+                      <input
+                        type="radio"
+                        id="accomodation"
+                        name="tab"
+                        [value]="0"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        A Person / Proprietorship Firm</label
+                      >
+                    </li>
+                    <li class="radio-construction">
+                      <input
+                        type="radio"
+                        id="construction"
+                        name="tab"
+                        [value]="1"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault2"
+                      >
+                        An Organisation/Business with turnover less than 5 Crore
+                      </label>
+                    </li>
+                    <li class="radio-consulting">
+                      <input
+                        type="radio"
+                        id="consulting"
+                        name="tab"
+                        [value]="2"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault3"
+                      >
+                        An Organisation/Business with turnover more than 5 Crore
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-12 radio-content">
+                  <div
+                    id="accomodation"
+                    class="accomodation-pro"
+                    *ngIf="type == 0"
+                  >
+                    <form [formGroup]="CompanyForm">
+                      <div class="form-group company">
+                        <label class="labelname"
+                          >Name of Business/Company?&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                        <h4>
+                          Mention the name of the business entity (ex.
+                          company/firm name)
+                        </h4>
+
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('namecompany').invalid &&
+                              CompanyForm.get('namecompany').touched) ||
+                            (CompanyForm.get('namecompany').pristine &&
+                              hasError)
+                          "
+                          type="text"
+                          class="form-control company"
+                          placeholder=""
+                          formControlName="namecompany"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('namecompany').invalid &&
+                              CompanyForm.get('namecompany').touched) ||
+                            (CompanyForm.get('namecompany').pristine &&
+                              hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group company">
+                        <label class="labelname"
+                          >Name of the Applicant&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                        <h4>
+                          Mention the name of the person responsible for taking
+                          the necessary steps on behalf of business.
+                        </h4>
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('Applicant').invalid &&
+                              CompanyForm.get('Applicant').touched) ||
+                            (CompanyForm.get('Applicant').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control company"
+                          placeholder=""
+                          formControlName="Applicant"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('Applicant').invalid &&
+                              CompanyForm.get('Applicant').touched) ||
+                            (CompanyForm.get('Applicant').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <!-- <div class="form-group company form-check">
+                        <label class="labelbusiness"
+                          >Choose your business entity&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                        <ul class="radio-button" id="radio-check">
+                          <li class="radio-accomodation">
+                            <input
+                              type="radio"
+                              id=""
+                              name="tab"
+                            />&nbsp;&nbsp;<label
+                              class="form-check-label"
+                              for="flexRadioDefault1"
+                            >
+                              Private Limited Company</label
+                            >
+                          </li>
+                          <li class="radio-construction">
+                            <input
+                              type="radio"
+                              id=""
+                              name="tab"
+                            />&nbsp;&nbsp;<label
+                              class="form-check-label"
+                              for="flexRadioDefault2"
+                            >
+                              Public Limited Company</label
+                            >
+                          </li>
+                          <li class="radio-consulting">
+                            <input
+                              type="radio"
+                              id=""
+                              name="tab"
+                            />&nbsp;&nbsp;<label
+                              class="form-check-label"
+                              for="flexRadioDefault3"
+                            >
+                              Partnership</label
+                            >
+                          </li>
+                          <li class="radio-entertainment">
+                            <input
+                              type="radio"
+                              id=""
+                              name="tab"
+                            />&nbsp;&nbsp;<label
+                              class="form-check-label"
+                              for="flexRadioDefault4"
+                            >
+                              Proprietorship/individual</label
+                            >
+                          </li>
+                          <li class="radio-finance">
+                            <input
+                              type="radio"
+                              id=""
+                              name="tab"
+                            />&nbsp;&nbsp;<label
+                              class="form-check-label"
+                              for="flexRadioDefault5"
+                            >
+                              Other</label
+                            >
+                          </li>
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Applicant').invalid &&
+                                CompanyForm.get('Applicant').touched) ||
+                              (CompanyForm.get('Applicant').pristine &&
+                                hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </ul>
+                      </div> -->
+
+                      <div class="form-group company">
+                        <label class="labelname"
+                          >Address of Business/Unit?&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                        <h4>
+                          Mention the address of business where food activity is
+                          carried out
+                        </h4>
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('Address').invalid &&
+                              CompanyForm.get('Address').touched) ||
+                            (CompanyForm.get('Address').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control company"
+                          placeholder=""
+                          formControlName="Address"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('Address').invalid &&
+                              CompanyForm.get('Address').touched) ||
+                            (CompanyForm.get('Address').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+
+                      <div class="form-group company">
+                        <label class="labelname"
+                          >Select a State&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+
+                        <select
+                          name="states"
+                          class="custom-select mb-3"
+                          value="select"
+                        >
+                          <option
+                            value
+                            selected="selected"
+                            class="gf_placeholder"
+                          >
+                            select
+                          </option>
+                          <option value="AndhraPradesh">AndhraPradesh</option>
+                          <option value="ArunachalPradesh">
+                            ArunachalPradesh
+                          </option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Mumbai">Mumbai</option>
+                          <option value="Jaipur">Jaipur</option>
+                          <option value="Karnataka">Karnataka</option>
+                        </select>
+
+                        <div class="selectarrow">
+                          <i
+                            class="fa fa-angle-down"
+                            aria-hidden="true"
+                            aria-disabled="true"
+                          ></i>
+                        </div>
+                      </div>
+                      <br />
+                      <div class="form-group company">
+                        <label class="labelname"
+                          >Pincode&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('Pincode').invalid &&
+                              CompanyForm.get('Pincode').touched) ||
+                            (CompanyForm.get('Pincode').pristine && hasError)
+                          "
+                          type="number"
+                          class="form-control company"
+                          placeholder=""
+                          formControlName="Pincode"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('Pincode').invalid &&
+                              CompanyForm.get('Pincode').touched) ||
+                            (CompanyForm.get('Pincode').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+
+                      <div class="Business-name">
+                        <label class="labelbusiness"
+                          >Food Product Category&nbsp;<sup
+                            ><i class="fa fa-asterisk"></i></sup
+                        ></label>
+                      </div>
+
+                      <div class="radiosection-left">
+                        <div class="form-check food-product">
+                          <ul class="radio-button" id="radio-check">
+                            <li class="radio-Diary">
+                              <input
+                                type="checkbox"
+                                id="Diary"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Diary Products</label
+                              >
+                            </li>
+                            <li class="radio-Fats">
+                              <input
+                                type="checkbox"
+                                id="Fats"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                Fats & oils</label
+                              >
+                            </li>
+                            <li class="radio-Edibles">
+                              <input
+                                type="checkbox"
+                                id="Edibles"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault3"
+                              >
+                                Edibles ices, including ice creams</label
+                              >
+                            </li>
+                            <li class="radio-Fruits">
+                              <input
+                                type="checkbox"
+                                id="Fruits"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault4"
+                              >
+                                Fruits & vegetables, nuts and seeds</label
+                              >
+                            </li>
+                            <li class="radio-Confectionery">
+                              <input
+                                type="checkbox"
+                                id="Confectionery"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault5"
+                              >
+                                Confectionery</label
+                              >
+                            </li>
+                            <li class="radio-Cereals">
+                              <input
+                                type="checkbox"
+                                id="Cereals"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault6"
+                              >
+                                Cereals and cereal products & pulses</label
+                              >
+                            </li>
+                            <li class="radio-Bakery">
+                              <input
+                                type="checkbox"
+                                id="Bakery"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault7"
+                              >
+                                Bakery Products</label
+                              >
+                            </li>
+                            <li class="radio-Meat">
+                              <input
+                                type="checkbox"
+                                id="Meat"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault8"
+                              >
+                                Meat and meat products, including poultry</label
+                              >
+                            </li>
+                            <li class="radio-Fish">
+                              <input
+                                type="checkbox"
+                                id="Fish"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault9"
+                              >
+                                Fish and fish products</label
+                              >
+                            </li>
+                            <li class="radio-Eggs">
+                              <input
+                                type="checkbox"
+                                id="Eggs"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault10"
+                              >
+                                Eggs and egg products</label
+                              >
+                            </li>
+                            <li class="radio-Sweeteners">
+                              <input
+                                type="checkbox"
+                                id="Sweeteners"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault11"
+                              >
+                                Sweeteners, including honey</label
+                              >
+                            </li>
+                            <li class="radio-Salts">
+                              <input
+                                type="checkbox"
+                                id="Salts"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault12"
+                              >
+                                Salts, spices, soups, sauces, salads and protein
+                                products</label
+                              >
+                            </li>
+                            <li class="radio-Foodstuffs">
+                              <input
+                                type="checkbox"
+                                id="Foodstuffs"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault13"
+                              >
+                                Foodstuffs intended for particular nutritional
+                                uses</label
+                              >
+                            </li>
+                            <li class="radio-Beverages">
+                              <input
+                                type="checkbox"
+                                id="Beverages"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault14"
+                              >
+                                Beverages, excluding dairy products</label
+                              >
+                            </li>
+                            <li class="radio-savouries">
+                              <input
+                                type="checkbox"
+                                id="savouries"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault15"
+                              >
+                                Ready to eat savouries</label
+                              >
+                            </li>
+                            <li class="radio-foods">
+                              <input
+                                type="checkbox"
+                                id="foods"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault16"
+                              >
+                                Prepared foods</label
+                              >
+                            </li>
+                            <li class="radio-Substances">
+                              <input
+                                type="checkbox"
+                                id="Substances"
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault17"
+                              >
+                                Substances added to food</label
+                              >
+                            </li>
+                            <li class="radio-other">
+                              <input
+                                type="checkbox"
+                                id="others"
+                                name="tab"
+                                [(ngModel)]="type"
+                                [value]="1"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Other(not covered under above categories)</label
+                              >
+                            </li>
+                          </ul>
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Applicant').invalid &&
+                                CompanyForm.get('Applicant').touched) ||
+                              (CompanyForm.get('Applicant').pristine &&
+                                hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="col-md-6 radio-content">
+                          <div id="others" class="other-pro" *ngIf="type == 1">
+                            <label class="labelradio"
+                              >In case your option is other&nbsp;<sup
+                                ><i class="fa fa-asterisk"></i></sup
+                            ></label>
+                            <h4>
+                              Please describe what your business will be doing.
+                            </h4>
+                            <input
+                              type="text"
+                              class="form-control others"
+                              placeholder=""
+                              formControlName="others"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div
+                    id="construction"
+                    class="construction-pro"
+                    *ngIf="type == 1"
+                  >
+                    <div
+                      id="pills-Company"
+                      class="tab-pane fade show active"
+                      role="tabpanel"
+                      aria-labelledby="pills-Company-tab"
+                    >
+                      <form [formGroup]="CompanyForm">
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Existing FSSAI License Number&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Number').invalid &&
+                                CompanyForm.get('Number').touched) ||
+                              (CompanyForm.get('Number').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control company"
+                            placeholder=""
+                            formControlName="Number"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Number').invalid &&
+                                CompanyForm.get('Number').touched) ||
+                              (CompanyForm.get('Number').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Expiry Date&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Date').invalid &&
+                                CompanyForm.get('Date').touched) ||
+                              (CompanyForm.get('Date').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control company"
+                            placeholder=""
+                            formControlName="Date"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Date').invalid &&
+                                CompanyForm.get('Date').touched) ||
+                              (CompanyForm.get('Date').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group company form-check">
+                          <label class="labelbusiness"
+                            >Do you have the UserID and Password of your FSSAI
+                            Account?&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                          <ul class="radio-button" id="radio-check">
+                            <li class="radio-accomodation">
+                              <input
+                                type="radio"
+                                id=""
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Yes</label
+                              >
+                            </li>
+                            <li class="radio-construction">
+                              <input
+                                type="radio"
+                                id=""
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                No</label
+                              >
+                            </li>
+                            <span
+                              class="error"
+                              *ngIf="
+                                (CompanyForm.get('Applicant').invalid &&
+                                  CompanyForm.get('Applicant').touched) ||
+                                (CompanyForm.get('Applicant').pristine &&
+                                  hasError)
+                              "
+                              >This field is required</span
+                            >
+                          </ul>
+                        </div>
+
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Select a State&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <select
+                            name="states"
+                            class="custom-select mb-3"
+                            value="select"
+                          >
+                            <option
+                              value
+                              selected="selected"
+                              class="gf_placeholder"
+                            >
+                              select
+                            </option>
+                            <option value="AndhraPradesh">AndhraPradesh</option>
+                            <option value="ArunachalPradesh">
+                              ArunachalPradesh
+                            </option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Karnataka">Karnataka</option>
+                          </select>
+                          <div class="selectarrow">
+                            <i
+                              class="fa fa-angle-down"
+                              aria-hidden="true"
+                              aria-disabled="true"
+                            ></i>
+                          </div>
+                        </div>
+                        <br />
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Pincode.&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Pincode').invalid &&
+                                CompanyForm.get('Pincode').touched) ||
+                              (CompanyForm.get('Pincode').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control Pincode"
+                            placeholder=""
+                            formControlName="Pincode"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Pincode').invalid &&
+                                CompanyForm.get('Pincode').touched) ||
+                              (CompanyForm.get('Pincode').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+
+                        <div class="Business-name">
+                          <label class="labelbusiness"
+                            >Food Product Category&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                        </div>
+
+                        <div class="radiosection-left">
+                          <div class="form-check food-product">
+                            <ul class="radio-button" id="radio-check">
+                              <li class="radio-Diary">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault1"
+                                >
+                                  Diary Products</label
+                                >
+                              </li>
+                              <li class="radio-Fats">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault2"
+                                >
+                                  Fats & oils</label
+                                >
+                              </li>
+                              <li class="radio-Edibles">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault3"
+                                >
+                                  Edibles ices, including ice creams</label
+                                >
+                              </li>
+                              <li class="radio-Fruits">
+                                <input
+                                  type="checkbox"
+                                  id="Fruits"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault4"
+                                >
+                                  Fruits & vegetables, nuts and seeds</label
+                                >
+                              </li>
+                              <li class="radio-Confectionery">
+                                <input
+                                  type="checkbox"
+                                  id="Confectionery"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault5"
+                                >
+                                  Confectionery</label
+                                >
+                              </li>
+                              <li class="radio-Cereals">
+                                <input
+                                  type="checkbox"
+                                  id="Cereals"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault6"
+                                >
+                                  Cereals and cereal products & pulses</label
+                                >
+                              </li>
+                              <li class="radio-Bakery">
+                                <input
+                                  type="checkbox"
+                                  id="Bakery"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault7"
+                                >
+                                  Bakery Products</label
+                                >
+                              </li>
+                              <li class="radio-Meat">
+                                <input
+                                  type="checkbox"
+                                  id="Meat"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault8"
+                                >
+                                  Meat and meat products, including
+                                  poultry</label
+                                >
+                              </li>
+                              <li class="radio-Fish">
+                                <input
+                                  type="checkbox"
+                                  id="Fish"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault9"
+                                >
+                                  Fish and fish products</label
+                                >
+                              </li>
+                              <li class="radio-Eggs">
+                                <input
+                                  type="checkbox"
+                                  id="Eggs"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault10"
+                                >
+                                  Eggs and egg products</label
+                                >
+                              </li>
+                              <li class="radio-Sweeteners">
+                                <input
+                                  type="checkbox"
+                                  id="Sweeteners"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault11"
+                                >
+                                  Sweeteners, including honey</label
+                                >
+                              </li>
+                              <li class="radio-Salts">
+                                <input
+                                  type="checkbox"
+                                  id="Salts"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault12"
+                                >
+                                  Salts, spices, soups, sauces, salads and
+                                  protein products</label
+                                >
+                              </li>
+                              <li class="radio-Foodstuffs">
+                                <input
+                                  type="checkbox"
+                                  id="Foodstuffs"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault13"
+                                >
+                                  Foodstuffs intended for particular nutritional
+                                  uses</label
+                                >
+                              </li>
+                              <li class="radio-Beverages">
+                                <input
+                                  type="checkbox"
+                                  id="Beverages"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault14"
+                                >
+                                  Beverages, excluding dairy products</label
+                                >
+                              </li>
+                              <li class="radio-savouries">
+                                <input
+                                  type="checkbox"
+                                  id="savouries"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault15"
+                                >
+                                  Ready to eat savouries</label
+                                >
+                              </li>
+                              <li class="radio-foods">
+                                <input
+                                  type="checkbox"
+                                  id="foods"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault16"
+                                >
+                                  Prepared foods</label
+                                >
+                              </li>
+                              <li class="radio-Substances">
+                                <input
+                                  type="checkbox"
+                                  id="Substances"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault17"
+                                >
+                                  Substances added to food</label
+                                >
+                              </li>
+                              <li class="radio-others">
+                                <input
+                                  type="checkbox"
+                                  id="others"
+                                  name="tab"
+                                  [value]="1"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault19"
+                                >
+                                  Other(not covered under above
+                                  categories)</label
+                                >
+                              </li>
+                              <span
+                                class="error"
+                                *ngIf="
+                                  (CompanyForm.get('Applicant').invalid &&
+                                    CompanyForm.get('Applicant').touched) ||
+                                  (CompanyForm.get('Applicant').pristine &&
+                                    hasError)
+                                "
+                                >This field is required</span
+                              >
+                            </ul>
+                          </div>
+                          <!-- <div class="col-md-6 radio-content">
+                          <div id="others" class="other-pro" *ngIf="type == 1">
+                            <label class="labelradio"
+                              >In case your option is other&nbsp;<sup
+                                ><i class="fa fa-asterisk"></i></sup
+                            ></label>
+                            <h4>
+                              Please describe what your business will be doing.
+                            </h4>
+                            <input
+                              type="text"
+                              class="form-control others"
+                              placeholder=""
+                              formControlName="others"
+                            />
+                          </div>
+                          <br />
+                        </div> -->
+
+                          <!-- <div
+                          class="hr-dotted"
+                          style="
+                            border-bottom: 1px dotted #ccc;
+                            margin-bottom: 12px;
+                          "
+                        ></div> -->
+                          <!-- <div class="previous-next">
+                          <a href="#previous"
+                              ><button type="button" class="btn-previous">PREVIOUS</button></a
+                            >
+                          <a href="#next"
+                            ><button
+                              type="button"
+                              class="btn-next"
+                              (click)="Next()"
+                            >
+                              NEXT
+                            </button></a
+                          >
+                        </div> -->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div id="consulting" class="consulting-pro" *ngIf="type == 2">
+                    <div
+                      id="pills-Company"
+                      class="tab-pane fade show active"
+                      role="tabpanel"
+                      aria-labelledby="pills-Company-tab"
+                    >
+                      <form [formGroup]="CompanyForm">
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Existing FSSAI License Number&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Number').invalid &&
+                                CompanyForm.get('Number').touched) ||
+                              (CompanyForm.get('Number').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control company"
+                            placeholder=""
+                            formControlName="Number"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Number').invalid &&
+                                CompanyForm.get('Number').touched) ||
+                              (CompanyForm.get('Number').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Expiry Date&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Date').invalid &&
+                                CompanyForm.get('Date').touched) ||
+                              (CompanyForm.get('Date').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control company"
+                            placeholder=""
+                            formControlName="Date"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Date').invalid &&
+                                CompanyForm.get('Date').touched) ||
+                              (CompanyForm.get('Date').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+                        <div class="form-group company form-check">
+                          <label class="labelbusiness"
+                            >Do you have the UserID and Password of your FSSAI
+                            Account?&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                          <ul class="radio-button" id="radio-check">
+                            <li class="radio-accomodation">
+                              <input
+                                type="radio"
+                                id=""
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault1"
+                              >
+                                Yes</label
+                              >
+                            </li>
+                            <li class="radio-construction">
+                              <input
+                                type="radio"
+                                id=""
+                                name="tab"
+                              />&nbsp;&nbsp;<label
+                                class="form-check-label"
+                                for="flexRadioDefault2"
+                              >
+                                No</label
+                              >
+                            </li>
+                            <span
+                              class="error"
+                              *ngIf="
+                                (CompanyForm.get('Date').invalid &&
+                                  CompanyForm.get('Date').touched) ||
+                                (CompanyForm.get('Date').pristine && hasError)
+                              "
+                              >This field is required</span
+                            >
+                          </ul>
+                        </div>
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >What is the modification you need? Explain
+                            briefly?&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <textarea
+                            [class.is-invalid]="
+                              (CompanyForm.get('text').invalid &&
+                                CompanyForm.get('text').touched) ||
+                              (CompanyForm.get('text').pristine && hasError)
+                            "
+                            type="text"
+                            class="form-control company"
+                            placeholder=""
+                            formControlName="text"
+                          ></textarea>
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('text').invalid &&
+                                CompanyForm.get('text').touched) ||
+                              (CompanyForm.get('text').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Select a State&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+
+                          <select
+                            name="states"
+                            class="custom-select mb-3"
+                            value="select"
+                          >
+                            <option
+                              value
+                              selected="selected"
+                              class="gf_placeholder"
+                            >
+                              select
+                            </option>
+                            <option value="AndhraPradesh">AndhraPradesh</option>
+                            <option value="ArunachalPradesh">
+                              ArunachalPradesh
+                            </option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Jaipur">Jaipur</option>
+                            <option value="Karnataka">Karnataka</option>
+                          </select>
+                          <div class="selectarrow">
+                            <i
+                              class="fa fa-angle-down"
+                              aria-hidden="true"
+                              aria-disabled="true"
+                            ></i>
+                          </div>
+                        </div>
+                        <br />
+                        <div class="form-group company">
+                          <label class="labelname"
+                            >Pincode&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('Pincode').invalid &&
+                                CompanyForm.get('Pincode').touched) ||
+                              (CompanyForm.get('Pincode').pristine && hasError)
+                            "
+                            type="number"
+                            class="form-control Pincode"
+                            placeholder=""
+                            formControlName="Pincode"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('Pincode').invalid &&
+                                CompanyForm.get('Pincode').touched) ||
+                              (CompanyForm.get('Pincode').pristine && hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div>
+
+                        <div class="Business-name">
+                          <label class="labelbusiness"
+                            >Food Product Category&nbsp;<sup
+                              ><i class="fa fa-asterisk"></i></sup
+                          ></label>
+                        </div>
+
+                        <div class="radiosection-left">
+                          <div class="form-check food-product">
+                            <ul class="radio-button" id="radio-check">
+                              <li class="radio-Diary">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault1"
+                                >
+                                  Diary Products</label
+                                >
+                              </li>
+                              <li class="radio-Fats">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault2"
+                                >
+                                  Fats & oils</label
+                                >
+                              </li>
+                              <li class="radio-Edibles">
+                                <input
+                                  type="checkbox"
+                                  id=""
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault3"
+                                >
+                                  Edibles ices, including ice creams</label
+                                >
+                              </li>
+                              <li class="radio-Fruits">
+                                <input
+                                  type="checkbox"
+                                  id="Fruits"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault4"
+                                >
+                                  Fruits & vegetables, nuts and seeds</label
+                                >
+                              </li>
+                              <li class="radio-Confectionery">
+                                <input
+                                  type="checkbox"
+                                  id="Confectionery"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault5"
+                                >
+                                  Confectionery</label
+                                >
+                              </li>
+                              <li class="radio-Cereals">
+                                <input
+                                  type="checkbox"
+                                  id="Cereals"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault6"
+                                >
+                                  Cereals and cereal products & pulses</label
+                                >
+                              </li>
+                              <li class="radio-Bakery">
+                                <input
+                                  type="checkbox"
+                                  id="Bakery"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault7"
+                                >
+                                  Bakery Products</label
+                                >
+                              </li>
+                              <li class="radio-Meat">
+                                <input
+                                  type="checkbox"
+                                  id="Meat"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault8"
+                                >
+                                  Meat and meat products, including
+                                  poultry</label
+                                >
+                              </li>
+                              <li class="radio-Fish">
+                                <input
+                                  type="checkbox"
+                                  id="Fish"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault9"
+                                >
+                                  Fish and fish products</label
+                                >
+                              </li>
+                              <li class="radio-Eggs">
+                                <input
+                                  type="checkbox"
+                                  id="Eggs"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault10"
+                                >
+                                  Eggs and egg products</label
+                                >
+                              </li>
+                              <li class="radio-Sweeteners">
+                                <input
+                                  type="checkbox"
+                                  id="Sweeteners"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault11"
+                                >
+                                  Sweeteners, including honey</label
+                                >
+                              </li>
+                              <li class="radio-Salts">
+                                <input
+                                  type="checkbox"
+                                  id="Salts"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault12"
+                                >
+                                  Salts, spices, soups, sauces, salads and
+                                  protein products</label
+                                >
+                              </li>
+                              <li class="radio-Foodstuffs">
+                                <input
+                                  type="checkbox"
+                                  id="Foodstuffs"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault13"
+                                >
+                                  Foodstuffs intended for particular nutritional
+                                  uses</label
+                                >
+                              </li>
+                              <li class="radio-Beverages">
+                                <input
+                                  type="checkbox"
+                                  id="Beverages"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault14"
+                                >
+                                  Beverages, excluding dairy products</label
+                                >
+                              </li>
+                              <li class="radio-savouries">
+                                <input
+                                  type="checkbox"
+                                  id="savouries"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault15"
+                                >
+                                  Ready to eat savouries</label
+                                >
+                              </li>
+                              <li class="radio-foods">
+                                <input
+                                  type="checkbox"
+                                  id="foods"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault16"
+                                >
+                                  Prepared foods</label
+                                >
+                              </li>
+                              <li class="radio-Substances">
+                                <input
+                                  type="checkbox"
+                                  id="Substances"
+                                  name="tab"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault17"
+                                >
+                                  Substances added to food</label
+                                >
+                              </li>
+                              <li class="radio-others">
+                                <input
+                                  type="checkbox"
+                                  id="others"
+                                  name="tab"
+                                  [(ngModel)]="type"
+                                  [value]="1"
+                                />&nbsp;&nbsp;<label
+                                  class="form-check-label"
+                                  for="flexRadioDefault19"
+                                >
+                                  Other(not covered under above
+                                  categories)</label
+                                >
+                              </li>
+                              <span
+                                class="error"
+                                *ngIf="
+                                  (CompanyForm.get('Date').invalid &&
+                                    CompanyForm.get('Date').touched) ||
+                                  (CompanyForm.get('Date').pristine && hasError)
+                                "
+                                >This field is required</span
+                              >
+                            </ul>
+                          </div>
+                          <div class="col-md-6 radio-content">
+                            <div
+                              id="others"
+                              class="other-pro"
+                              *ngIf="type == 1"
+                            >
+                              <label class="labelradio"
+                                >In case your option is other&nbsp;<sup
+                                  ><i class="fa fa-asterisk"></i></sup
+                              ></label>
+                              <h4>
+                                Please describe what your business will be
+                                doing.
+                              </h4>
+                              <input
+                                type="text"
+                                class="form-control others"
+                                placeholder=""
+                                formControlName="others"
+                              />
+                            </div>
+                            <br />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <button type="submit" class="btn-next" (click)="Next()">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="pills-Business"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-Business-tab"
+          >
+            <div class="Business-pro">
+              <div class="Business-name">
+                <!-- <form [formGroup]="CompanyForm"> -->
+                <div class="form-group company">
+                  <label class="labelname"
+                    >Mention your brand name&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+
+                  <input
+                    [class.is-invalid]="
+                      (CompanyForm.get('namecompany').invalid &&
+                        CompanyForm.get('namecompany').touched) ||
+                      (CompanyForm.get('namecompany').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company"
+                    placeholder=""
+                    formControlName="namecompany"
+                  />
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('namecompany').invalid &&
+                        CompanyForm.get('namecompany').touched) ||
+                      (CompanyForm.get('namecompany').pristine && hasError)
+                    "
+                    >This field is required
+                  </span>
+                </div>
+                <div class="form-group company">
+                  <label class="labelbusiness"
+                    >What does your brand contain?&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+
+                  <div class="radiosection-left">
+                    <div class="form-check">
+                      <ul class="radio-button" id="radio-check">
+                        <li class="radio-accomodation">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Its a word/name</label
+                          >
+                        </li>
+                        <li class="radio-construction">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            A symbol/logo</label
+                          >
+                        </li>
+                        <li class="radio-consulting">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault3"
+                          >
+                            Both of above</label
+                          >
+                        </li>
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('namecompany').invalid &&
+                              CompanyForm.get('namecompany').touched) ||
+                            (CompanyForm.get('namecompany').pristine &&
+                              hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group company">
+                  <label class="labelbusiness"
+                    >Does your brand also have a slogan?&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+
+                  <div class="radiosection-left">
+                    <div class="form-check">
+                      <ul class="radio-button" id="radio-check">
+                        <li class="radio-accomodation">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Yes</label
+                          >
+                        </li>
+                        <li class="radio-construction">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            No</label
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group company">
+                  <label class="labelbusiness"
+                    >Have you used this brand for business purpose in the
+                    past?&nbsp;<sup><i class="fa fa-asterisk"></i></sup
+                  ></label>
+
+                  <div class="radiosection-left">
+                    <div class="form-check">
+                      <ul class="radio-button" id="radio-check">
+                        <li class="radio-accomodation">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Yes</label
+                          >
+                        </li>
+                        <li class="radio-construction">
+                          <input
+                            type="radio"
+                            id=""
+                            name="tab"
+                          />&nbsp;&nbsp;<label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            No</label
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <button type="button" class="btn-next" (click)="Next()">
+                    NEXT
+                  </button>
+                </div>
+                <!-- </form> -->
+              </div>
+            </div>
+          </div>
+          <div
+            id="pills-abc"
+            class="tab-pane fade"
+            role="tabpanel"
+            aria-labelledby="pills-abc-tab"
+          >
+            <div class="Business-pro">
+              <div class="Business-name">
+                <label class="labelname"
+                  >Category of Product&nbsp;<sup
+                    ><i class="fa fa-asterisk"></i></sup
+                ></label>
+                <h4>
+                  Choose the category of product in which you want to register
+                  your trademark.
+                </h4>
+              </div>
+              <div class="radiosection-left">
+                <div class="form-check">
+                  <ul class="radio-button" id="radio-check">
+                    <li class="radio-accomodation">
+                      <input
+                        type="checkbox"
+                        id="accomodation"
+                        value="0"
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault1"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-construction">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault2"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-consulting">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault3"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-entertainment">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault4"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-finance">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault5"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-foodservice">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault6"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-health">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault7"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-insurance">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault8"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-manufacturing">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault9"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-professional">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault10"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-realestate">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault11"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                    <li class="radio-rental">
+                      <input
+                        type="checkbox"
+                        id=""
+                        name="tab"
+                      />&nbsp;&nbsp;<label
+                        class="form-check-label"
+                        for="flexRadioDefault12"
+                      >
+                        1-Chemicals</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6 radio-content">
+                  <div
+                    id="accomodation"
+                    class="accomodation-pro"
+                    *ngIf="type == 0"
+                  >
+                    <label class="labelradio"
+                      >what will you do in accomodation?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control accomodation"
+                      placeholder=""
+                      formControlName="accomodation"
+                    />
+                  </div>
+                  <div
+                    id="construction"
+                    class="construction-pro"
+                    *ngIf="type == 1"
+                  >
+                    <label class="labelradio"
+                      >what will you do in construction?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control construction"
+                      placeholder=""
+                      formControlName="construction"
+                    />
+                  </div>
+                  <div id="consulting" class="consulting-pro" *ngIf="type == 2">
+                    <label class="labelradio"
+                      >what will you do in consulting?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control consulting"
+                      placeholder=""
+                      formControlName="consulting"
+                    />
+                    <h4>
+                      Describe the Type of Consulting service you provide.
+                      (Management, Marketing etc.)
+                    </h4>
+                  </div>
+                  <div
+                    id="entertainment"
+                    class="entertainment-pro"
+                    *ngIf="type == 3"
+                  >
+                    <label class="labelradio"
+                      >what will you do in entertainment?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control entertainment"
+                      placeholder=""
+                      formControlName="entertainment"
+                    />
+                  </div>
+                  <div id="finance" class="finance-pro" *ngIf="type == 4">
+                    <label class="labelradio"
+                      >what will you do in finance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control finance"
+                      placeholder=""
+                      formControlName="finance"
+                    />
+                  </div>
+                  <div
+                    id="foodservice"
+                    class="foodservice-pro"
+                    *ngIf="type == 5"
+                  >
+                    <label class="labelradio"
+                      >what will you do in foodservice?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control foodservice"
+                      placeholder=""
+                      formControlName="foodservice"
+                    />
+                  </div>
+                  <div id="health" class="health-pro" *ngIf="type == 6">
+                    <label class="labelradio"
+                      >what will you do in health care?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control health"
+                      placeholder=""
+                      formControlName="health"
+                    />
+                  </div>
+                  <div id="insurance" class="insurance-pro" *ngIf="type == 7">
+                    <label class="labelradio"
+                      >what will you do in insurance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control insurance"
+                      placeholder=""
+                      formControlName="insurance"
+                    />
+                  </div>
+                  <div
+                    id="manufacturing"
+                    class="manufacturing-pro"
+                    *ngIf="type == 8"
+                  >
+                    <label class="labelradio"
+                      >what will you do in manufacturing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control manufacturing"
+                      placeholder=""
+                      formControlName="manufacturing"
+                    />
+                    <h4>
+                      Describe the type of goods you make and the primary
+                      material used for making them.(For Example Wood
+                      Furniture).
+                    </h4>
+                  </div>
+                  <div
+                    id="professional"
+                    class="professional-pro"
+                    *ngIf="type == 9"
+                  >
+                    <label class="labelradio"
+                      >what will you do in profession?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control professional"
+                      placeholder=""
+                      formControlName="professional"
+                    />
+                  </div>
+                  <div
+                    id="realestate"
+                    class="realestate-pro"
+                    *ngIf="type == 10"
+                  >
+                    <label class="labelradio"
+                      >what will you do in real estate?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control realestate"
+                      placeholder=""
+                      formControlName="realestate"
+                    />
+                  </div>
+                  <div id="rental" class="rental-pro" *ngIf="type == 11">
+                    <label class="labelradio"
+                      >what will you do in rental & leasing?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control rental"
+                      placeholder=""
+                      formControlName="rental"
+                    />
+                  </div>
+                  <div id="retail" class="retail-pro" *ngIf="type == 12">
+                    <label class="labelradio"
+                      >what will you do in retail?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control retail"
+                      placeholder=""
+                      formControlName="retail"
+                    />
+                  </div>
+                  <div id="social" class="social-pro" *ngIf="type == 13">
+                    <label class="labelradio"
+                      >what will you do in social assistance?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control social"
+                      placeholder=""
+                      formControlName="social"
+                    />
+                  </div>
+                  <div
+                    id="technology"
+                    class="technology-pro"
+                    *ngIf="type == 14"
+                  >
+                    <label class="labelradio"
+                      >What kind of technology business you will do?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control technology"
+                      placeholder=""
+                      formControlName="technology"
+                    />
+                  </div>
+                  <div
+                    id="transportation"
+                    class="transportation-pro"
+                    *ngIf="type == 15"
+                  >
+                    <label class="labelradio"
+                      >what will you do in transportation ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control transportation"
+                      placeholder=""
+                      formControlName="transportation"
+                    />
+                  </div>
+                  <div
+                    id="warehousing"
+                    class="warehousing-pro"
+                    *ngIf="type == 16"
+                  >
+                    <label class="labelradio"
+                      >What kind of warehousing business you will do ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control warehousing"
+                      placeholder=""
+                      formControlName="warehousing"
+                    />
+                  </div>
+                  <div id="wholesale" class="wholesale-pro" *ngIf="type == 17">
+                    <label class="labelradio"
+                      >What will you do in wholesale ?&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <input
+                      type="text"
+                      class="form-control wholesale"
+                      placeholder=""
+                      formControlName="wholesale"
+                    />
+                  </div>
+                  <div id="other" class="other-pro" *ngIf="type == 18">
+                    <label class="labelradio"
+                      >In case your option is other&nbsp;<sup
+                        ><i class="fa fa-asterisk"></i></sup
+                    ></label>
+                    <h4>Please describe what your business will be doing.</h4>
+                    <input
+                      type="text"
+                      class="form-control other"
+                      placeholder=""
+                      formControlName="other"
+                    />
+                  </div>
+                  <br />
+                </div>
+                <!-- <form [formGroup]="CompanyForm"> -->
+                <div class="form-group company">
+                  <h2>Detailed description of your selected class</h2>
+                  <div
+                    class="hr-dotted"
+                    style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                  ></div>
+                  <label class="labelname"
+                    >Description of your Product / Services&nbsp;<sup
+                      ><i class="fa fa-asterisk"></i></sup
+                  ></label>
+                  <textarea
+                    [class.is-invalid]="
+                      (CompanyForm.get('text').invalid &&
+                        CompanyForm.get('text').touched) ||
+                      (CompanyForm.get('text').pristine && hasError)
+                    "
+                    type="text"
+                    class="form-control company"
+                    placeholder=""
+                    formControlName="text"
+                  ></textarea>
+                  <span
+                    class="error"
+                    *ngIf="
+                      (CompanyForm.get('text').invalid &&
+                        CompanyForm.get('text').touched) ||
+                      (CompanyForm.get('text').pristine && hasError)
+                    "
+                    >This field is required</span
+                  >
+                </div>
+                <!-- <signature-pad
+                    [config]="{ penColor: red }"
+                    #sP
+                  ></signature-pad>
+                  <button (click)="sp.clear()">CLEAR</button> -->
+
+                <div
+                  class="hr-dotted"
+                  style="border-bottom: 1px dotted #ccc; margin-bottom: 12px"
+                ></div>
+                <div class="previous-next">
+                  <a href="#previous"
+                    ><button type="button" class="btn-previous">
+                      PREVIOUS
+                    </button></a
+                  >
+                  <a href="#next"
+                    ><button type="button" class="btn-next">NEXT</button></a
+                  >
+                </div>
+                <!-- </form> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

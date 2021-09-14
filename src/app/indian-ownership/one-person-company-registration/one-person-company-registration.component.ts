@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 })
 export class OnePersonCompanyRegistrationComponent implements OnInit {
 
-  
+  type: any;
   public CompanyForm;
   public DirectorForm;
   public hasError = false;

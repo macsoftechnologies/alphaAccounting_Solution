@@ -1,0 +1,129 @@
+<section class="privatelimited-wrapper">
+  <div class="private-banner">
+    <div class="banner-image">
+      <div class="overlay">
+        <div class="container">
+          <div class="col-md-12 overlay-body">
+            <div class="row">
+              <div class="col-lg-8 col-md-12 overlay-left">
+                <h3>FSSAI Food License</h3>
+                <div class="hr" style="border-bottom: 1px solid black"></div>
+                <h4>Online Application process. Just fill our FSSAI form.</h4>
+                <h5 style="color: #3fb543">
+                  <b>Get any of 3 types of FSSAI registration</b>
+                </h5>
+
+                <h6>
+                  <strong>Basic Registration&nbsp;:</strong>&nbsp;For Sales < 12
+                  lakh/year
+                </h6>
+                <h6>
+                  <b>State Registration&nbsp;:</b>&nbsp;For Sales of 12 lakh – 2
+                  Crore/year
+                </h6>
+                <h6>
+                  <b>Central Registration&nbsp;:</b>&nbsp;For Sales > 2
+                  Crore/year
+                </h6>
+                <h6>
+                  <b>FSSAI application code in 7 days & license in 60 days</b>
+                </h6>
+              </div>
+
+              <div class="col-lg-4 col-md-12 card-reg">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="rectangle">
+                      <p>FSSAI License</p>
+                    </div>
+                    <div class="triangle-l"></div>
+
+                    <form [formGroup]="CompanyForm">
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="full name"
+                          id="fullname"
+                          formControlName="fullname"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="Email"
+                          id="email"
+                          formControlName="email"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          type="number"
+                          class="form-control"
+                          placeholder="mobile number"
+                          id="number"
+                          maxlength="10"
+                          formControlName="number"
+                        /><span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        id="proceed"
+                        class="form-control"
+                        (click)="proceed()"
+                      >
+                        proceed
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

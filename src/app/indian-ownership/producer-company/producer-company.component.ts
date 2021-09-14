@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./producer-company.component.scss']
 })
 export class ProducerCompanyComponent implements OnInit {
-
+  type: any;
   public CompanyForm;
   public hasError = false;
 

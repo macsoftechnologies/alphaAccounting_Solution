@@ -1,0 +1,142 @@
+<section class="limitedliability-wrapper">
+  <div class="limited-banner">
+    <div class="banner-image">
+      <div class="overlay-liabilty">
+        <div class="container">
+          <div class="col-md-12 overlay-liabilty-body">
+            <div class="row">
+              <div class="col-lg-8 col-md-12 overlay-liabilty-left">
+                <h3>Allotment of Shares</h3>
+                <div
+                  class="hr"
+                  style="border-bottom: 1px solid white; width: 95%"
+                ></div>
+                <h4>Simple online filing process</h4>
+                <h5 style="color: #3fb543">Starting At</h5>
+                <p></p>
+                <h6>Rs. 5,499 Onwards</h6>
+                <h2>SAVE 30% COST!!!</h2>
+              </div>
+
+              <div class="col-lg-4 col-md-12 card-reg-limited">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="rectangle-limited">
+                      <p>Allotment of Shares</p>
+                    </div>
+                    <div class="triangle-l-limited"></div>
+
+                    <form [formGroup]="CompanyForm">
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="full name"
+                          id="fullname"
+                          formControlName="fullname"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('fullname').invalid &&
+                              CompanyForm.get('fullname').touched) ||
+                            (CompanyForm.get('fullname').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <!-- <div class="form-group">
+                          <input
+                            [class.is-invalid]="
+                              (CompanyForm.get('companyname').invalid &&
+                                CompanyForm.get('companyname').touched) ||
+                              (CompanyForm.get('companyname').pristine &&
+                                hasError)
+                            "
+                            type="text"
+                            class="form-control"
+                            placeholder="Company name "
+                            id="companyname"
+                            formControlName="companyname"
+                          />
+                          <span
+                            class="error"
+                            *ngIf="
+                              (CompanyForm.get('companyname').invalid &&
+                                CompanyForm.get('companyname').touched) ||
+                              (CompanyForm.get('companyname').pristine &&
+                                hasError)
+                            "
+                            >This field is required</span
+                          >
+                        </div> -->
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          type="text"
+                          class="form-control"
+                          placeholder="Email"
+                          id="email"
+                          formControlName="email"
+                        />
+                        <span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('email').invalid &&
+                              CompanyForm.get('email').touched) ||
+                            (CompanyForm.get('email').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <div class="form-group">
+                        <input
+                          [class.is-invalid]="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          type="number"
+                          class="form-control"
+                          placeholder="mobile number"
+                          id="number"
+                          maxlength="10"
+                          formControlName="number"
+                        /><span
+                          class="error"
+                          *ngIf="
+                            (CompanyForm.get('number').invalid &&
+                              CompanyForm.get('number').touched) ||
+                            (CompanyForm.get('number').pristine && hasError)
+                          "
+                          >This field is required</span
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        id="proceed"
+                        class="form-control"
+                        (click)="proceed()"
+                      >
+                        proceed
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

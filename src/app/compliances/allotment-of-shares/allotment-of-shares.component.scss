@@ -1,0 +1,222 @@
+.limitedliability-wrapper {
+  .limited-banner {
+    .banner-image {
+      background-image: url("../../../assets/images/banner/1.jpeg");
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      .overlay-liabilty {
+        background-color: #000000a8;
+        height: 100%;
+        width: 100%;
+        .overlay-liabilty-body {
+          padding-bottom: 60px;
+          .overlay-liabilty-left {
+            h3 {
+              color: #fff;
+              font-size: 40px;
+              font-weight: 500;
+              text-transform: capitalize;
+              // display: flex;
+              align-items: center;
+              justify-content: center;
+              //   height: 100%;
+              //   padding: 31px 0px 0px 0px;
+              padding: 84px 0px 41px 0px;
+              margin: 0px !important;
+              //   line-height: 1.3;
+            }
+            h4 {
+              color: white;
+              font-size: 24px;
+              line-height: 1.5;
+              margin: 18px 0px 0px 0px;
+            }
+            h5 {
+              color: white;
+              margin-top: 21px;
+              font-size: 20px;
+              margin-bottom: 0px;
+            }
+            h6 {
+              color: white;
+              font-size: 20px;
+              padding: 14px 0px 10px 0px;
+            }
+            h2 {
+              font-size: 20px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.card-reg-limited {
+  margin: 60px 0px 0px 0px;
+  .card {
+    background-color: rgba(255, 255, 255, 0.84);
+  }
+  .card-body {
+    .rectangle-limited {
+      // font-size: 12px !important;
+
+      background: #66bb6a;
+      height: 50px;
+      width: 80%;
+      margin-left: -24px;
+      position: relative;
+      left: -15px;
+      top: 0px;
+      // float: left;
+      // -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+      // -khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+      // -webkit-box-shadow: 0px 0px 4px rgb(0 0 0 / 55%);
+      box-shadow: 0px 0px 4px rgb(0 0 0 / 55%);
+      z-index: 4;
+
+      p {
+        font-size: 18px;
+        text-transform: capitalize;
+        text-align: center;
+        padding-top: 14px;
+        color: white;
+      }
+    }
+  }
+
+  .triangle-l-limited {
+    border-color: transparent #66bb6a transparent transparent;
+    border-style: solid;
+    margin-left: -56px;
+    border-width: 18px;
+    height: 0px;
+    width: 0px;
+    /* position: relative; */
+    left: -30px;
+    top: 35px;
+    z-index: -1;
+    margin-top: -18px;
+    box-sizing: border-box;
+  }
+
+  input#fullname {
+    margin: 2px 0px 0px 0px;
+    padding: 8px 0px 8px 8px;
+    text-transform: capitalize;
+    height: auto;
+    border-radius: initial;
+    box-shadow: none;
+  }
+  span.error {
+    color: #dc3545;
+    font-size: 10px;
+  }
+  input#email {
+    margin: 17px 0px 0px 0px;
+    padding: 8px 0px 8px 8px;
+    // text-transform: capitalize;
+    height: auto;
+    border-radius: initial;
+    box-shadow: none;
+  }
+  input#number {
+    margin: 17px 0px 0px 0px;
+    padding: 8px 0px 8px 8px;
+    text-transform: capitalize;
+    height: auto;
+    border-radius: initial;
+    box-shadow: none;
+  }
+  button#proceed {
+    margin: 2px 0px 30px 0px;
+    width: 100%;
+    text-transform: uppercase;
+    height: 50px;
+    background-color: #66bb6a;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  :focus {
+    outline: none;
+  }
+}
+//To remove arrows in input number field
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .limitedliability-wrapper {
+    .limited-banner {
+      .overlay-liabilty-left {
+        h3 {
+          font-size: 35px;
+          line-height: 50px;
+          padding: 84px 0px 30px 0px;
+        }
+      }
+      .card-reg-limited {
+        .rectangle-limited {
+          width: 90%;
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .limitedliability-wrapper {
+    .limited-banner {
+      .card-body {
+        .rectangle-limited {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      .overlay-liabilty-left {
+        h3 {
+          padding: 84px 0px 30px 0px !important;
+        }
+        .hr {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .limitedliability-wrapper {
+    .limited-banner {
+      .banner-image {
+        height: 100%;
+      }
+      .overlay-liabilty {
+        .overlay-liabilty-body {
+          padding-bottom: 30px;
+        }
+        .overlay-liabilty-left {
+          h3 {
+            line-height: 50px;
+            padding: 84px 0px 30px 0px !important;
+          }
+          .hr {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

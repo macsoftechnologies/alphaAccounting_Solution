@@ -8,11 +8,12 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
   styleUrls: ["./private-limited-registration.component.scss"],
 })
 export class PrivateLimitedRegistrationComponent implements OnInit {
+  type: any;
   public CompanyForm;
   public DirectorForm;
   public hasError = false;
 
-  constructor(private router: Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     this.CompanyForm = new FormGroup({
       namecompany: new FormControl("", [Validators.required]),
       listadd: new FormControl("", [Validators.required]),
@@ -28,7 +29,6 @@ export class PrivateLimitedRegistrationComponent implements OnInit {
       file2: new FormControl("", [Validators.required]),
       address: new FormControl("", [Validators.required]),
       Pincode: new FormControl("", [Validators.required]),
-     
     });
   }
 
@@ -36,13 +36,15 @@ export class PrivateLimitedRegistrationComponent implements OnInit {
   Next() {
     if (this.CompanyForm.valid) {
       console.log("working");
-      this.router.navigate(['pills-Director'],{relativeTo:this.activatedRoute});
+      this.router.navigate(["pills-Director"], {
+        relativeTo: this.activatedRoute,
+      });
     } else {
       this.hasError = true;
       console.log("not working");
     }
   }
-  directorsubmit(){
+  directorsubmit() {
     if (this.DirectorForm.valid) {
       console.log("working");
       this.router.navigateByUrl("");
@@ -50,6 +52,5 @@ export class PrivateLimitedRegistrationComponent implements OnInit {
       this.hasError = true;
       console.log("not working");
     }
-
   }
 }
