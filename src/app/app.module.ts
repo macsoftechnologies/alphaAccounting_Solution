@@ -23,6 +23,7 @@ import { RegistrationsModule } from "./Registrations/registrations.module";
 import { IncomeTaxComplianesModule } from "./income-tax-complianes/income-tax-complianes.module";
 import { GstModule } from "./gst/gst.module";
 import { CompliancesModule } from "./compliances/compliances.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { CompliancesModule } from "./compliances/compliances.module";
     IncomeTaxComplianesModule,
     GstModule,
     CompliancesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

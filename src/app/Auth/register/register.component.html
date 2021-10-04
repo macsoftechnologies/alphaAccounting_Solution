@@ -30,7 +30,7 @@
                         <input type="email" [class.is-invalid]= "
                         registerForm.get('email').invalid && 
                         registerForm.get('email').touched || registerForm.get('email') && hasError"
-                         class="form-control" placeholder="Enter Email ID">
+                         class="form-control" formControlName="email" placeholder="Enter Email ID">
                         <span *ngIf="registerForm.get('email').invalid && 
                         registerForm.get('email').touched || registerForm.get('email').pristine && hasError">Email is required</span>
                     </div>
@@ -39,7 +39,7 @@
                         <input type="number" [class.is-invalid]= "
                         registerForm.get('number').invalid && 
                         registerForm.get('number').touched || registerForm.get('number').pristine && hasError"
-                         class="form-control" placeholder="Enter Number" maxlength="10">
+                         class="form-control" formControlName="number" placeholder="Enter Number" maxlength="10">
                         <span class="error" *ngIf="registerForm.get('number').invalid && 
                         registerForm.get('number').touched || registerForm.get('number').pristine && hasError">Mobile Number is required</span>
                     </div>
@@ -48,13 +48,13 @@
                         <input type="password" [class.is-invalid]= "
                         registerForm.get('password').invalid && 
                         registerForm.get('password').touched || registerForm.get('password').pristine && hasError"
-                         class="form-control" placeholder="Enter Password">
+                         class="form-control" formControlName="password" placeholder="Enter Password">
                          <span class="error" *ngIf="registerForm.get('password').invalid && 
                          registerForm.get('password').touched || registerForm.get('password').pristine && hasError">Password is required</span>
                     </div>
                     
                     <div class="login-button">
-                        <button type="button" class="form-control" (click)="registerBtn()">Register</button>
+                        <button type="button" class="form-control" (click)="register()">Register</button>
                     </div>
                 </div>
             </form>
