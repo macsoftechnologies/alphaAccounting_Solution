@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/api-service/api-service.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class LoginComponent implements OnInit {
    public hasError = false;
     LoginForm:FormGroup;
  
-    constructor(private service: ApiServiceService) { }
+    constructor(private service: ApiServiceService, private router: Router) { }
    
   ngOnInit(): void {
     this.LoginForm = new FormGroup({
@@ -34,16 +36,23 @@ export class LoginComponent implements OnInit {
 
       this.service.userLogin(userLoginDetails).subscribe( (resp) => {
         console.log(resp);
-        if(resp.statusCode == 200 ) {
-        
+        if(resp.statusCode == 200 ) {        
           console.log("Login Successfull");
-        
+          Swal.fire({
+            icon: 'success',
+            text: "USer successfully Logged in"
+          })        
+          this.router.navigateByUrl('');
         }
         else {
           console.log("Enter Valid Details")
         }
       })
     }
+  }
+
+  singup() {
+    this.router.navigateByUrl('/register')
   }
 }
   //   else {
